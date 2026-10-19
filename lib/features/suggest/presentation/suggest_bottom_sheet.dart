@@ -516,10 +516,7 @@ class _SectionHeader extends StatelessWidget {
             ),
           ),
         ),
-        if (trailing != null) ...[
-          SizedBox(width: spacing.xs),
-          trailing!,
-        ],
+        if (trailing != null) ...[SizedBox(width: spacing.xs), trailing!],
       ],
     );
   }

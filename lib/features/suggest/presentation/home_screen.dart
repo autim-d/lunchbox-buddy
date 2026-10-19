@@ -301,20 +301,39 @@ class HomeScreen extends ConsumerWidget {
               SizedBox(height: spacing.xxl),
 
               // 4. Saved Recipes Row
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Wrap(
+                alignment: WrapAlignment.spaceBetween,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                spacing: spacing.sm,
+                runSpacing: spacing.xs,
                 children: [
-                  Text(
-                    l10n.savedRecipesSectionTitle,
-                    style: typography.titleMedium.copyWith(
-                      color: colors.textPrimary,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        l10n.savedRecipesSectionTitle,
+                        style: typography.titleMedium.copyWith(
+                          color: colors.textPrimary,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(width: spacing.xs),
+                      Icon(
+                        Icons.bookmark_rounded,
+                        size: 20.0,
+                        color: colors.accent,
+                      ),
+                    ],
                   ),
-                  Icon(
-                    Icons.bookmark_rounded,
-                    size: 20.0,
-                    color: colors.accent,
+                  TextButton(
+                    onPressed: () => context.push('/saved-recipes'),
+                    child: Text(
+                      l10n.viewAllSavedRecipes,
+                      style: typography.labelMedium.copyWith(
+                        color: colors.secondary,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -371,7 +390,7 @@ class HomeScreen extends ConsumerWidget {
                         return _SavedRecipeMiniCard(
                           recipe: recipe,
                           onTap: () {
-                            // Can view recipe detail
+                            context.push('/recipe/${recipe.id}', extra: recipe);
                           },
                         );
                       },

@@ -501,4 +501,68 @@ class AppLocalizationsAr extends AppLocalizations {
   String cardCounter(int current, int total) {
     return '$current من $total';
   }
+
+  @override
+  String get recipeDetailTitle => 'تفاصيل الوصفة';
+
+  @override
+  String get servingsLabel => 'عدد الحصص';
+
+  @override
+  String get ingredientsSectionTitle => 'المكونات المطلوبة';
+
+  @override
+  String get stepsSectionTitle => 'طريقة التحضير خطوة بخطوة';
+
+  @override
+  String get iHaveThisIngredient => 'متوفر لدي';
+
+  @override
+  String ingredientsOnHandSummary(int haveCount, int totalCount) {
+    return 'المتوفر لديكِ: $haveCount من $totalCount';
+  }
+
+  @override
+  String get addMissingToGrocery => 'إضافة النواقص لقائمة التسوق';
+
+  @override
+  String get missingAddedToGrocerySnackbar =>
+      'تمت إضافة المكونات الناقصة إلى قائمة التسوق بنجاح!';
+
+  @override
+  String get startCooking => 'ابدأي الطهي';
+
+  @override
+  String get dynamicSaveAction => 'حفظ الوصفة';
+
+  @override
+  String get dynamicSavingAction => 'جاري الحفظ...';
+
+  @override
+  String get dynamicSavedAction => 'تم الحفظ ✓';
+
+  @override
+  String get viewAllSavedRecipes => 'عرض الكل';
+
+  @override
+  String get recipeRemovedFromSaved => 'تمت إزالة الوصفة من المفضلة';
+
+  @override
+  String get undo => 'تراجع';
+
+  @override
+  String get remove => 'حذف';
+
+  @override
+  String prepAndCookTime(int prep, int cook) {
+    return 'التحضير: $prep د • الطهي: $cook د';
+  }
+
+  @override
+  String stepNumberLabel(int number) {
+    return 'خطوة $number';
+  }
+
+  @override
+  String get optionalIngredient => '(اختياري)';
 }

@@ -679,5 +679,102 @@
         "type": "int"
       }
     }
+  },
+  "recipeDetailTitle": "تفاصيل الوصفة",
+  "@recipeDetailTitle": {
+    "description": "Recipe detail app bar title"
+  },
+  "servingsLabel": "عدد الحصص",
+  "@servingsLabel": {
+    "description": "Servings stepper label"
+  },
+  "ingredientsSectionTitle": "المكونات المطلوبة",
+  "@ingredientsSectionTitle": {
+    "description": "Required ingredients section title"
+  },
+  "stepsSectionTitle": "طريقة التحضير خطوة بخطوة",
+  "@stepsSectionTitle": {
+    "description": "Step by step preparation section title"
+  },
+  "iHaveThisIngredient": "متوفر لدي",
+  "@iHaveThisIngredient": {
+    "description": "I have it checkbox label"
+  },
+  "ingredientsOnHandSummary": "المتوفر لديكِ: {haveCount} من {totalCount}",
+  "@ingredientsOnHandSummary": {
+    "description": "Ingredients on hand counter banner",
+    "placeholders": {
+      "haveCount": {
+        "type": "int"
+      },
+      "totalCount": {
+        "type": "int"
+      }
+    }
+  },
+  "addMissingToGrocery": "إضافة النواقص لقائمة التسوق",
+  "@addMissingToGrocery": {
+    "description": "Add missing ingredients to grocery list button"
+  },
+  "missingAddedToGrocerySnackbar": "تمت إضافة المكونات الناقصة إلى قائمة التسوق بنجاح!",
+  "@missingAddedToGrocerySnackbar": {
+    "description": "Snackbar shown when missing ingredients are added"
+  },
+  "startCooking": "ابدأي الطهي",
+  "@startCooking": {
+    "description": "Start cook mode action button"
+  },
+  "dynamicSaveAction": "حفظ الوصفة",
+  "@dynamicSaveAction": {
+    "description": "Save action dynamic button initial text"
+  },
+  "dynamicSavingAction": "جاري الحفظ...",
+  "@dynamicSavingAction": {
+    "description": "Save action dynamic button in-progress text"
+  },
+  "dynamicSavedAction": "تم الحفظ ✓",
+  "@dynamicSavedAction": {
+    "description": "Save action dynamic button completed text"
+  },
+  "viewAllSavedRecipes": "عرض الكل",
+  "@viewAllSavedRecipes": {
+    "description": "View all saved recipes button on home screen"
+  },
+  "recipeRemovedFromSaved": "تمت إزالة الوصفة من المفضلة",
+  "@recipeRemovedFromSaved": {
+    "description": "Snackbar shown when recipe is removed from saved list"
+  },
+  "undo": "تراجع",
+  "@undo": {
+    "description": "Undo action label"
+  },
+  "remove": "حذف",
+  "@remove": {
+    "description": "Remove action label"
+  },
+  "prepAndCookTime": "التحضير: {prep} د • الطهي: {cook} د",
+  "@prepAndCookTime": {
+    "description": "Prep and cook minutes label",
+    "placeholders": {
+      "prep": {
+        "type": "int"
+      },
+      "cook": {
+        "type": "int"
+      }
+    }
+  },
+  "stepNumberLabel": "خطوة {number}",
+  "@stepNumberLabel": {
+    "description": "Step number badge label",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "optionalIngredient": "(اختياري)",
+  "@optionalIngredient": {
+    "description": "Optional ingredient label"
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lunchbox_buddy/core/l10n/l10n.dart';
 import 'package:lunchbox_buddy/core/ui/app_button.dart';
 import 'package:lunchbox_buddy/core/ui/recipe_card.dart';
@@ -167,7 +168,10 @@ class _ResultsScreenState extends ConsumerState<ResultsScreen> {
                                         score: rec.score,
                                         isScrollable: true,
                                         onTap: () {
-                                          // Navigation to Cook Mode / Recipe Details
+                                          context.push(
+                                            '/recipe/${rec.recipe.id}',
+                                            extra: rec.recipe,
+                                          );
                                         },
                                       ),
                                     );

@@ -507,4 +507,68 @@ class AppLocalizationsEn extends AppLocalizations {
   String cardCounter(int current, int total) {
     return '$current of $total';
   }
+
+  @override
+  String get recipeDetailTitle => 'Recipe Details';
+
+  @override
+  String get servingsLabel => 'Servings';
+
+  @override
+  String get ingredientsSectionTitle => 'Required Ingredients';
+
+  @override
+  String get stepsSectionTitle => 'Step-by-Step Preparation';
+
+  @override
+  String get iHaveThisIngredient => 'I have it';
+
+  @override
+  String ingredientsOnHandSummary(int haveCount, int totalCount) {
+    return 'You have $haveCount of $totalCount';
+  }
+
+  @override
+  String get addMissingToGrocery => 'Add missing to grocery list';
+
+  @override
+  String get missingAddedToGrocerySnackbar =>
+      'Missing ingredients added to grocery list successfully!';
+
+  @override
+  String get startCooking => 'Start Cooking';
+
+  @override
+  String get dynamicSaveAction => 'Save Recipe';
+
+  @override
+  String get dynamicSavingAction => 'Saving...';
+
+  @override
+  String get dynamicSavedAction => 'Saved ✓';
+
+  @override
+  String get viewAllSavedRecipes => 'View All';
+
+  @override
+  String get recipeRemovedFromSaved => 'Recipe removed from favorites';
+
+  @override
+  String get undo => 'Undo';
+
+  @override
+  String get remove => 'Remove';
+
+  @override
+  String prepAndCookTime(int prep, int cook) {
+    return 'Prep: ${prep}m • Cook: ${cook}m';
+  }
+
+  @override
+  String stepNumberLabel(int number) {
+    return 'Step $number';
+  }
+
+  @override
+  String get optionalIngredient => '(Optional)';
 }

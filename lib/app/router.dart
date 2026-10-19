@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:lunchbox_buddy/core/data/models/models.dart';
 import 'package:lunchbox_buddy/features/kids/presentation/kids_notifier.dart';
 import 'package:lunchbox_buddy/features/kids/presentation/kids_screen.dart';
 import 'package:lunchbox_buddy/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:lunchbox_buddy/features/recipe/presentation/debug_recipes_screen.dart';
+import 'package:lunchbox_buddy/features/recipe/presentation/recipe_detail_screen.dart';
+import 'package:lunchbox_buddy/features/recipe/presentation/saved_recipes_screen.dart';
 import 'package:lunchbox_buddy/features/suggest/presentation/home_screen.dart';
 import 'package:lunchbox_buddy/features/suggest/presentation/results_screen.dart';
 
@@ -66,6 +69,23 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         path: '/results',
         name: 'results',
         builder: (context, state) => const ResultsScreen(),
+      ),
+      GoRoute(
+        path: '/recipe/:id',
+        name: 'recipe-detail',
+        builder: (context, state) {
+          final recipeId = state.pathParameters['id'] ?? '';
+          final extraRecipe = state.extra as Recipe?;
+          return RecipeDetailScreen(
+            recipeId: recipeId,
+            initialRecipe: extraRecipe,
+          );
+        },
+      ),
+      GoRoute(
+        path: '/saved-recipes',
+        name: 'saved-recipes',
+        builder: (context, state) => const SavedRecipesScreen(),
       ),
     ],
   );

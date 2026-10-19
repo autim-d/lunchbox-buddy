@@ -1015,6 +1015,120 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'{current} من {total}'**
   String cardCounter(int current, int total);
+
+  /// Recipe detail app bar title
+  ///
+  /// In ar, this message translates to:
+  /// **'تفاصيل الوصفة'**
+  String get recipeDetailTitle;
+
+  /// Servings stepper label
+  ///
+  /// In ar, this message translates to:
+  /// **'عدد الحصص'**
+  String get servingsLabel;
+
+  /// Required ingredients section title
+  ///
+  /// In ar, this message translates to:
+  /// **'المكونات المطلوبة'**
+  String get ingredientsSectionTitle;
+
+  /// Step by step preparation section title
+  ///
+  /// In ar, this message translates to:
+  /// **'طريقة التحضير خطوة بخطوة'**
+  String get stepsSectionTitle;
+
+  /// I have it checkbox label
+  ///
+  /// In ar, this message translates to:
+  /// **'متوفر لدي'**
+  String get iHaveThisIngredient;
+
+  /// Ingredients on hand counter banner
+  ///
+  /// In ar, this message translates to:
+  /// **'المتوفر لديكِ: {haveCount} من {totalCount}'**
+  String ingredientsOnHandSummary(int haveCount, int totalCount);
+
+  /// Add missing ingredients to grocery list button
+  ///
+  /// In ar, this message translates to:
+  /// **'إضافة النواقص لقائمة التسوق'**
+  String get addMissingToGrocery;
+
+  /// Snackbar shown when missing ingredients are added
+  ///
+  /// In ar, this message translates to:
+  /// **'تمت إضافة المكونات الناقصة إلى قائمة التسوق بنجاح!'**
+  String get missingAddedToGrocerySnackbar;
+
+  /// Start cook mode action button
+  ///
+  /// In ar, this message translates to:
+  /// **'ابدأي الطهي'**
+  String get startCooking;
+
+  /// Save action dynamic button initial text
+  ///
+  /// In ar, this message translates to:
+  /// **'حفظ الوصفة'**
+  String get dynamicSaveAction;
+
+  /// Save action dynamic button in-progress text
+  ///
+  /// In ar, this message translates to:
+  /// **'جاري الحفظ...'**
+  String get dynamicSavingAction;
+
+  /// Save action dynamic button completed text
+  ///
+  /// In ar, this message translates to:
+  /// **'تم الحفظ ✓'**
+  String get dynamicSavedAction;
+
+  /// View all saved recipes button on home screen
+  ///
+  /// In ar, this message translates to:
+  /// **'عرض الكل'**
+  String get viewAllSavedRecipes;
+
+  /// Snackbar shown when recipe is removed from saved list
+  ///
+  /// In ar, this message translates to:
+  /// **'تمت إزالة الوصفة من المفضلة'**
+  String get recipeRemovedFromSaved;
+
+  /// Undo action label
+  ///
+  /// In ar, this message translates to:
+  /// **'تراجع'**
+  String get undo;
+
+  /// Remove action label
+  ///
+  /// In ar, this message translates to:
+  /// **'حذف'**
+  String get remove;
+
+  /// Prep and cook minutes label
+  ///
+  /// In ar, this message translates to:
+  /// **'التحضير: {prep} د • الطهي: {cook} د'**
+  String prepAndCookTime(int prep, int cook);
+
+  /// Step number badge label
+  ///
+  /// In ar, this message translates to:
+  /// **'خطوة {number}'**
+  String stepNumberLabel(int number);
+
+  /// Optional ingredient label
+  ///
+  /// In ar, this message translates to:
+  /// **'(اختياري)'**
+  String get optionalIngredient;
 }
 
 class _AppLocalizationsDelegate

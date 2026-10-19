@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lunchbox_buddy/core/data/models/models.dart';
 import 'package:lunchbox_buddy/core/l10n/l10n.dart';
+import 'package:lunchbox_buddy/core/ui/recipe_category_illustration.dart';
 import 'package:lunchbox_buddy/core/ui/ticket_clipper.dart';
 import 'package:lunchbox_buddy/core/ui/tokens.dart';
 import 'package:lunchbox_buddy/features/recipe/presentation/saved_recipes_notifier.dart';
@@ -200,6 +201,19 @@ class RecipeCard extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
+              // Illustration header with Hero transition
+              ClipRRect(
+                borderRadius: BorderRadius.circular(radii.md),
+                child: RecipeCategoryIllustration(
+                  recipe: recipe,
+                  height: 110.0,
+                  borderRadius: BorderRadius.circular(radii.md),
+                  enableHero: true,
+                  showHalalBadge: false,
+                ),
+              ),
+              SizedBox(height: spacing.md),
+
               // Recipe Title
               Text(
                 recipe.title,

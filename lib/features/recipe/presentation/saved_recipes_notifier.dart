@@ -38,6 +38,24 @@ class SavedRecipeIdsNotifier extends AsyncNotifier<Set<String>> {
     await metadataDao.setValue(_kSavedRecipesKey, jsonEncode(newSet.toList()));
   }
 
+  Future<void> removeRecipe(String recipeId) async {
+    final currentSet = state.asData?.value ?? <String>{};
+    if (!currentSet.contains(recipeId)) return;
+    final newSet = Set<String>.from(currentSet)..remove(recipeId);
+    state = AsyncData(newSet);
+    final metadataDao = ref.read(metadataDaoProvider);
+    await metadataDao.setValue(_kSavedRecipesKey, jsonEncode(newSet.toList()));
+  }
+
+  Future<void> saveRecipe(String recipeId) async {
+    final currentSet = state.asData?.value ?? <String>{};
+    if (currentSet.contains(recipeId)) return;
+    final newSet = Set<String>.from(currentSet)..add(recipeId);
+    state = AsyncData(newSet);
+    final metadataDao = ref.read(metadataDaoProvider);
+    await metadataDao.setValue(_kSavedRecipesKey, jsonEncode(newSet.toList()));
+  }
+
   bool isSaved(String recipeId) {
     return state.asData?.value.contains(recipeId) ?? false;
   }
@@ -57,4 +75,13 @@ final savedRecipesListProvider = FutureProvider<List<Recipe>>((ref) async {
   final recipesDao = ref.watch(recipesDaoProvider);
   final allRecipes = await recipesDao.getAllRecipes();
   return allRecipes.where((r) => savedIds.contains(r.id)).toList();
+});
+
+/// Provider resolving a single Recipe by its ID
+final recipeByIdProvider = FutureProvider.family<Recipe?, String>((
+  ref,
+  recipeId,
+) async {
+  final recipesDao = ref.watch(recipesDaoProvider);
+  return recipesDao.getRecipeById(recipeId);
 });

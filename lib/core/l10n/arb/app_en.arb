@@ -679,5 +679,102 @@
         "type": "int"
       }
     }
+  },
+  "recipeDetailTitle": "Recipe Details",
+  "@recipeDetailTitle": {
+    "description": "Recipe detail app bar title"
+  },
+  "servingsLabel": "Servings",
+  "@servingsLabel": {
+    "description": "Servings stepper label"
+  },
+  "ingredientsSectionTitle": "Required Ingredients",
+  "@ingredientsSectionTitle": {
+    "description": "Required ingredients section title"
+  },
+  "stepsSectionTitle": "Step-by-Step Preparation",
+  "@stepsSectionTitle": {
+    "description": "Step by step preparation section title"
+  },
+  "iHaveThisIngredient": "I have it",
+  "@iHaveThisIngredient": {
+    "description": "I have it checkbox label"
+  },
+  "ingredientsOnHandSummary": "You have {haveCount} of {totalCount}",
+  "@ingredientsOnHandSummary": {
+    "description": "Ingredients on hand counter banner",
+    "placeholders": {
+      "haveCount": {
+        "type": "int"
+      },
+      "totalCount": {
+        "type": "int"
+      }
+    }
+  },
+  "addMissingToGrocery": "Add missing to grocery list",
+  "@addMissingToGrocery": {
+    "description": "Add missing ingredients to grocery list button"
+  },
+  "missingAddedToGrocerySnackbar": "Missing ingredients added to grocery list successfully!",
+  "@missingAddedToGrocerySnackbar": {
+    "description": "Snackbar shown when missing ingredients are added"
+  },
+  "startCooking": "Start Cooking",
+  "@startCooking": {
+    "description": "Start cook mode action button"
+  },
+  "dynamicSaveAction": "Save Recipe",
+  "@dynamicSaveAction": {
+    "description": "Save action dynamic button initial text"
+  },
+  "dynamicSavingAction": "Saving...",
+  "@dynamicSavingAction": {
+    "description": "Save action dynamic button in-progress text"
+  },
+  "dynamicSavedAction": "Saved ✓",
+  "@dynamicSavedAction": {
+    "description": "Save action dynamic button completed text"
+  },
+  "viewAllSavedRecipes": "View All",
+  "@viewAllSavedRecipes": {
+    "description": "View all saved recipes button on home screen"
+  },
+  "recipeRemovedFromSaved": "Recipe removed from favorites",
+  "@recipeRemovedFromSaved": {
+    "description": "Snackbar shown when recipe is removed from saved list"
+  },
+  "undo": "Undo",
+  "@undo": {
+    "description": "Undo action label"
+  },
+  "remove": "Remove",
+  "@remove": {
+    "description": "Remove action label"
+  },
+  "prepAndCookTime": "Prep: {prep}m • Cook: {cook}m",
+  "@prepAndCookTime": {
+    "description": "Prep and cook minutes label",
+    "placeholders": {
+      "prep": {
+        "type": "int"
+      },
+      "cook": {
+        "type": "int"
+      }
+    }
+  },
+  "stepNumberLabel": "Step {number}",
+  "@stepNumberLabel": {
+    "description": "Step number badge label",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "optionalIngredient": "(Optional)",
+  "@optionalIngredient": {
+    "description": "Optional ingredient label"
   }
 }
