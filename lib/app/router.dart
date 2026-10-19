@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lunchbox_buddy/core/data/models/models.dart';
 import 'package:lunchbox_buddy/features/cook/presentation/cook_mode_screen.dart';
+import 'package:lunchbox_buddy/features/debug/presentation/ai_debug_screen.dart';
 import 'package:lunchbox_buddy/features/feedback/presentation/history_screen.dart';
 import 'package:lunchbox_buddy/features/grocery/presentation/grocery_screen.dart';
 import 'package:lunchbox_buddy/features/kids/presentation/kids_notifier.dart';
@@ -108,6 +109,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         path: '/grocery',
         name: 'grocery',
         builder: (context, state) => const GroceryListScreen(),
+      ),
+      GoRoute(
+        path: '/ai-debug',
+        name: 'ai-debug',
+        builder: (context, state) => const AiDebugScreen(),
       ),
     ],
   );

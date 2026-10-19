@@ -75,6 +75,13 @@ class _DebugRecipesScreenState extends ConsumerState<DebugRecipesScreen>
             }
           },
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.psychology_rounded),
+            tooltip: 'فاحص Firebase AI Logic',
+            onPressed: () => context.push('/ai-debug'),
+          ),
+        ],
         bottom: TabBar(
           controller: _tabController,
           labelColor: colors.secondary,

@@ -48,6 +48,12 @@ dependencies:
     sdk: flutter
   wakelock_plus: ^1.8.1
   share_plus: ^13.3.1
+  firebase_core: ^5.0.0
+  firebase_auth: ^7.0.0
+  firebase_app_check: ^0.5.0
+  firebase_crashlytics: ^6.0.0
+  firebase_remote_config: ^7.0.0
+  firebase_ai: ^5.0.0
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +70,7 @@ dev_dependencies:
   freezed: ^4.0.3
   json_serializable: ^6.14.1
   drift_dev: ^2.35.1
+  mocktail: ^1.0.5
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
