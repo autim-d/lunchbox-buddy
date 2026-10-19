@@ -1,0 +1,424 @@
+{
+  "@@locale": "ar",
+  "appTitle": "لانش بوكس بادي",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "appSubtitle": "مساعدكِ اليومي لتحضير وجبات أطفالك المدرسية بكل حب وسهولة",
+  "@appSubtitle": {
+    "description": "Tagline or subtitle of the application"
+  },
+  "welcomeTitle": "أهلاً بكِ في لانش بوكس بادي",
+  "@welcomeTitle": {
+    "description": "Welcome title in onboarding"
+  },
+  "welcomeSubtitle": "نساعدكِ تقررين وش تطبخين وتجهزين لأطفالك كل يوم بدون حيرة",
+  "@welcomeSubtitle": {
+    "description": "Saudi-friendly friendly onboarding subtitle"
+  },
+  "homePlaceholderTitle": "وجبات اليوم المقترحة",
+  "@homePlaceholderTitle": {
+    "description": "Title on the placeholder home screen"
+  },
+  "homePlaceholderDescription": "هنا بتشوفين ٣ أفكار لوجبات شهية تناسب أطفالك ومكونات ثلاجتك",
+  "@homePlaceholderDescription": {
+    "description": "Description on the placeholder home screen"
+  },
+  "suggestMealButton": "اقترحي لي وجبة",
+  "@suggestMealButton": {
+    "description": "Primary tactile action button to suggest a meal"
+  },
+  "onboardingButton": "ابدئي الآن",
+  "@onboardingButton": {
+    "description": "Get started button on onboarding"
+  },
+  "onboardingStepOneTitle": "ضيفي أطفالك",
+  "@onboardingStepOneTitle": {
+    "description": "Onboarding step title for adding children"
+  },
+  "onboardingStepOneDescription": "أعمارهم، حساسياتهم، والأكلات اللي ما يحبونها عشان نختار لهم الأفضل",
+  "@onboardingStepOneDescription": {
+    "description": "Onboarding step description"
+  },
+  "goToOnboarding": "إعداد ملف الأطفال",
+  "@goToOnboarding": {
+    "description": "Button to navigate to onboarding"
+  },
+  "goToHome": "العودة للرئيسية",
+  "@goToHome": {
+    "description": "Button to navigate back to home"
+  },
+  "switchLanguage": "تغيير اللغة",
+  "@switchLanguage": {
+    "description": "Button or label to toggle app language"
+  },
+  "currentLanguage": "العربية",
+  "@currentLanguage": {
+    "description": "Name of the current language"
+  },
+  "english": "English",
+  "@english": {
+    "description": "English language name"
+  },
+  "arabic": "العربية",
+  "@arabic": {
+    "description": "Arabic language name"
+  },
+  "layoutDirectionLabel": "اتجاه العرض: من اليمين لليسار (RTL)",
+  "@layoutDirectionLabel": {
+    "description": "Label indicating layout direction"
+  },
+  "suggestIdeaOne": "ساندوتش جبنة وخيار مع تفاح مقطع",
+  "@suggestIdeaOne": {
+    "description": "Sample meal idea 1"
+  },
+  "suggestIdeaTwo": "ميني بان كيك بالشوفان والموز",
+  "@suggestIdeaTwo": {
+    "description": "Sample meal idea 2"
+  },
+  "suggestIdeaThree": "أصابع دجاج مشوية مع جزر وحمص",
+  "@suggestIdeaThree": {
+    "description": "Sample meal idea 3"
+  },
+  "debugRecipesTitle": "قاعدة بيانات الوصفات (محلياً)",
+  "@debugRecipesTitle": {
+    "description": "Title of debug recipes screen"
+  },
+  "debugRecipesSubtitle": "وصفات معتمدة ومخزنة بدون اتصال بالإنترنت",
+  "@debugRecipesSubtitle": {
+    "description": "Subtitle of debug recipes screen"
+  },
+  "totalRecipesCount": "{count} وصفة معتمدة محلياً",
+  "@totalRecipesCount": {
+    "description": "Total recipes count banner",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "prepMinutesLabel": "التحضير: {minutes} د",
+  "@prepMinutesLabel": {
+    "description": "Preparation time label",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "cookMinutesLabel": "الطهي: {minutes} د",
+  "@cookMinutesLabel": {
+    "description": "Cooking time label",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "ingredientsCountLabel": "{count} مكونات",
+  "@ingredientsCountLabel": {
+    "description": "Number of ingredients in a recipe",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stepsCountLabel": "{count} خطوات",
+  "@stepsCountLabel": {
+    "description": "Number of steps in a recipe",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "viewDebugRecipes": "استعراض وصفات قاعدة البيانات المحلية (Debug)",
+  "@viewDebugRecipes": {
+    "description": "Button to open debug recipes list"
+  },
+  "loadingRecipes": "جاري قراءة الوصفات من قاعدة البيانات المحلية...",
+  "@loadingRecipes": {
+    "description": "Loading state label"
+  },
+  "noRecipesFound": "لم يتم العثور على وصفات في قاعدة البيانات",
+  "@noRecipesFound": {
+    "description": "Empty state label"
+  },
+  "allergenMilk": "حليب ومشتقاته",
+  "@allergenMilk": {
+    "description": "Milk allergen"
+  },
+  "allergenEgg": "بيض",
+  "@allergenEgg": {
+    "description": "Egg allergen"
+  },
+  "allergenGluten": "قمح / جلوتين",
+  "@allergenGluten": {
+    "description": "Gluten allergen"
+  },
+  "allergenNuts": "مكسرات",
+  "@allergenNuts": {
+    "description": "Tree nuts allergen"
+  },
+  "allergenPeanuts": "فول سوداني",
+  "@allergenPeanuts": {
+    "description": "Peanut allergen"
+  },
+  "allergenSesame": "سمسم",
+  "@allergenSesame": {
+    "description": "Sesame allergen"
+  },
+  "allergenFish": "سمك",
+  "@allergenFish": {
+    "description": "Fish allergen"
+  },
+  "allergenShellfish": "مأكولات بحرية",
+  "@allergenShellfish": {
+    "description": "Shellfish allergen"
+  },
+  "allergenSoy": "صويا",
+  "@allergenSoy": {
+    "description": "Soy allergen"
+  },
+  "noAllergies": "لا توجد حساسيات",
+  "@noAllergies": {
+    "description": "No allergies option"
+  },
+  "pickyLevel0": "يأكل كل شيء ما شاء الله",
+  "@pickyLevel0": {
+    "description": "Picky level 0"
+  },
+  "pickyLevel1": "انتقائي خفيف",
+  "@pickyLevel1": {
+    "description": "Picky level 1"
+  },
+  "pickyLevel2": "انتقائي معتدل",
+  "@pickyLevel2": {
+    "description": "Picky level 2"
+  },
+  "pickyLevel3": "انتقائي وصعب الإرضاء",
+  "@pickyLevel3": {
+    "description": "Picky level 3"
+  },
+  "pickinessLabel": "درجة الانتقائية في الأكل",
+  "@pickinessLabel": {
+    "description": "Pickiness label"
+  },
+  "childNameLabel": "اسم الطفل أو الطفلة",
+  "@childNameLabel": {
+    "description": "Child name label"
+  },
+  "childNameHint": "مثال: سارة، محمد، فيصل",
+  "@childNameHint": {
+    "description": "Child name hint"
+  },
+  "childNameRequired": "يرجى كتابة اسم الطفل",
+  "@childNameRequired": {
+    "description": "Child name required error"
+  },
+  "birthDateLabel": "تاريخ وشهر الميلاد",
+  "@birthDateLabel": {
+    "description": "Birth date label"
+  },
+  "birthMonth": "الشهر",
+  "@birthMonth": {
+    "description": "Month"
+  },
+  "birthYear": "السنة",
+  "@birthYear": {
+    "description": "Year"
+  },
+  "allergiesSectionTitle": "هل يعاني طفلكِ من أي حساسية طعام؟",
+  "@allergiesSectionTitle": {
+    "description": "Allergies section title"
+  },
+  "dislikesSectionTitle": "أكلات أو مكونات ما يحبها طفلكِ؟",
+  "@dislikesSectionTitle": {
+    "description": "Dislikes section title"
+  },
+  "avatarSectionTitle": "اختاري شخصية ولوناً لطفلكِ",
+  "@avatarSectionTitle": {
+    "description": "Avatar section title"
+  },
+  "saveAndContinue": "حفظ ومتابعة",
+  "@saveAndContinue": {
+    "description": "Save and continue button"
+  },
+  "saveChanges": "حفظ التعديلات",
+  "@saveChanges": {
+    "description": "Save changes button"
+  },
+  "addChildSuccess": "تم حفظ ملف {name} بنجاح!",
+  "@addChildSuccess": {
+    "description": "Child added success banner",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "addAnotherChild": "إضافة طفل آخر",
+  "@addAnotherChild": {
+    "description": "Add another child button"
+  },
+  "finishAndGoHome": "إتمام والذهاب للرئيسية",
+  "@finishAndGoHome": {
+    "description": "Finish onboarding button"
+  },
+  "kidsManagementTitle": "أطفالي",
+  "@kidsManagementTitle": {
+    "description": "Kids management title"
+  },
+  "kidsManagementSubtitle": "تفضيلات أطفالكِ الغذائية وحساسياتهم",
+  "@kidsManagementSubtitle": {
+    "description": "Kids management subtitle"
+  },
+  "noKidsYet": "لم تقومي بإضافة أي طفل بعد",
+  "@noKidsYet": {
+    "description": "No kids empty message"
+  },
+  "addNewChild": "إضافة طفل جديد",
+  "@addNewChild": {
+    "description": "Add new child button"
+  },
+  "editChild": "تعديل الملف",
+  "@editChild": {
+    "description": "Edit child button"
+  },
+  "deleteChildHoldPrompt": "اضغطي مطولاً للحذف",
+  "@deleteChildHoldPrompt": {
+    "description": "Hold to delete prompt"
+  },
+  "deleteChildHolding": "جاري الحذف...",
+  "@deleteChildHolding": {
+    "description": "Deleting progress prompt"
+  },
+  "childDeletedMessage": "تم حذف ملف {name}",
+  "@childDeletedMessage": {
+    "description": "Child deleted snackbar message",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "undoButton": "تراجع",
+  "@undoButton": {
+    "description": "Undo button"
+  },
+  "ageYearsMonths": "{years} سنوات",
+  "@ageYearsMonths": {
+    "description": "Age in years",
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "ageMonthsOnly": "{months} أشهر",
+  "@ageMonthsOnly": {
+    "description": "Age in months",
+    "placeholders": {
+      "months": {
+        "type": "int"
+      }
+    }
+  },
+  "lunchboxTypeLabel": "نوع اللانش بوكس المفضل",
+  "@lunchboxTypeLabel": {
+    "description": "Lunchbox type label"
+  },
+  "lunchboxNone": "عادي",
+  "@lunchboxNone": {
+    "description": "Standard lunchbox"
+  },
+  "lunchboxCold": "يحفظ البرودة",
+  "@lunchboxCold": {
+    "description": "Cold pack lunchbox"
+  },
+  "lunchboxHot": "حافظ للحرارة",
+  "@lunchboxHot": {
+    "description": "Thermos lunchbox"
+  },
+  "myKidsSectionTitle": "أطفالي المسجلين",
+  "@myKidsSectionTitle": {
+    "description": "Section header for registered kids on home"
+  },
+  "welcomeFeature1Title": "اقتراحات في 4 ثوانٍ",
+  "@welcomeFeature1Title": {
+    "description": "Welcome feature 1 title"
+  },
+  "welcomeFeature1Subtitle": "بدون تفكير أو حيرة صباحية",
+  "@welcomeFeature1Subtitle": {
+    "description": "Welcome feature 1 subtitle"
+  },
+  "welcomeFeature2Title": "حماية وأمان دقيق",
+  "@welcomeFeature2Title": {
+    "description": "Welcome feature 2 title"
+  },
+  "welcomeFeature2Subtitle": "فلترة حتمية للحساسيات والعمر",
+  "@welcomeFeature2Subtitle": {
+    "description": "Welcome feature 2 subtitle"
+  },
+  "dislikeCucumber": "خيار",
+  "@dislikeCucumber": {
+    "description": "Cucumber dislike chip label"
+  },
+  "dislikeTomato": "طماطم",
+  "@dislikeTomato": {
+    "description": "Tomato dislike chip label"
+  },
+  "dislikeCarrot": "جزر",
+  "@dislikeCarrot": {
+    "description": "Carrot dislike chip label"
+  },
+  "dislikeBellPepper": "فلفل رومي",
+  "@dislikeBellPepper": {
+    "description": "Bell pepper dislike chip label"
+  },
+  "dislikeOnion": "بصل",
+  "@dislikeOnion": {
+    "description": "Onion dislike chip label"
+  },
+  "dislikeGarlic": "ثوم",
+  "@dislikeGarlic": {
+    "description": "Garlic dislike chip label"
+  },
+  "dislikeTuna": "تونة",
+  "@dislikeTuna": {
+    "description": "Tuna dislike chip label"
+  },
+  "dislikePeas": "بازلاء",
+  "@dislikePeas": {
+    "description": "Peas dislike chip label"
+  },
+  "dislikeOlives": "زيتون",
+  "@dislikeOlives": {
+    "description": "Olives dislike chip label"
+  },
+  "dislikeFoul": "فول",
+  "@dislikeFoul": {
+    "description": "Foul dislike chip label"
+  },
+  "dislikeCorn": "ذرة",
+  "@dislikeCorn": {
+    "description": "Corn dislike chip label"
+  },
+  "dislikeLettuce": "خس",
+  "@dislikeLettuce": {
+    "description": "Lettuce dislike chip label"
+  },
+  "editChildSubtitle": "تحديث معلومات وتفضيلات طفلكِ",
+  "@editChildSubtitle": {
+    "description": "Subtitle for edit child bottom sheet"
+  },
+  "noAllergiesSelected": "لا توجد حساسيات محددة",
+  "@noAllergiesSelected": {
+    "description": "Empty allergies label"
+  },
+  "noDislikesSelected": "لا توجد أكلات مستبعدة",
+  "@noDislikesSelected": {
+    "description": "Empty dislikes label"
+  }
+}

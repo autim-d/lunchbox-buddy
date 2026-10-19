@@ -1,0 +1,522 @@
+[
+  {
+    "id": "arabic_bread",
+    "nameAr": "خبز عربي / مفرود",
+    "nameEn": "Arabic Flatbread",
+    "category": "bakery",
+    "allergens": ["gluten"],
+    "commonInRegion": true
+  },
+  {
+    "id": "samo_bread",
+    "nameAr": "خبز صامولي",
+    "nameEn": "Samoli Bread Roll",
+    "category": "bakery",
+    "allergens": ["gluten"],
+    "commonInRegion": true
+  },
+  {
+    "id": "toast_white",
+    "nameAr": "توست أبيض",
+    "nameEn": "White Toast",
+    "category": "bakery",
+    "allergens": ["gluten"],
+    "commonInRegion": true
+  },
+  {
+    "id": "toast_brown",
+    "nameAr": "توست أسمر",
+    "nameEn": "Brown / Wholewheat Toast",
+    "category": "bakery",
+    "allergens": ["gluten"],
+    "commonInRegion": true
+  },
+  {
+    "id": "tortilla",
+    "nameAr": "خبز تورتيلا",
+    "nameEn": "Tortilla Wrap",
+    "category": "bakery",
+    "allergens": ["gluten"],
+    "commonInRegion": true
+  },
+  {
+    "id": "samosa_wrappers",
+    "nameAr": "رقائق سمبوسة",
+    "nameEn": "Samosa Pastry Wrappers",
+    "category": "bakery",
+    "allergens": ["gluten"],
+    "commonInRegion": true
+  },
+  {
+    "id": "pizza_dough",
+    "nameAr": "عجينة بيتزا صغيرة",
+    "nameEn": "Mini Pizza Dough",
+    "category": "bakery",
+    "allergens": ["gluten"],
+    "commonInRegion": true
+  },
+  {
+    "id": "flour",
+    "nameAr": "دقيق قمح",
+    "nameEn": "Wheat Flour",
+    "category": "pantry",
+    "allergens": ["gluten"],
+    "commonInRegion": true
+  },
+  {
+    "id": "oats",
+    "nameAr": "شوفان كامل",
+    "nameEn": "Whole Oats",
+    "category": "pantry",
+    "allergens": ["gluten"],
+    "commonInRegion": true
+  },
+  {
+    "id": "rice",
+    "nameAr": "أرز بسمتي / مصري",
+    "nameEn": "Rice",
+    "category": "pantry",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "pasta",
+    "nameAr": "مكرونة صغيرة",
+    "nameEn": "Mini Pasta",
+    "category": "pantry",
+    "allergens": ["gluten"],
+    "commonInRegion": true
+  },
+  {
+    "id": "chicken",
+    "nameAr": "صدر دجاج طازج",
+    "nameEn": "Chicken Breast",
+    "category": "protein",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "minced_beef",
+    "nameAr": "لحم مفروم بقري حلال",
+    "nameEn": "Halal Minced Beef",
+    "category": "protein",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "tuna",
+    "nameAr": "لحم تونة خفيف بالماء أو الزيت",
+    "nameEn": "Canned Light Tuna",
+    "category": "protein",
+    "allergens": ["fish"],
+    "commonInRegion": true
+  },
+  {
+    "id": "shrimp",
+    "nameAr": "روبيان مطبوخ",
+    "nameEn": "Cooked Shrimp",
+    "category": "protein",
+    "allergens": ["shellfish"],
+    "commonInRegion": true
+  },
+  {
+    "id": "egg",
+    "nameAr": "بيض طازج",
+    "nameEn": "Fresh Eggs",
+    "category": "protein",
+    "allergens": ["egg"],
+    "commonInRegion": true
+  },
+  {
+    "id": "foul",
+    "nameAr": "فول مدمس مهروس",
+    "nameEn": "Mashed Fava Beans (Foul)",
+    "category": "protein",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "hummus",
+    "nameAr": "حمص بالطحينة ناعم",
+    "nameEn": "Hummus with Tahini",
+    "category": "protein",
+    "allergens": ["sesame"],
+    "commonInRegion": true
+  },
+  {
+    "id": "chickpeas",
+    "nameAr": "حمص حب مسلوق",
+    "nameEn": "Cooked Chickpeas",
+    "category": "protein",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "labneh",
+    "nameAr": "لبنة طازجة",
+    "nameEn": "Fresh Labneh",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "commonInRegion": true
+  },
+  {
+    "id": "cheese_white",
+    "nameAr": "جبنة بيضاء فيتا أو عكاوي",
+    "nameEn": "White Feta / Akkawi Cheese",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "commonInRegion": true
+  },
+  {
+    "id": "cheese_cheddar",
+    "nameAr": "جبن شيدر مبشور أو شرائح",
+    "nameEn": "Cheddar Cheese",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "commonInRegion": true
+  },
+  {
+    "id": "mozzarella",
+    "nameAr": "جبنة موزاريلا مبشورة",
+    "nameEn": "Grated Mozzarella",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "commonInRegion": true
+  },
+  {
+    "id": "halloumi",
+    "nameAr": "جبنة حلوم",
+    "nameEn": "Halloumi Cheese",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "commonInRegion": true
+  },
+  {
+    "id": "kashkaval",
+    "nameAr": "جبنة قشقوان",
+    "nameEn": "Kashkaval Cheese",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "commonInRegion": true
+  },
+  {
+    "id": "milk",
+    "nameAr": "حليب طازج كامل أو قليل الدسم",
+    "nameEn": "Fresh Milk",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "commonInRegion": true
+  },
+  {
+    "id": "yogurt",
+    "nameAr": "زبادي طبيعي",
+    "nameEn": "Plain Natural Yogurt",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "commonInRegion": true
+  },
+  {
+    "id": "butter",
+    "nameAr": "زبدة طبيعية",
+    "nameEn": "Natural Butter",
+    "category": "dairy",
+    "allergens": ["milk"],
+    "commonInRegion": true
+  },
+  {
+    "id": "cucumber",
+    "nameAr": "خيار صغير طازج",
+    "nameEn": "Fresh Mini Cucumber",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "tomato",
+    "nameAr": "طماطم طازجة",
+    "nameEn": "Fresh Tomato",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "cherry_tomato",
+    "nameAr": "طماطم كرزية",
+    "nameEn": "Cherry Tomatoes",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "carrot",
+    "nameAr": "جزر مقشر أو مبشور",
+    "nameEn": "Fresh Carrots",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "lettuce",
+    "nameAr": "خس روماني مقرمش",
+    "nameEn": "Crisp Romaine Lettuce",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "bell_pepper",
+    "nameAr": "فلفل رومي ملون",
+    "nameEn": "Sweet Bell Pepper",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "corn",
+    "nameAr": "ذرة حلوة مسلوقة",
+    "nameEn": "Sweet Corn",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "peas",
+    "nameAr": "بازلاء خضراء طرية",
+    "nameEn": "Green Peas",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "potato",
+    "nameAr": "بطاطس مسلوقة أو مشوية",
+    "nameEn": "Potato",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "sweet_potato",
+    "nameAr": "بطاطا حلوة مشوية",
+    "nameEn": "Sweet Potato",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "mint",
+    "nameAr": "نعناع طازج",
+    "nameEn": "Fresh Mint",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "parsley",
+    "nameAr": "بقدونس مفروم",
+    "nameEn": "Fresh Parsley",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "onion",
+    "nameAr": "بصل مفروم",
+    "nameEn": "Onion",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "garlic",
+    "nameAr": "ثوم مهروس خفيف",
+    "nameEn": "Garlic",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "dates",
+    "nameAr": "تمر خلاص / سكري منزوع النوى",
+    "nameEn": "Pitted Dates (Khalas/Sukkari)",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "banana",
+    "nameAr": "موز طازج",
+    "nameEn": "Fresh Banana",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "apple",
+    "nameAr": "تفاح مقطع شرائح",
+    "nameEn": "Sliced Apple",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "strawberry",
+    "nameAr": "فراولة طازجة",
+    "nameEn": "Fresh Strawberries",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "orange",
+    "nameAr": "برتقال مقشر فصوص",
+    "nameEn": "Orange Wedges",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "grapes",
+    "nameAr": "عنب مقطوع نصفين",
+    "nameEn": "Halved Grapes",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "pear",
+    "nameAr": "كمثرى مقطعة شرائح",
+    "nameEn": "Sliced Pear",
+    "category": "produce",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "zaatar",
+    "nameAr": "زعتر بلدي بالسمسم",
+    "nameEn": "Zaatar Blend with Sesame",
+    "category": "pantry",
+    "allergens": ["sesame"],
+    "commonInRegion": true
+  },
+  {
+    "id": "olive_oil",
+    "nameAr": "زيت زيتون بكر ممتاز",
+    "nameEn": "Extra Virgin Olive Oil",
+    "category": "pantry",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "olives",
+    "nameAr": "زيتون أسود أو أخضر مخلي",
+    "nameEn": "Pitted Olives",
+    "category": "pantry",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "tahini",
+    "nameAr": "طحينة سمسم نقية",
+    "nameEn": "Pure Sesame Tahini",
+    "category": "pantry",
+    "allergens": ["sesame"],
+    "commonInRegion": true
+  },
+  {
+    "id": "sesame_seeds",
+    "nameAr": "سمسم محمص",
+    "nameEn": "Toasted Sesame Seeds",
+    "category": "pantry",
+    "allergens": ["sesame"],
+    "commonInRegion": true
+  },
+  {
+    "id": "honey",
+    "nameAr": "عسل نحل طبيعي",
+    "nameEn": "Pure Natural Honey",
+    "category": "pantry",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "peanut_butter",
+    "nameAr": "زبدة فول سوداني طبيعية بدون سكر",
+    "nameEn": "Natural Peanut Butter",
+    "category": "pantry",
+    "allergens": ["peanuts"],
+    "commonInRegion": true
+  },
+  {
+    "id": "almonds",
+    "nameAr": "لوز شرائح محمص خفيف",
+    "nameEn": "Sliced Almonds",
+    "category": "pantry",
+    "allergens": ["nuts"],
+    "commonInRegion": true
+  },
+  {
+    "id": "walnuts",
+    "nameAr": "عين الجمل / جوز مجروش",
+    "nameEn": "Crushed Walnuts",
+    "category": "pantry",
+    "allergens": ["nuts"],
+    "commonInRegion": true
+  },
+  {
+    "id": "chia_seeds",
+    "nameAr": "بذور الشيا",
+    "nameEn": "Chia Seeds",
+    "category": "pantry",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "tomato_paste",
+    "nameAr": "صلصة طماطم طبيعية",
+    "nameEn": "Tomato Paste / Sauce",
+    "category": "pantry",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "soy_sauce",
+    "nameAr": "صلصة صويا خفيفة",
+    "nameEn": "Light Soy Sauce",
+    "category": "pantry",
+    "allergens": ["soy", "gluten"],
+    "commonInRegion": true
+  },
+  {
+    "id": "cinnamon",
+    "nameAr": "قرفة مطحونة",
+    "nameEn": "Ground Cinnamon",
+    "category": "pantry",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "cumin",
+    "nameAr": "كمون مطحون",
+    "nameEn": "Ground Cumin",
+    "category": "pantry",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "cardamom",
+    "nameAr": "هيل ناعم",
+    "nameEn": "Ground Cardamom",
+    "category": "pantry",
+    "allergens": [],
+    "commonInRegion": true
+  },
+  {
+    "id": "water",
+    "nameAr": "ماء نقي",
+    "nameEn": "Water",
+    "category": "drinks",
+    "allergens": [],
+    "commonInRegion": true
+  }
+]

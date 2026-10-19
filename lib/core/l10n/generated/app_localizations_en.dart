@@ -1,0 +1,320 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for English (`en`).
+class AppLocalizationsEn extends AppLocalizations {
+  AppLocalizationsEn([String locale = 'en']) : super(locale);
+
+  @override
+  String get appTitle => 'Lunchbox Buddy';
+
+  @override
+  String get appSubtitle =>
+      'Your smart daily kitchen helper for school meals packed with love';
+
+  @override
+  String get welcomeTitle => 'Welcome to Lunchbox Buddy';
+
+  @override
+  String get welcomeSubtitle =>
+      'Helping you decide what to cook and pack for your kids every day without the stress';
+
+  @override
+  String get homePlaceholderTitle => 'Today\'s Suggested Meals';
+
+  @override
+  String get homePlaceholderDescription =>
+      'Here you\'ll discover 3 delicious meal ideas tailored for your kids and the ingredients you have';
+
+  @override
+  String get suggestMealButton => 'Suggest a meal';
+
+  @override
+  String get onboardingButton => 'Get Started';
+
+  @override
+  String get onboardingStepOneTitle => 'Add your children';
+
+  @override
+  String get onboardingStepOneDescription =>
+      'Their ages, allergies, and dislikes so we pick what\'s best for them';
+
+  @override
+  String get goToOnboarding => 'Setup Kid Profiles';
+
+  @override
+  String get goToHome => 'Back to Home';
+
+  @override
+  String get switchLanguage => 'Switch Language';
+
+  @override
+  String get currentLanguage => 'English';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get arabic => 'العربية';
+
+  @override
+  String get layoutDirectionLabel => 'Layout direction: Left to Right (LTR)';
+
+  @override
+  String get suggestIdeaOne => 'Cheese & cucumber sandwich with sliced apples';
+
+  @override
+  String get suggestIdeaTwo => 'Oat & banana mini pancakes';
+
+  @override
+  String get suggestIdeaThree =>
+      'Grilled chicken tenders with carrots & hummus';
+
+  @override
+  String get debugRecipesTitle => 'Recipe Database (Debug)';
+
+  @override
+  String get debugRecipesSubtitle =>
+      'Curated recipes stored locally in SQLite without network';
+
+  @override
+  String totalRecipesCount(int count) {
+    return '$count Curated Recipes Stored Locally';
+  }
+
+  @override
+  String prepMinutesLabel(int minutes) {
+    return 'Prep: ${minutes}m';
+  }
+
+  @override
+  String cookMinutesLabel(int minutes) {
+    return 'Cook: ${minutes}m';
+  }
+
+  @override
+  String ingredientsCountLabel(int count) {
+    return '$count ingredients';
+  }
+
+  @override
+  String stepsCountLabel(int count) {
+    return '$count steps';
+  }
+
+  @override
+  String get viewDebugRecipes => 'Browse Local Database Recipes (Debug)';
+
+  @override
+  String get loadingRecipes => 'Loading recipes from local database...';
+
+  @override
+  String get noRecipesFound => 'No recipes found in local database';
+
+  @override
+  String get allergenMilk => 'Milk & Dairy';
+
+  @override
+  String get allergenEgg => 'Eggs';
+
+  @override
+  String get allergenGluten => 'Wheat / Gluten';
+
+  @override
+  String get allergenNuts => 'Tree Nuts';
+
+  @override
+  String get allergenPeanuts => 'Peanuts';
+
+  @override
+  String get allergenSesame => 'Sesame';
+
+  @override
+  String get allergenFish => 'Fish';
+
+  @override
+  String get allergenShellfish => 'Shellfish';
+
+  @override
+  String get allergenSoy => 'Soy';
+
+  @override
+  String get noAllergies => 'No allergies';
+
+  @override
+  String get pickyLevel0 => 'Eats everything enthusiastically';
+
+  @override
+  String get pickyLevel1 => 'Slightly picky';
+
+  @override
+  String get pickyLevel2 => 'Moderately picky';
+
+  @override
+  String get pickyLevel3 => 'Very picky / particular';
+
+  @override
+  String get pickinessLabel => 'Food Pickiness Level';
+
+  @override
+  String get childNameLabel => 'Child\'s Name';
+
+  @override
+  String get childNameHint => 'e.g. Sarah, Faisal, Omar';
+
+  @override
+  String get childNameRequired => 'Please enter child\'s name';
+
+  @override
+  String get birthDateLabel => 'Birth Month & Year';
+
+  @override
+  String get birthMonth => 'Month';
+
+  @override
+  String get birthYear => 'Year';
+
+  @override
+  String get allergiesSectionTitle =>
+      'Does your child have any food allergies?';
+
+  @override
+  String get dislikesSectionTitle => 'Foods or ingredients they dislike?';
+
+  @override
+  String get avatarSectionTitle => 'Choose an avatar and color';
+
+  @override
+  String get saveAndContinue => 'Save & Continue';
+
+  @override
+  String get saveChanges => 'Save Changes';
+
+  @override
+  String addChildSuccess(String name) {
+    return '$name\'s profile saved successfully!';
+  }
+
+  @override
+  String get addAnotherChild => 'Add Another Child';
+
+  @override
+  String get finishAndGoHome => 'Finish & Go to Home';
+
+  @override
+  String get kidsManagementTitle => 'My Children';
+
+  @override
+  String get kidsManagementSubtitle =>
+      'Children dietary preferences and allergies';
+
+  @override
+  String get noKidsYet => 'No child profiles added yet';
+
+  @override
+  String get addNewChild => 'Add New Child';
+
+  @override
+  String get editChild => 'Edit Profile';
+
+  @override
+  String get deleteChildHoldPrompt => 'Hold to Delete';
+
+  @override
+  String get deleteChildHolding => 'Deleting...';
+
+  @override
+  String childDeletedMessage(String name) {
+    return '$name\'s profile was deleted';
+  }
+
+  @override
+  String get undoButton => 'Undo';
+
+  @override
+  String ageYearsMonths(int years) {
+    return '$years years';
+  }
+
+  @override
+  String ageMonthsOnly(int months) {
+    return '$months months';
+  }
+
+  @override
+  String get lunchboxTypeLabel => 'Preferred Lunchbox Type';
+
+  @override
+  String get lunchboxNone => 'Standard';
+
+  @override
+  String get lunchboxCold => 'Cold Pack';
+
+  @override
+  String get lunchboxHot => 'Insulated / Hot';
+
+  @override
+  String get myKidsSectionTitle => 'My Children';
+
+  @override
+  String get welcomeFeature1Title => 'Suggestions in 4 seconds';
+
+  @override
+  String get welcomeFeature1Subtitle => 'Zero morning stress or overthinking';
+
+  @override
+  String get welcomeFeature2Title => 'Deterministic Safety';
+
+  @override
+  String get welcomeFeature2Subtitle =>
+      'Strict allergen and age-appropriate checks';
+
+  @override
+  String get dislikeCucumber => 'Cucumber';
+
+  @override
+  String get dislikeTomato => 'Tomato';
+
+  @override
+  String get dislikeCarrot => 'Carrot';
+
+  @override
+  String get dislikeBellPepper => 'Bell Pepper';
+
+  @override
+  String get dislikeOnion => 'Onion';
+
+  @override
+  String get dislikeGarlic => 'Garlic';
+
+  @override
+  String get dislikeTuna => 'Tuna';
+
+  @override
+  String get dislikePeas => 'Peas';
+
+  @override
+  String get dislikeOlives => 'Olives';
+
+  @override
+  String get dislikeFoul => 'Fava Beans';
+
+  @override
+  String get dislikeCorn => 'Corn';
+
+  @override
+  String get dislikeLettuce => 'Lettuce';
+
+  @override
+  String get editChildSubtitle => 'Update child preferences and dietary notes';
+
+  @override
+  String get noAllergiesSelected => 'No allergies selected';
+
+  @override
+  String get noDislikesSelected => 'No disliked foods selected';
+}

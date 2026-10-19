@@ -1,0 +1,424 @@
+{
+  "@@locale": "en",
+  "appTitle": "Lunchbox Buddy",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "appSubtitle": "Your smart daily kitchen helper for school meals packed with love",
+  "@appSubtitle": {
+    "description": "Tagline or subtitle of the application"
+  },
+  "welcomeTitle": "Welcome to Lunchbox Buddy",
+  "@welcomeTitle": {
+    "description": "Welcome title in onboarding"
+  },
+  "welcomeSubtitle": "Helping you decide what to cook and pack for your kids every day without the stress",
+  "@welcomeSubtitle": {
+    "description": "Onboarding subtitle"
+  },
+  "homePlaceholderTitle": "Today's Suggested Meals",
+  "@homePlaceholderTitle": {
+    "description": "Title on the placeholder home screen"
+  },
+  "homePlaceholderDescription": "Here you'll discover 3 delicious meal ideas tailored for your kids and the ingredients you have",
+  "@homePlaceholderDescription": {
+    "description": "Description on the placeholder home screen"
+  },
+  "suggestMealButton": "Suggest a meal",
+  "@suggestMealButton": {
+    "description": "Primary tactile action button to suggest a meal"
+  },
+  "onboardingButton": "Get Started",
+  "@onboardingButton": {
+    "description": "Get started button on onboarding"
+  },
+  "onboardingStepOneTitle": "Add your children",
+  "@onboardingStepOneTitle": {
+    "description": "Onboarding step title for adding children"
+  },
+  "onboardingStepOneDescription": "Their ages, allergies, and dislikes so we pick what's best for them",
+  "@onboardingStepOneDescription": {
+    "description": "Onboarding step description"
+  },
+  "goToOnboarding": "Setup Kid Profiles",
+  "@goToOnboarding": {
+    "description": "Button to navigate to onboarding"
+  },
+  "goToHome": "Back to Home",
+  "@goToHome": {
+    "description": "Button to navigate back to home"
+  },
+  "switchLanguage": "Switch Language",
+  "@switchLanguage": {
+    "description": "Button or label to toggle app language"
+  },
+  "currentLanguage": "English",
+  "@currentLanguage": {
+    "description": "Name of the current language"
+  },
+  "english": "English",
+  "@english": {
+    "description": "English language name"
+  },
+  "arabic": "العربية",
+  "@arabic": {
+    "description": "Arabic language name"
+  },
+  "layoutDirectionLabel": "Layout direction: Left to Right (LTR)",
+  "@layoutDirectionLabel": {
+    "description": "Label indicating layout direction"
+  },
+  "suggestIdeaOne": "Cheese & cucumber sandwich with sliced apples",
+  "@suggestIdeaOne": {
+    "description": "Sample meal idea 1"
+  },
+  "suggestIdeaTwo": "Oat & banana mini pancakes",
+  "@suggestIdeaTwo": {
+    "description": "Sample meal idea 2"
+  },
+  "suggestIdeaThree": "Grilled chicken tenders with carrots & hummus",
+  "@suggestIdeaThree": {
+    "description": "Sample meal idea 3"
+  },
+  "debugRecipesTitle": "Recipe Database (Debug)",
+  "@debugRecipesTitle": {
+    "description": "Title of debug recipes screen"
+  },
+  "debugRecipesSubtitle": "Curated recipes stored locally in SQLite without network",
+  "@debugRecipesSubtitle": {
+    "description": "Subtitle of debug recipes screen"
+  },
+  "totalRecipesCount": "{count} Curated Recipes Stored Locally",
+  "@totalRecipesCount": {
+    "description": "Total recipes count banner",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "prepMinutesLabel": "Prep: {minutes}m",
+  "@prepMinutesLabel": {
+    "description": "Preparation time label",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "cookMinutesLabel": "Cook: {minutes}m",
+  "@cookMinutesLabel": {
+    "description": "Cooking time label",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "ingredientsCountLabel": "{count} ingredients",
+  "@ingredientsCountLabel": {
+    "description": "Number of ingredients in a recipe",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stepsCountLabel": "{count} steps",
+  "@stepsCountLabel": {
+    "description": "Number of steps in a recipe",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "viewDebugRecipes": "Browse Local Database Recipes (Debug)",
+  "@viewDebugRecipes": {
+    "description": "Button to open debug recipes list"
+  },
+  "loadingRecipes": "Loading recipes from local database...",
+  "@loadingRecipes": {
+    "description": "Loading state label"
+  },
+  "noRecipesFound": "No recipes found in local database",
+  "@noRecipesFound": {
+    "description": "Empty state label"
+  },
+  "allergenMilk": "Milk & Dairy",
+  "@allergenMilk": {
+    "description": "Milk allergen"
+  },
+  "allergenEgg": "Eggs",
+  "@allergenEgg": {
+    "description": "Egg allergen"
+  },
+  "allergenGluten": "Wheat / Gluten",
+  "@allergenGluten": {
+    "description": "Gluten allergen"
+  },
+  "allergenNuts": "Tree Nuts",
+  "@allergenNuts": {
+    "description": "Tree nuts allergen"
+  },
+  "allergenPeanuts": "Peanuts",
+  "@allergenPeanuts": {
+    "description": "Peanut allergen"
+  },
+  "allergenSesame": "Sesame",
+  "@allergenSesame": {
+    "description": "Sesame allergen"
+  },
+  "allergenFish": "Fish",
+  "@allergenFish": {
+    "description": "Fish allergen"
+  },
+  "allergenShellfish": "Shellfish",
+  "@allergenShellfish": {
+    "description": "Shellfish allergen"
+  },
+  "allergenSoy": "Soy",
+  "@allergenSoy": {
+    "description": "Soy allergen"
+  },
+  "noAllergies": "No allergies",
+  "@noAllergies": {
+    "description": "No allergies option"
+  },
+  "pickyLevel0": "Eats everything enthusiastically",
+  "@pickyLevel0": {
+    "description": "Picky level 0"
+  },
+  "pickyLevel1": "Slightly picky",
+  "@pickyLevel1": {
+    "description": "Picky level 1"
+  },
+  "pickyLevel2": "Moderately picky",
+  "@pickyLevel2": {
+    "description": "Picky level 2"
+  },
+  "pickyLevel3": "Very picky / particular",
+  "@pickyLevel3": {
+    "description": "Picky level 3"
+  },
+  "pickinessLabel": "Food Pickiness Level",
+  "@pickinessLabel": {
+    "description": "Pickiness label"
+  },
+  "childNameLabel": "Child's Name",
+  "@childNameLabel": {
+    "description": "Child name label"
+  },
+  "childNameHint": "e.g. Sarah, Faisal, Omar",
+  "@childNameHint": {
+    "description": "Child name hint"
+  },
+  "childNameRequired": "Please enter child's name",
+  "@childNameRequired": {
+    "description": "Child name required error"
+  },
+  "birthDateLabel": "Birth Month & Year",
+  "@birthDateLabel": {
+    "description": "Birth date label"
+  },
+  "birthMonth": "Month",
+  "@birthMonth": {
+    "description": "Month"
+  },
+  "birthYear": "Year",
+  "@birthYear": {
+    "description": "Year"
+  },
+  "allergiesSectionTitle": "Does your child have any food allergies?",
+  "@allergiesSectionTitle": {
+    "description": "Allergies section title"
+  },
+  "dislikesSectionTitle": "Foods or ingredients they dislike?",
+  "@dislikesSectionTitle": {
+    "description": "Dislikes section title"
+  },
+  "avatarSectionTitle": "Choose an avatar and color",
+  "@avatarSectionTitle": {
+    "description": "Avatar section title"
+  },
+  "saveAndContinue": "Save & Continue",
+  "@saveAndContinue": {
+    "description": "Save and continue button"
+  },
+  "saveChanges": "Save Changes",
+  "@saveChanges": {
+    "description": "Save changes button"
+  },
+  "addChildSuccess": "{name}'s profile saved successfully!",
+  "@addChildSuccess": {
+    "description": "Child added success banner",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "addAnotherChild": "Add Another Child",
+  "@addAnotherChild": {
+    "description": "Add another child button"
+  },
+  "finishAndGoHome": "Finish & Go to Home",
+  "@finishAndGoHome": {
+    "description": "Finish onboarding button"
+  },
+  "kidsManagementTitle": "My Children",
+  "@kidsManagementTitle": {
+    "description": "Kids management title"
+  },
+  "kidsManagementSubtitle": "Children dietary preferences and allergies",
+  "@kidsManagementSubtitle": {
+    "description": "Kids management subtitle"
+  },
+  "noKidsYet": "No child profiles added yet",
+  "@noKidsYet": {
+    "description": "No kids empty message"
+  },
+  "addNewChild": "Add New Child",
+  "@addNewChild": {
+    "description": "Add new child button"
+  },
+  "editChild": "Edit Profile",
+  "@editChild": {
+    "description": "Edit child button"
+  },
+  "deleteChildHoldPrompt": "Hold to Delete",
+  "@deleteChildHoldPrompt": {
+    "description": "Hold to delete prompt"
+  },
+  "deleteChildHolding": "Deleting...",
+  "@deleteChildHolding": {
+    "description": "Deleting progress prompt"
+  },
+  "childDeletedMessage": "{name}'s profile was deleted",
+  "@childDeletedMessage": {
+    "description": "Child deleted snackbar message",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "undoButton": "Undo",
+  "@undoButton": {
+    "description": "Undo button"
+  },
+  "ageYearsMonths": "{years} years",
+  "@ageYearsMonths": {
+    "description": "Age in years",
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "ageMonthsOnly": "{months} months",
+  "@ageMonthsOnly": {
+    "description": "Age in months",
+    "placeholders": {
+      "months": {
+        "type": "int"
+      }
+    }
+  },
+  "lunchboxTypeLabel": "Preferred Lunchbox Type",
+  "@lunchboxTypeLabel": {
+    "description": "Lunchbox type label"
+  },
+  "lunchboxNone": "Standard",
+  "@lunchboxNone": {
+    "description": "Standard lunchbox"
+  },
+  "lunchboxCold": "Cold Pack",
+  "@lunchboxCold": {
+    "description": "Cold pack lunchbox"
+  },
+  "lunchboxHot": "Insulated / Hot",
+  "@lunchboxHot": {
+    "description": "Thermos lunchbox"
+  },
+  "myKidsSectionTitle": "My Children",
+  "@myKidsSectionTitle": {
+    "description": "Section header for registered kids on home"
+  },
+  "welcomeFeature1Title": "Suggestions in 4 seconds",
+  "@welcomeFeature1Title": {
+    "description": "Welcome feature 1 title"
+  },
+  "welcomeFeature1Subtitle": "Zero morning stress or overthinking",
+  "@welcomeFeature1Subtitle": {
+    "description": "Welcome feature 1 subtitle"
+  },
+  "welcomeFeature2Title": "Deterministic Safety",
+  "@welcomeFeature2Title": {
+    "description": "Welcome feature 2 title"
+  },
+  "welcomeFeature2Subtitle": "Strict allergen and age-appropriate checks",
+  "@welcomeFeature2Subtitle": {
+    "description": "Welcome feature 2 subtitle"
+  },
+  "dislikeCucumber": "Cucumber",
+  "@dislikeCucumber": {
+    "description": "Cucumber dislike chip label"
+  },
+  "dislikeTomato": "Tomato",
+  "@dislikeTomato": {
+    "description": "Tomato dislike chip label"
+  },
+  "dislikeCarrot": "Carrot",
+  "@dislikeCarrot": {
+    "description": "Carrot dislike chip label"
+  },
+  "dislikeBellPepper": "Bell Pepper",
+  "@dislikeBellPepper": {
+    "description": "Bell pepper dislike chip label"
+  },
+  "dislikeOnion": "Onion",
+  "@dislikeOnion": {
+    "description": "Onion dislike chip label"
+  },
+  "dislikeGarlic": "Garlic",
+  "@dislikeGarlic": {
+    "description": "Garlic dislike chip label"
+  },
+  "dislikeTuna": "Tuna",
+  "@dislikeTuna": {
+    "description": "Tuna dislike chip label"
+  },
+  "dislikePeas": "Peas",
+  "@dislikePeas": {
+    "description": "Peas dislike chip label"
+  },
+  "dislikeOlives": "Olives",
+  "@dislikeOlives": {
+    "description": "Olives dislike chip label"
+  },
+  "dislikeFoul": "Fava Beans",
+  "@dislikeFoul": {
+    "description": "Foul dislike chip label"
+  },
+  "dislikeCorn": "Corn",
+  "@dislikeCorn": {
+    "description": "Corn dislike chip label"
+  },
+  "dislikeLettuce": "Lettuce",
+  "@dislikeLettuce": {
+    "description": "Lettuce dislike chip label"
+  },
+  "editChildSubtitle": "Update child preferences and dietary notes",
+  "@editChildSubtitle": {
+    "description": "Subtitle for edit child bottom sheet"
+  },
+  "noAllergiesSelected": "No allergies selected",
+  "@noAllergiesSelected": {
+    "description": "Empty allergies label"
+  },
+  "noDislikesSelected": "No disliked foods selected",
+  "@noDislikesSelected": {
+    "description": "Empty dislikes label"
+  }
+}

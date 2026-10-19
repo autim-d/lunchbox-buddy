@@ -1,0 +1,1971 @@
+[
+  {
+    "id": "labneh_cucumber",
+    "title": "ساندوتش لبنة وخيار مقرمش",
+    "description": "ساندوتش صباحي خفيف ومنعش، يعشقه الأطفال ويوفر كالسيوم وبروتين لبداية يوم نشيط.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "picky-eater", "budget"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "toast_brown",
+        "quantity": 2.0,
+        "unit": "slices",
+        "displayText": "شريحتا توست أسمر",
+        "optional": false
+      },
+      {
+        "ingredientId": "labneh",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان لبنة طازجة",
+        "optional": false
+      },
+      {
+        "ingredientId": "cucumber",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة خيار مقطعة شرائح رفيعة",
+        "optional": false
+      },
+      {
+        "ingredientId": "mint",
+        "quantity": 3.0,
+        "unit": "leaves",
+        "displayText": "أوراق نعناع طازجة",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "افردي اللبنة بالتساوي على شريحة التوست الأسمر.",
+      "رصّي شرائح الخيار المقرمشة ورقات النعناع فوق اللبنة.",
+      "أغلقي بشريحة التوست الثانية وقطعي الساندوتش مثلثات صغيرة لتناسب يد طفلك."
+    ]
+  },
+  {
+    "id": "chicken_lettuce_roll",
+    "title": "رول الدجاج والخس الشهي",
+    "description": "لفائف تورتيلا طرية محشوة بقطع الدجاج المطبوخ والخضار الطازجة لوجبة مشبعة ومغذية.",
+    "prepMinutes": 10,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "lunchbox-friendly", "no-oven"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "tortilla",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "رغيف تورتيلا قمح",
+        "optional": false
+      },
+      {
+        "ingredientId": "chicken",
+        "quantity": 80.0,
+        "unit": "grams",
+        "displayText": "صدر دجاج مطبوخ ومقطع شرائح",
+        "optional": false
+      },
+      {
+        "ingredientId": "lettuce",
+        "quantity": 2.0,
+        "unit": "leaves",
+        "displayText": "ورقتا خس مقرمش",
+        "optional": false
+      },
+      {
+        "ingredientId": "tomato",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة طماطم منزوعة البذور ومقطعة شرائح",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "سخني خبز التورتيلا على مقلاة جافة لمدة 15 ثانية ليصبح طرياً ومرناً.",
+      "وزعي الخس، شرائح الدجاج، وشرائح الطماطم في منتصف الرغيف.",
+      "لفي الرغيف بإحكام على شكل أسطواني، ثم قطعيه إلى نصفين متساويين لسهولة الأكل."
+    ]
+  },
+  {
+    "id": "mini_egg_sandwich",
+    "title": "ميني ساندوتش البيض بالتوست",
+    "description": "بيض مسلوق ومهروس مع لمسة زبادي أو لبنة خفيفة بين طبقتي توست طري، مصدر مثالي للبروتين.",
+    "prepMinutes": 10,
+    "cookMinutes": 8,
+    "servings": 1,
+    "tags": ["lunchbox-friendly", "budget", "picky-eater", "quick"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "toast_white",
+        "quantity": 2.0,
+        "unit": "slices",
+        "displayText": "شريحتا توست أبيض أو أسمر",
+        "optional": false
+      },
+      {
+        "ingredientId": "egg",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "بيضة واحدة مسلوقة جيداً",
+        "optional": false
+      },
+      {
+        "ingredientId": "yogurt",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة زبادي طبيعي لتطرية الخليط",
+        "optional": true
+      },
+      {
+        "ingredientId": "lettuce",
+        "quantity": 1.0,
+        "unit": "leaf",
+        "displayText": "ورقة خس صغيرة",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "قشري البيضة المسلوقة واهرسيها ناعماً بالشوكة مع ملعقة الزبادي ورشة ملح خفيفة جداً.",
+      "افردي خليط البيض على التوست وضعي ورقة الخس المغسولة والمجففة.",
+      "أطبقي الساندوتش وقطعيه إلى أربعة مربعات صغيرة سهلة التناول للأطفال."
+    ]
+  },
+  {
+    "id": "yogurt_fruit",
+    "title": "زبادي كريمي بالفواكه الطبيعية",
+    "description": "كوب زبادي منعش مع قطع الفراولة والموز، يقدم طاقة ونشاطاً وخالٍ من السكريات المكررة.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "yogurt",
+        "quantity": 1.0,
+        "unit": "cup",
+        "displayText": "علبة زبادي طبيعي طازج",
+        "optional": false
+      },
+      {
+        "ingredientId": "strawberry",
+        "quantity": 4.0,
+        "unit": "pieces",
+        "displayText": "أربع حبات فراولة مقطعة مكعبات",
+        "optional": false
+      },
+      {
+        "ingredientId": "banana",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة موز مقطعة دوائر",
+        "optional": false
+      },
+      {
+        "ingredientId": "honey",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة عسل طبيعي",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "ضعي الزبادي الطبيعي في علبة لانش بوكس محكمة الإغلاق لمنع التسرب.",
+      "أضيفي قطع الفراولة والموز الطازجة فوق الزبادي.",
+      "أضيفي رشة عسل خفيفة لمن هم فوق عمر السنة وقدميها مع ملعقة صغيرة."
+    ]
+  },
+  {
+    "id": "cheese_cucumber_toast",
+    "title": "توست الجبن الشيدر والخيار",
+    "description": "توست كلاسيكي مقرمش بالجبن الشيدر اللذيذ وشرائح الخيار الباردة، سريع التحضير ومحبوب عالمياً.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "picky-eater", "budget"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "toast_white",
+        "quantity": 2.0,
+        "unit": "slices",
+        "displayText": "شريحتا توست",
+        "optional": false
+      },
+      {
+        "ingredientId": "cheese_cheddar",
+        "quantity": 1.0,
+        "unit": "slice",
+        "displayText": "شريحة جبن شيدر طبيعي",
+        "optional": false
+      },
+      {
+        "ingredientId": "cucumber",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة خيار مقطعة شرائح رقيقة",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "ضعي شريحة الجبن الشيدر على إحدى شريحتي التوست.",
+      "رصي شرائح الخيار الرقيقة فوق الجبن ثم غطيها بالشريحة الثانية.",
+      "اضغطي برفق وقطعي الساندوتش على شكل مثلثين جذابين."
+    ]
+  },
+  {
+    "id": "tuna_roll",
+    "title": "رول التونة والذرة المشبع",
+    "description": "تورتيلا ملفوفة بحشوة التونة الخفيفة والذرة الحلوة وأوراق الخس المنعشة الغنية بالأوميغا 3.",
+    "prepMinutes": 7,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "tortilla",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "رغيف تورتيلا",
+        "optional": false
+      },
+      {
+        "ingredientId": "tuna",
+        "quantity": 60.0,
+        "unit": "grams",
+        "displayText": "نصف علبة تونة مصفاة تماماً من السائل",
+        "optional": false
+      },
+      {
+        "ingredientId": "corn",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان ذرة حلوة مسلوقة",
+        "optional": false
+      },
+      {
+        "ingredientId": "lettuce",
+        "quantity": 1.0,
+        "unit": "leaf",
+        "displayText": "ورقة خس مفرومة",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اخلطي التونة المصفاة مع الذرة الحلوة في وعاء صغير.",
+      "افردي الخليط على رغيف التورتيلا وأضيفي الخس المفروم.",
+      "لفي الرغيف بإحكام وقطعيه لدوائر أو رولين صغيرين محكمين."
+    ]
+  },
+  {
+    "id": "banana_oats",
+    "title": "شوفان الموز المنقوع بالحليب",
+    "description": "وجبة مشبعة وغنية بالألياف تحضر ليلاً في دقائق، تصبح جاهزة صباحاً بأقل جهد ممكن.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "budget"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "oats",
+        "quantity": 0.5,
+        "unit": "cup",
+        "displayText": "نصف كوب شوفان كامل",
+        "optional": false
+      },
+      {
+        "ingredientId": "milk",
+        "quantity": 0.5,
+        "unit": "cup",
+        "displayText": "نصف كوب حليب طازج",
+        "optional": false
+      },
+      {
+        "ingredientId": "banana",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة موز مهروسة أو مقطعة شرائح",
+        "optional": false
+      },
+      {
+        "ingredientId": "cinnamon",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "displayText": "رشة قرفة مطحونة خفيفة",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اخلطي الشوفان مع الحليب والقرفة في وعاء زجاجي محكم الإغلاق قبل النوم.",
+      "احفظي الوعاء في الثلاجة طوال الليل حتى يتشرب الشوفان الحليب ويصبح طرياً.",
+      "أضيفي شرائح الموز الطازجة في الصباح وضعي الوعاء في اللانش بوكس."
+    ]
+  },
+  {
+    "id": "oat_pancakes",
+    "title": "ميني بان كيك الشوفان والموز",
+    "description": "أقراص بان كيك ذهبية صحية بدون سكر مضاف، ممتازة لحملها في علبة الطعام كوجبة خفيفة ومحبوبة.",
+    "prepMinutes": 10,
+    "cookMinutes": 10,
+    "servings": 2,
+    "tags": ["one-pan", "lunchbox-friendly", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "oats",
+        "quantity": 0.75,
+        "unit": "cup",
+        "displayText": "ثلاثة أرباع كوب شوفان مطحون",
+        "optional": false
+      },
+      {
+        "ingredientId": "banana",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "حبة موز ناضجة مهروسة",
+        "optional": false
+      },
+      {
+        "ingredientId": "egg",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "بيضة واحدة طازجة",
+        "optional": false
+      },
+      {
+        "ingredientId": "butter",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة زبدة لدهن المقلاة",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اخلطي الموز المهروس مع البيضة والشوفان المطحون حتى تحصلي على قوام متجانس.",
+      "ادهني مقلاة غير لاصقة بقليل من الزبدة وسخنيها على نار متوسطة.",
+      "اسكبي ملاعق صغيرة من المزيج واطهي لمدة دقيقتين لكل وجه حتى يصبح ذهبياً."
+    ]
+  },
+  {
+    "id": "hummus_veggie_wrap",
+    "title": "رول الحمص بأعواد الخضار المقرمشة",
+    "description": "لفافة خبز عربي بحمص ناعم وخضار ملونة، توفر أليافاً وبروتيناً نباتياً لذيذاً وخفيفاً على المعدة.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "budget"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "arabic_bread",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "رغيف خبز عربي مفرود",
+        "optional": false
+      },
+      {
+        "ingredientId": "hummus",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان حمص ناعم",
+        "optional": false
+      },
+      {
+        "ingredientId": "carrot",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة جزر مبشور ناعم",
+        "optional": false
+      },
+      {
+        "ingredientId": "cucumber",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة خيار مقطعة أصابع رقيقة",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "افردي الحمص الناعم على رغيف الخبز العربي بالتساوي.",
+      "رصي الجزر المبشور وأصابع الخيار الطرية في المنتصف.",
+      "لفي الرغيف بإحكام وقطعيه نصفين مائلين لمنظر مشهٍ ومغري للطفل."
+    ]
+  },
+  {
+    "id": "chicken_rice_box",
+    "title": "علبة أرز ودجاج دافئة بالذرة",
+    "description": "أرز بسمتي حبة طويلة مع قطع صدر دجاج مطبوخ والذرة الحلوة في حافظة حرارية لوجبة مشبعة.",
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "servings": 1,
+    "tags": ["lunchbox-friendly", "one-pan"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "rice",
+        "quantity": 1.0,
+        "unit": "cup",
+        "displayText": "كوب أرز مطبوخ خفيف النكهة",
+        "optional": false
+      },
+      {
+        "ingredientId": "chicken",
+        "quantity": 80.0,
+        "unit": "grams",
+        "displayText": "قطع دجاج صغيرة مطبوخة",
+        "optional": false
+      },
+      {
+        "ingredientId": "corn",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان ذرة حلوة مسلوقة",
+        "optional": false
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة زيت زيتون",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "قلبي الدجاج المطبوخ مع الأرز والذرة في مقلاة صغيرة مع زيت الزيتون حتى يسخن جيداً.",
+      "ضعي الوجبة الساخنة فوراً في علبة طعام حرارية معزولة لحفظ دفئها حتى وقت الفسحة.",
+      "أرفقي معها ملعقة صغيرة سهلة الإمساك."
+    ]
+  },
+  {
+    "id": "pasta_salad",
+    "title": "سلطة مكرونة باردة بالألوان",
+    "description": "مكرونة صغيرة باردة مع مكعبات الفلفل الرومي والذرة وزيت الزيتون البكر، خيار ممتع في الأيام الدافئة.",
+    "prepMinutes": 10,
+    "cookMinutes": 10,
+    "servings": 2,
+    "tags": ["lunchbox-friendly", "budget"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "pasta",
+        "quantity": 1.0,
+        "unit": "cup",
+        "displayText": "كوب مكرونة صغيرة مسلوقة ومبردة",
+        "optional": false
+      },
+      {
+        "ingredientId": "bell_pepper",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة فلفل رومي ملون مقطع مكعبات صغيرة",
+        "optional": false
+      },
+      {
+        "ingredientId": "corn",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان ذرة مسلوقة",
+        "optional": false
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tbsp",
+        "displayText": "ملعقة كبيرة زيت زيتون بكر",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "اسلقي المكرونة وصفيها تماماً ثم دعيها تبرد بدرجة حرارة الغرفة.",
+      "أضيفي مكعبات الفلفل الرومي والذرة وزيت الزيتون ورشة ملح خفيفة وقلبي جيداً.",
+      "وزعي السلطة في علبة اللانش بوكس مع شوكة صغيرة."
+    ]
+  },
+  {
+    "id": "egg_veg_muffins",
+    "title": "مافن البيض بالخضار والجبن",
+    "description": "أقراص مافن بيض مخبوزة بالفرن مع قطع الطماطم والفلفل والجبن، سهلة التحضير والحفظ لأيام متعددة.",
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "servings": 3,
+    "tags": ["lunchbox-friendly", "hidden-veggies"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "egg",
+        "quantity": 3.0,
+        "unit": "pieces",
+        "displayText": "ثلاث بيضات طازجة",
+        "optional": false
+      },
+      {
+        "ingredientId": "bell_pepper",
+        "quantity": 0.25,
+        "unit": "piece",
+        "displayText": "ربع حبة فلفل رومي مفروم ناعم",
+        "optional": false
+      },
+      {
+        "ingredientId": "tomato",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة طماطم مقطعة ناعماً بدون بذور",
+        "optional": false
+      },
+      {
+        "ingredientId": "cheese_cheddar",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان جبن شيدر مبشور",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اخفقي البيض في وعاء ثم اخلطي معه الفلفل والطماطم والجبن المبشور.",
+      "صبي الخليط في قوالب كب كيك مدهونة واخبزيها في فرن بحرارة 180 مئوية لمدة 15 دقيقة حتى تنضج.",
+      "دعيها تبرد تماماً قبل وضع قطعتين منها في اللانش بوكس."
+    ]
+  },
+  {
+    "id": "pb_banana_sandwich",
+    "title": "ساندوتش زبدة الفول السوداني والموز",
+    "description": "ساندوتش طاقة كلاسيكي غني بالدهون المفيدة والبروتين، يحبه الأطفال لنكهته الحلوة الطبيعية.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 24,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "toast_brown",
+        "quantity": 2.0,
+        "unit": "slices",
+        "displayText": "شريحتا توست أسمر",
+        "optional": false
+      },
+      {
+        "ingredientId": "peanut_butter",
+        "quantity": 1.5,
+        "unit": "tbsp",
+        "displayText": "ملعقة ونصف كبيرة زبدة فول سوداني طبيعية",
+        "optional": false
+      },
+      {
+        "ingredientId": "banana",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة موز مقطعة شرائح",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "تأكدي أولاً من سياسة المدرسة بخصوص مسببات الحساسية من الفول السوداني.",
+      "افردي زبدة الفول السوداني على شريحة التوست ورصي شرائح الموز فوقها.",
+      "أغلقي الساندوتش واضغطي بخفة وقطعيه إلى أنصاف سهلة التناول."
+    ]
+  },
+  {
+    "id": "cheese_veg_sticks",
+    "title": "مكعبات الجبن وأعواد الخضار الطازجة",
+    "description": "طبق خفيف وسريع يعتمد على أصابع الجزر والخيار مع مكعبات الجبنة البيضاء اللذيذة للأطفال محبي التغميس والتسالي.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "cheese_white",
+        "quantity": 50.0,
+        "unit": "grams",
+        "displayText": "مكعبات جبنة بيضاء متماسكة",
+        "optional": false
+      },
+      {
+        "ingredientId": "carrot",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "حبة جزر مقشرة ومقطعة أعواداً سميكة",
+        "optional": false
+      },
+      {
+        "ingredientId": "cucumber",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "حبة خيار مقطعة أصابع متساوية",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "قطعي الجبن والخضار إلى أصابع ومكعبات متناسقة بحجم قبضة الطفل.",
+      "رتبي الخضار والمكعبات في أقسام اللانش بوكس المفصولة لمنع وصول السوائل.",
+      "يمكن إضافة شريحة خبز صغيرة جانباً لتكتمل الوجبة."
+    ]
+  },
+  {
+    "id": "labneh_veggie_roll",
+    "title": "رول اللبنة والنعناع بالخضار المشكلة",
+    "description": "تورتيلا طرية مدهونة بلبنة غنية مع شرائح الخيار والطماطم وأوراق الخس المقرمش المنعش.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "budget"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "tortilla",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "رغيف تورتيلا طازج",
+        "optional": false
+      },
+      {
+        "ingredientId": "labneh",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان لبنة طازجة",
+        "optional": false
+      },
+      {
+        "ingredientId": "cucumber",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة خيار مقطعة شرائح",
+        "optional": false
+      },
+      {
+        "ingredientId": "tomato",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة طماطم مقطعة شرائح",
+        "optional": true
+      },
+      {
+        "ingredientId": "lettuce",
+        "quantity": 1.0,
+        "unit": "leaf",
+        "displayText": "ورقة خس مقرمشة",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "ادهني اللبنة على كامل سطح التورتيلا بالتساوي.",
+      "رصي الخيار والطماطم وأوراق الخس في النصف السفلي من الرغيف.",
+      "لفي التورتيلا رولاً محكماً وقطعيه دوائر مائلة تشبه السوشي لتشجيع الطفل على الأكل."
+    ]
+  },
+  {
+    "id": "tuna_pasta",
+    "title": "مكرونة التونة والذرة اللذيذة",
+    "description": "طبق مكرونة شهي يجمع بروتين التونة الخفيف مع حلاوة الذرة وزيت الزيتون، يؤكل دافئاً أو بارداً.",
+    "prepMinutes": 8,
+    "cookMinutes": 10,
+    "servings": 1,
+    "tags": ["lunchbox-friendly", "quick", "budget"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "pasta",
+        "quantity": 1.0,
+        "unit": "cup",
+        "displayText": "كوب مكرونة مسلوقة",
+        "optional": false
+      },
+      {
+        "ingredientId": "tuna",
+        "quantity": 60.0,
+        "unit": "grams",
+        "displayText": "نصف علبة تونة مصفاة",
+        "optional": false
+      },
+      {
+        "ingredientId": "corn",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان ذرة حلوة",
+        "optional": false
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة زيت زيتون",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "في وعاء، اخلطي المكرونة المسلوقة مع التونة المفتتة والذرة الحلوة.",
+      "أضيفي ملعقة زيت الزيتون ورشة ملح صغيرة وقلبي الخليط برفق.",
+      "ضعي المكرونة في علبة اللانش بوكس وقدميها مع شوكة طعام صغيرة."
+    ]
+  },
+  {
+    "id": "dates_oat_balls",
+    "title": "كرات التمر والشوفان الصحية",
+    "description": "حلوى طبيعية مصنوعة من التمر الفاخر والشوفان وقليل من القرفة، خالية تماماً من السكر ومثالية لطاقة مستمرة.",
+    "prepMinutes": 10,
+    "cookMinutes": 0,
+    "servings": 4,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "picky-eater", "budget"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "dates",
+        "quantity": 8.0,
+        "unit": "pieces",
+        "displayText": "ثماني حبات تمر منزوع النوى",
+        "optional": false
+      },
+      {
+        "ingredientId": "oats",
+        "quantity": 0.5,
+        "unit": "cup",
+        "displayText": "نصف كوب شوفان مطحون خفيفاً",
+        "optional": false
+      },
+      {
+        "ingredientId": "cinnamon",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "displayText": "رشة قرفة مطحونة",
+        "optional": true
+      },
+      {
+        "ingredientId": "chia_seeds",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة بذور الشيا",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اطحني التمر في محضر الطعام حتى يصبح عجينة لينة ومتماسكة.",
+      "أضيفي الشوفان والقرفة وبذور الشيا واخلطي حتى تتكون عجينة يسهل تشكيلها.",
+      "شكلي كرات بحجم حبة الجوز وضعي حبتين منها في علبة اللانش بوكس كتحلية صحية."
+    ]
+  },
+  {
+    "id": "rice_veg_bowl",
+    "title": "وعاء الأرز بالخضار والحمص",
+    "description": "وعاء أرز أبيض مع ملعقة حمص لذيذة وأعواد خضار مشكلة لوجبة متكاملة وغنية بالعناصر المفيدة.",
+    "prepMinutes": 10,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["lunchbox-friendly", "budget"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "rice",
+        "quantity": 1.0,
+        "unit": "cup",
+        "displayText": "كوب أرز مطبوخ",
+        "optional": false
+      },
+      {
+        "ingredientId": "hummus",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان حمص ناعم",
+        "optional": false
+      },
+      {
+        "ingredientId": "carrot",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة جزر مقطعة أعواداً",
+        "optional": false
+      },
+      {
+        "ingredientId": "cucumber",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة خيار مقطعة أصابع",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "ضعي الأرز في القسم الرئيسي من اللانش بوكس.",
+      "ضعي الحمص في علبة صغيرة مخصصة للتغميس بجانب الأرز.",
+      "رتبي أعواد الجزر والخيار جانباً لتناولها مع الحمص والأرز."
+    ]
+  },
+  {
+    "id": "baked_samosa_cheese",
+    "title": "سمبوسة الأجبان المخبوزة بالفرن",
+    "description": "مثلثات سمبوسة مقرمشة خفيفة محشوة بالجبنة البيضاء والموزاريلا والنعناع ومخبوزة بقليل من زيت الزيتون بدون قلي.",
+    "prepMinutes": 15,
+    "cookMinutes": 15,
+    "servings": 3,
+    "tags": ["lunchbox-friendly", "picky-eater", "budget"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "samosa_wrappers",
+        "quantity": 6.0,
+        "unit": "pieces",
+        "displayText": "ست شرائح رقائق سمبوسة",
+        "optional": false
+      },
+      {
+        "ingredientId": "cheese_white",
+        "quantity": 60.0,
+        "unit": "grams",
+        "displayText": "جبنة بيضاء مهروسة",
+        "optional": false
+      },
+      {
+        "ingredientId": "mozzarella",
+        "quantity": 40.0,
+        "unit": "grams",
+        "displayText": "جبنة موزاريلا مبشورة للمطة اللذيذة",
+        "optional": false
+      },
+      {
+        "ingredientId": "mint",
+        "quantity": 1.0,
+        "unit": "tbsp",
+        "displayText": "نعناع طازج مفروم",
+        "optional": true
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tbsp",
+        "displayText": "ملعقة كبيرة زيت زيتون لدهن الوجه",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "اخلطي الجبنة البيضاء مع الموزاريلا والنعناع المفروم في طبق عميق.",
+      "احشي كل شريحة سمبوسة بملعقة من الحشوة ولفيها على شكل مثلث محكم.",
+      "ادهني المثلثات بقليل من زيت الزيتون واخبزيها في الفرن على حرارة 190 مئوية حتى تصبح ذهبية ومقرمشة."
+    ]
+  },
+  {
+    "id": "baked_samosa_meat",
+    "title": "سمبوسة اللحم بالبازلاء في الفرن",
+    "description": "سمبوسة بحشوة لحم مفروم حلال مع البازلاء الحلوة والكمون، مخبوزة بالفرن لتكون صحية وخفيفة للمدرسة.",
+    "prepMinutes": 15,
+    "cookMinutes": 15,
+    "servings": 3,
+    "tags": ["lunchbox-friendly"],
+    "source": "curated",
+    "ageMinMonths": 24,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "samosa_wrappers",
+        "quantity": 6.0,
+        "unit": "pieces",
+        "displayText": "ست رقائق سمبوسة",
+        "optional": false
+      },
+      {
+        "ingredientId": "minced_beef",
+        "quantity": 100.0,
+        "unit": "grams",
+        "displayText": "لحم مفروم بقري حلال مطهو مسبقاً",
+        "optional": false
+      },
+      {
+        "ingredientId": "peas",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان بازلاء خضراء طرية",
+        "optional": false
+      },
+      {
+        "ingredientId": "cumin",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "displayText": "رشة كمون مطحون خفيفة",
+        "optional": true
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tbsp",
+        "displayText": "ملعقة كبيرة زيت زيتون لدهن الوجه",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "اخلطي اللحم المفروم المطهو مع البازلاء ورشة الكمون.",
+      "احشي شرائح السمبوسة بالحشوة ولفيها بإحكام لمنع خروج الحشو أثناء الخبز.",
+      "ادهنيها بزيت الزيتون واخبزيها بالفرن لمدة 15 دقيقة حتى تتحمر وتصبح مقرمشة."
+    ]
+  },
+  {
+    "id": "labneh_zaatar_wrap",
+    "title": "لفائف اللبنة بالزعتر وزيت الزيتون",
+    "description": "لفافة خبز عربي دافئة باللبنة الطازجة والزعتر البلدي وزيت الزيتون، طعم سعودي أصيل ومحبوب يومياً.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "budget"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "arabic_bread",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "رغيف خبز عربي مفرود",
+        "optional": false
+      },
+      {
+        "ingredientId": "labneh",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان لبنة طازجة",
+        "optional": false
+      },
+      {
+        "ingredientId": "zaatar",
+        "quantity": 1.0,
+        "unit": "tbsp",
+        "displayText": "ملعقة كبيرة زعتر بالسمسم",
+        "optional": false
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة زيت زيتون بكر",
+        "optional": false
+      },
+      {
+        "ingredientId": "cucumber",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "شرائح خيار طازجة",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "افردي اللبنة على رغيف الخبز العربي بشكل متساوٍ.",
+      "رشي الزعتر البلدي فوق اللبنة وضعي قطرات من زيت الزيتون وشرائح الخيار.",
+      "لفي الخبز على شكل رول طري وقطعيه نصفين لتسهيل أكله في المدرسة."
+    ]
+  },
+  {
+    "id": "halloumi_mint_toast",
+    "title": "توست الحلوم المشوي بالنعناع والزيتون",
+    "description": "جبنة حلوم مشوية خفيفة في توست أسمر مع النعناع والزيتون المفروم، غنية بالكالسيوم والنكهة الشهية.",
+    "prepMinutes": 5,
+    "cookMinutes": 5,
+    "servings": 1,
+    "tags": ["quick", "one-pan", "lunchbox-friendly"],
+    "source": "curated",
+    "ageMinMonths": 24,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "toast_brown",
+        "quantity": 2.0,
+        "unit": "slices",
+        "displayText": "شريحتا توست أسمر",
+        "optional": false
+      },
+      {
+        "ingredientId": "halloumi",
+        "quantity": 50.0,
+        "unit": "grams",
+        "displayText": "شرائح جبنة حلوم خفيفة الملوحة",
+        "optional": false
+      },
+      {
+        "ingredientId": "mint",
+        "quantity": 4.0,
+        "unit": "leaves",
+        "displayText": "أوراق نعناع طازجة",
+        "optional": true
+      },
+      {
+        "ingredientId": "olives",
+        "quantity": 3.0,
+        "unit": "pieces",
+        "displayText": "حبات زيتون أسود مخلي مقطعة شرائح",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اشوي شرائح الحلوم في مقلاة جافة لمدة دقيقة لكل جانب حتى تأخذ لوناً ذهبياً جميلاً.",
+      "رصي شرائح الحلوم فوق التوست وأضيفي النعناع وقطع الزيتون.",
+      "أطبقي الساندوتش وحمصيه دقيقة إضافية ثم قطعيه مثلثات صغيرة."
+    ]
+  },
+  {
+    "id": "egg_cheese_samo",
+    "title": "صامولي البيض والجبن الشيدر الذهبي",
+    "description": "ساندوتش الصامولي المفضل في الصباحات المدرسية مع بيض مخفوق ناعم وجبنة شيدر ذائبة.",
+    "prepMinutes": 5,
+    "cookMinutes": 5,
+    "servings": 1,
+    "tags": ["quick", "one-pan", "lunchbox-friendly", "picky-eater", "budget"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "samo_bread",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "خبز صامولي طازج",
+        "optional": false
+      },
+      {
+        "ingredientId": "egg",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "بيضة واحدة مخفوقة",
+        "optional": false
+      },
+      {
+        "ingredientId": "cheese_cheddar",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "جبن شيدر مبشور",
+        "optional": false
+      },
+      {
+        "ingredientId": "butter",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة زبدة طبيعية",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اخفقي البيضة واطهيها في مقلاة مدهونة بالزبدة مع تقليب مستمر حتى تصبح ناعمة وطرية.",
+      "أضيفي الجبن الشيدر المبشور فوق البيض وهو ساخن لكي يذوب برفق.",
+      "افتحي خبز الصامولي من الجانب واحشيه بخليط البيض والجبن الشهي."
+    ]
+  },
+  {
+    "id": "shakshuka_wrap",
+    "title": "رول الشكشوكة الخفيفة بالخبز",
+    "description": "بيض مخفوق مع صلصة طماطم وفلفل رومي حلو في خبز تورتيلا، غني بالنكهات ومحبوب للصغار.",
+    "prepMinutes": 8,
+    "cookMinutes": 7,
+    "servings": 1,
+    "tags": ["one-pan", "lunchbox-friendly", "budget"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "tortilla",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "خبز تورتيلا أو خبز عربي",
+        "optional": false
+      },
+      {
+        "ingredientId": "egg",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "بيضة واحدة",
+        "optional": false
+      },
+      {
+        "ingredientId": "tomato",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة طماطم مقطعة ناعماً",
+        "optional": false
+      },
+      {
+        "ingredientId": "bell_pepper",
+        "quantity": 0.25,
+        "unit": "piece",
+        "displayText": "ربع حبة فلفل رومي مفروم",
+        "optional": true
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة زيت زيتون",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "شوّحي الطماطم والفلفل في زيت الزيتون لمدة 3 دقائق حتى تذبل.",
+      "اخفقي البيضة وصبيها فوق الخضار مع التقليب حتى تنضج الشكشوكة تماماً.",
+      "ضعي الشكشوكة داخل التورتيلا ولفيها رولاً متماسكاً وضعيه في اللانش بوكس."
+    ]
+  },
+  {
+    "id": "crispy_chicken_tenders_rice",
+    "title": "أصابع دجاج مقرمشة مشوية مع أرز",
+    "description": "قطع صدر دجاج مغلفة بفتات الشوفان ومخبوزة بالفرن مقرمشة، تقدم مع أرز بسمتي دافئ.",
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "servings": 2,
+    "tags": ["lunchbox-friendly", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "chicken",
+        "quantity": 120.0,
+        "unit": "grams",
+        "displayText": "صدر دجاج مقطع أصابع طولية",
+        "optional": false
+      },
+      {
+        "ingredientId": "oats",
+        "quantity": 0.5,
+        "unit": "cup",
+        "displayText": "نصف كوب شوفان مطحون خشناً للتغليف",
+        "optional": false
+      },
+      {
+        "ingredientId": "egg",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "بيضة مخفوقة للغمس",
+        "optional": false
+      },
+      {
+        "ingredientId": "rice",
+        "quantity": 1.0,
+        "unit": "cup",
+        "displayText": "كوب أرز بسمتي مطبوخ",
+        "optional": false
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tbsp",
+        "displayText": "ملعقة كبيرة زيت زيتون للرش",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "اغمسي أصابع الدجاج في البيض المخفوق ثم غلفيها بالشوفان المطحون جيداً.",
+      "رصيها في صينية مدهونة برذاذ زيت زيتون واخبزيها في الفرن على حرارة 200 مئوية لمدة 18 دقيقة حتى تصبح مقرمشة وذهبية.",
+      "ضعي أصابع الدجاج إلى جانب الأرز الدافئ في علبة اللانش بوكس."
+    ]
+  },
+  {
+    "id": "mini_veggie_pizzas",
+    "title": "ميني بيتزا الخضار وجبن الموزاريلا",
+    "description": "فطائر بيتزا صغيرة مغطاة بصلصة الطماطم الطبيعية وجبن الموزاريلا والزيتون والفلفل، وجبة مبهجة يعشقها كل الأطفال.",
+    "prepMinutes": 10,
+    "cookMinutes": 12,
+    "servings": 3,
+    "tags": ["lunchbox-friendly", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "pizza_dough",
+        "quantity": 3.0,
+        "unit": "pieces",
+        "displayText": "ثلاث دوائر صغيرة من عجينة البيتزا الجاهزة",
+        "optional": false
+      },
+      {
+        "ingredientId": "tomato_paste",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان صلصة طماطم خفيفة",
+        "optional": false
+      },
+      {
+        "ingredientId": "mozzarella",
+        "quantity": 50.0,
+        "unit": "grams",
+        "displayText": "جبنة موزاريلا مبشورة",
+        "optional": false
+      },
+      {
+        "ingredientId": "olives",
+        "quantity": 3.0,
+        "unit": "pieces",
+        "displayText": "حبات زيتون مقطعة شرائح",
+        "optional": true
+      },
+      {
+        "ingredientId": "bell_pepper",
+        "quantity": 0.25,
+        "unit": "piece",
+        "displayText": "فلفل رومي مقطع مكعبات صغيرة جداً",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "افردي صلصة الطماطم على دوائر العجين الصغيرة.",
+      "وزعي جبنة الموزاريلا وشرائح الزيتون والفلفل الرومي بالتساوي.",
+      "اخبزيها في فرن محمى مسبقاً على حرارة 200 مئوية لمدة 10-12 دقيقة حتى تذوب الجبنة وتتحمر الأطراف."
+    ]
+  },
+  {
+    "id": "zaatar_mini_manakish",
+    "title": "ميني مناقيش الزعتر وزيت الزيتون",
+    "description": "مناقيش صغيرة مخبوزة بالزعتر الفلسطيني الفاخر وزيت الزيتون، مناسبة لفسحة المدرسة ورائحتها تفتح الشهية.",
+    "prepMinutes": 10,
+    "cookMinutes": 10,
+    "servings": 3,
+    "tags": ["lunchbox-friendly", "budget"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "pizza_dough",
+        "quantity": 3.0,
+        "unit": "pieces",
+        "displayText": "ثلاث دوائر عجين صغيرة",
+        "optional": false
+      },
+      {
+        "ingredientId": "zaatar",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان زعتر بالسمسم",
+        "optional": false
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان زيت زيتون بكر",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "اخلطي الزعتر مع زيت الزيتون في وعاء حتى تحصلي على قوام سهل الفرد.",
+      "وزعي ملعقة من مزيج الزعتر على كل دائرة عجين مع الضغط الخفيف بالأصابع.",
+      "اخبزي المناقيش في فرن ساخن على حرارة 200 مئوية لمدة 8-10 دقائق حتى تنضج وتصبح ذهبية."
+    ]
+  },
+  {
+    "id": "date_oat_energy_bars",
+    "title": "ألواح التمر والشوفان المخبوزة",
+    "description": "ألواح طاقة مقرمشة ولذيذة محضرة من التمر المعجون والشوفان والعسل والزبدة بدون أي مواد حافظة.",
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "servings": 6,
+    "tags": ["lunchbox-friendly", "picky-eater", "budget"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "dates",
+        "quantity": 10.0,
+        "unit": "pieces",
+        "displayText": "عشر حبات تمر منزوعة النوى ومفرومة",
+        "optional": false
+      },
+      {
+        "ingredientId": "oats",
+        "quantity": 1.0,
+        "unit": "cup",
+        "displayText": "كوب شوفان كامل",
+        "optional": false
+      },
+      {
+        "ingredientId": "butter",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان زبدة مذابة",
+        "optional": false
+      },
+      {
+        "ingredientId": "honey",
+        "quantity": 1.0,
+        "unit": "tbsp",
+        "displayText": "ملعقة كبيرة عسل طبيعي",
+        "optional": false
+      },
+      {
+        "ingredientId": "cinnamon",
+        "quantity": 0.5,
+        "unit": "tsp",
+        "displayText": "نصف ملعقة صغيرة قرفة",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اخلطي التمر المفروم مع الشوفان والزبدة المذابة والعسل والقرفة وافركيهم جيداً.",
+      "افردي الخليط في صينية صغيرة واضغطي عليه بقوة بقعر ملعقة ليصبح بسماكة متساوية.",
+      "اخبزيه على حرارة 180 مئوية لمدة 15 دقيقة ثم دعيه يبرد تماماً وقطعيه أصابع مستطيلة."
+    ]
+  },
+  {
+    "id": "foul_tahini_pocket",
+    "title": "جيب خبز الفول المدمس بالطحينة",
+    "description": "نصف رغيف خبز عربي محشو بالفول المدمس المهروس مع لمسة طحينة وزيت زيتون وكمون، غني بالألياف والحديد.",
+    "prepMinutes": 5,
+    "cookMinutes": 3,
+    "servings": 1,
+    "tags": ["quick", "lunchbox-friendly", "budget"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "arabic_bread",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف رغيف خبز عربي مفتوح كالجيب",
+        "optional": false
+      },
+      {
+        "ingredientId": "foul",
+        "quantity": 0.5,
+        "unit": "cup",
+        "displayText": "نصف كوب فول مدمس مهروس ناعماً",
+        "optional": false
+      },
+      {
+        "ingredientId": "tahini",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة طحينة سمسم",
+        "optional": false
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة زيت زيتون",
+        "optional": false
+      },
+      {
+        "ingredientId": "cumin",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "displayText": "رشة كمون ناعم",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "سخني الفول المهروس مع الطحينة وزيت الزيتون ورشة الكمون.",
+      "احشي جيب الخبز العربي بخليط الفول الدافئ برفق.",
+      "لفي الساندوتش بورق زبدة ليبقى مرتباً وسهل المسك أثناء الأكل."
+    ]
+  },
+  {
+    "id": "creamy_tuna_sweetcorn_sandwich",
+    "title": "صامولي التونة بالذرة والزبادي",
+    "description": "صامولي طازج محشو بسلطة تونة خفيفة معدة بالزبادي الطبيعي والذرة الصفراء والخس المقرمش.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "samo_bread",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "خبز صامولي طري",
+        "optional": false
+      },
+      {
+        "ingredientId": "tuna",
+        "quantity": 60.0,
+        "unit": "grams",
+        "displayText": "نصف علبة تونة مصفاة",
+        "optional": false
+      },
+      {
+        "ingredientId": "yogurt",
+        "quantity": 1.0,
+        "unit": "tbsp",
+        "displayText": "ملعقة كبيرة زبادي طبيعي كبديل صحي للمايونيز",
+        "optional": false
+      },
+      {
+        "ingredientId": "corn",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان ذرة حلوة",
+        "optional": false
+      },
+      {
+        "ingredientId": "lettuce",
+        "quantity": 1.0,
+        "unit": "leaf",
+        "displayText": "ورقة خس مقطعة",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اخلطي التونة مع الزبادي والذرة الحلوة ورشة ملح خفيفة في وعاء صغير.",
+      "افتحي خبز الصامولي وضعي ورقة الخس كحاجز طراوة.",
+      "املئي الساندوتش بخليط التونة وضعي الساندوتش في حافظة الساندوتشات."
+    ]
+  },
+  {
+    "id": "macaroni_hidden_veggie_sauce",
+    "title": "مكرونة بصلصة الطماطم والخضار المخفية",
+    "description": "طبق مكرونة بصلصة حمراء غنية بالجزر والبطاطا الحلوة المهروسة تماماً، حل عبقري للأطفال الرافضين للخضار.",
+    "prepMinutes": 15,
+    "cookMinutes": 15,
+    "servings": 2,
+    "tags": ["lunchbox-friendly", "hidden-veggies", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "pasta",
+        "quantity": 1.0,
+        "unit": "cup",
+        "displayText": "كوب مكرونة صغيرة مسلوقة",
+        "optional": false
+      },
+      {
+        "ingredientId": "tomato_paste",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان معجون طماطم",
+        "optional": false
+      },
+      {
+        "ingredientId": "carrot",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة جزر مسلوقة ومهروسة ناعمة",
+        "optional": false
+      },
+      {
+        "ingredientId": "sweet_potato",
+        "quantity": 50.0,
+        "unit": "grams",
+        "displayText": "بطاطا حلوة مسلوقة ومهروسة بالكامل مع الصلصة",
+        "optional": false
+      },
+      {
+        "ingredientId": "cheese_cheddar",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "جبن شيدر مبشور للوجه",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اخفقي الجزر والبطاطا الحلوة المسلوقة مع معجون الطماطم وقليل من الماء في الخلاط حتى تختفي تماماً وتصبح صلصة حريرية.",
+      "اخلطي الصلصة الساخنة مع المكرونة المسلوقة وأضيفي الجبن الشيدر المبشور ليذوب على الوجه.",
+      "ضعي المكرونة في حافظة الطعام واستمتعي برؤية طفلك يأكل الخضار بكل سرور."
+    ]
+  },
+  {
+    "id": "sweet_potato_chicken_nuggets",
+    "title": "ناجتس الدجاج والبطاطا الحلوة بالفرن",
+    "description": "قطع ناجتس منزلية معدة من مفروم الدجاج والبطاطا الحلوة والشوفان، خالية من المواد الحافظة وغنية بالفيتامينات.",
+    "prepMinutes": 15,
+    "cookMinutes": 15,
+    "servings": 3,
+    "tags": ["lunchbox-friendly", "hidden-veggies", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "chicken",
+        "quantity": 150.0,
+        "unit": "grams",
+        "displayText": "صدر دجاج مفروم ناعم",
+        "optional": false
+      },
+      {
+        "ingredientId": "sweet_potato",
+        "quantity": 80.0,
+        "unit": "grams",
+        "displayText": "بطاطا حلوة مسلوقة ومهروسة",
+        "optional": false
+      },
+      {
+        "ingredientId": "oats",
+        "quantity": 0.5,
+        "unit": "cup",
+        "displayText": "نصف كوب شوفان مطحون ناعماً للتماسك",
+        "optional": false
+      },
+      {
+        "ingredientId": "egg",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "صفار بيضة واحدة",
+        "optional": false
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tbsp",
+        "displayText": "ملعقة كبيرة زيت زيتون لدهن الصينية",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "اخلطي الدجاج المفروم مع البطاطا الحلوة المهروسة والشوفان وصفار البيضة ورشة ملح صغيرة.",
+      "شكلي المزيج على هيئة قطع ناجتس مرحة ورصيها في صينية خبز مدهونة بزيت الزيتون.",
+      "اخبزيها في فرن بحرارة 190 مئوية لمدة 15 دقيقة مع تقليبها مرة واحدة في المنتصف."
+    ]
+  },
+  {
+    "id": "cheddar_apple_bites",
+    "title": "لقيمات الجبن الشيدر مع شرائح التفاح",
+    "description": "ثنائية شهية بين ملوحة الجبن الشيدر وحلاوة التفاح المقرمش، وجبة سريعة ومنعشة لا تحتاج لأي طهي.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "cheese_cheddar",
+        "quantity": 50.0,
+        "unit": "grams",
+        "displayText": "مكعبات جبن شيدر طبيعي",
+        "optional": false
+      },
+      {
+        "ingredientId": "apple",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "حبة تفاح أحمر أو أصفر مقطعة شرائح ومغموسة بقليل من الماء وعصير البرتقال لمنع الاسمرار",
+        "optional": false
+      },
+      {
+        "ingredientId": "grapes",
+        "quantity": 5.0,
+        "unit": "pieces",
+        "displayText": "خمس حبات عنب مقطوعة نصفين طولياً للأمان",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "قطعي الجبن الشيدر إلى مكعبات صغيرة تناسب فم الطفل.",
+      "قطعي التفاح والعنب نصفين طولياً لتفادي خطر الاختناق الصغير.",
+      "رتبي المكونات جنباً إلى جنب في علبة اللانش بوكس."
+    ]
+  },
+  {
+    "id": "overnight_chia_pudding",
+    "title": "بودينغ الشيا بالحليب والموز",
+    "description": "بودينغ غني بأوميغا 3 والكالسيوم، يحضر من بذور الشيا والحليب الطازج والموز المحلى بقطرة عسل.",
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "chia_seeds",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان بذور الشيا",
+        "optional": false
+      },
+      {
+        "ingredientId": "milk",
+        "quantity": 0.5,
+        "unit": "cup",
+        "displayText": "نصف كوب حليب طازج",
+        "optional": false
+      },
+      {
+        "ingredientId": "banana",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة موز مقطعة",
+        "optional": false
+      },
+      {
+        "ingredientId": "honey",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة عسل نحل",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اخلطي بذور الشيا مع الحليب والعسل في وعاء صغير محكم الإغلاق ورجيه جيداً.",
+      "اتركيه في الثلاجة طوال الليل حتى يتشرب الحليب ويصبح قوام البودينغ متماسكاً وكريمياً.",
+      "زيّني السطح بشرائح الموز صباحاً وضعيه في اللانش بوكس مع ملعقة."
+    ]
+  },
+  {
+    "id": "potato_egg_cubes",
+    "title": "مكعبات البطاطس والبيض المخبوزة",
+    "description": "مكعبات بطاطس مسلوقة ومخبوزة بالبيض المخفوق وجبن الشيدر في الفرن، سهلة الإمساك ومشبعة جداً.",
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "servings": 2,
+    "tags": ["lunchbox-friendly", "budget"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "potato",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "حبة بطاطس مسلوقة ومقطعة مكعبات صغيرة",
+        "optional": false
+      },
+      {
+        "ingredientId": "egg",
+        "quantity": 2.0,
+        "unit": "pieces",
+        "displayText": "بيضتان طازجتان",
+        "optional": false
+      },
+      {
+        "ingredientId": "cheese_cheddar",
+        "quantity": 2.0,
+        "unit": "tbsp",
+        "displayText": "ملعقتان كبيرتان جبن شيدر مبشور",
+        "optional": true
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tsp",
+        "displayText": "ملعقة صغيرة زيت زيتون لدهن الصينية",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "اخفقي البيض مع الجبن المبشور ورشة ملح خفيفة ثم اخلطي معه مكعبات البطاطس المسلوقة.",
+      "اسكبي الخليط في صينية صغيرة واخبزيها في الفرن على حرارة 180 مئوية لمدة 15 دقيقة حتى تتماسك.",
+      "دعيها تبرد قليلاً ثم قطعيها مكعبات متماسكة وضعيها في اللانش بوكس."
+    ]
+  },
+  {
+    "id": "chicken_shawarma_wrap",
+    "title": "شاورما دجاج منزلية خفيفة",
+    "description": "لفائف شاورما منزلية نظيفة بشرائح الدجاج المتبل بالزبادي وزيت الزيتون والخيار والخس.",
+    "prepMinutes": 10,
+    "cookMinutes": 10,
+    "servings": 1,
+    "tags": ["lunchbox-friendly", "one-pan"],
+    "source": "curated",
+    "ageMinMonths": 24,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "tortilla",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "خبز تورتيلا أو خبز صاج خفيف",
+        "optional": false
+      },
+      {
+        "ingredientId": "chicken",
+        "quantity": 80.0,
+        "unit": "grams",
+        "displayText": "قطع صدر دجاج متبلة ومطهوة بالزبادي والليمون",
+        "optional": false
+      },
+      {
+        "ingredientId": "cucumber",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "أصابع خيار مخلل خفيف أو طازج",
+        "optional": false
+      },
+      {
+        "ingredientId": "lettuce",
+        "quantity": 1.0,
+        "unit": "leaf",
+        "displayText": "ورقة خس مقطعة ناعماً",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "شوّحي شرائح الدجاج في مقلاة مع زيت الزيتون حتى تنضج تماماً وتكتسب نكهة الشواء اللطيفة.",
+      "ضعي شرائح الدجاج داخل رغيف الخبز وأضيفي الخس وشرائح الخيار.",
+      "لفي الرغيف بإحكام وقطعيه نصفين ولفي الجزء السفلي بورق تغليف الطعام."
+    ]
+  },
+  {
+    "id": "banana_peanut_butter_roll",
+    "title": "رول الموز وزبدة الفول السوداني بالقرفة",
+    "description": "تورتيلا ملفوفة بدهن زبدة الفول السوداني الطبيعية مع حبة موز كاملة ورشة قرفة، لذيذة ومغذية.",
+    "prepMinutes": 4,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 24,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "tortilla",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "رغيف تورتيلا",
+        "optional": false
+      },
+      {
+        "ingredientId": "peanut_butter",
+        "quantity": 1.5,
+        "unit": "tbsp",
+        "displayText": "ملعقة ونصف كبيرة زبدة فول سوداني ناعمة",
+        "optional": false
+      },
+      {
+        "ingredientId": "banana",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "حبة موز كاملة مقشرة",
+        "optional": false
+      },
+      {
+        "ingredientId": "cinnamon",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "displayText": "رشة قرفة خفيفة",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "ادهني زبدة الفول السوداني على رغيف التورتيلا ورشي القرفة فوقها.",
+      "ضعي حبة الموز كاملة على طرف الرغيف ولفي التورتيلا حولها بإحكام.",
+      "قطعي الرول إلى دوائر صغيرة تشبه قطع السوشي اللذيذة."
+    ]
+  },
+  {
+    "id": "kashkaval_tomato_melt",
+    "title": "صامولي جبنة القشقوان بالطماطم",
+    "description": "صامولي محشو بجبنة القشقوان المميزة وشرائح الطماطم ورشة زيت زيتون خفيفة، يذوب الجبن ويعطي طعماً رائعاً.",
+    "prepMinutes": 5,
+    "cookMinutes": 3,
+    "servings": 1,
+    "tags": ["quick", "lunchbox-friendly", "budget", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "samo_bread",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "خبز صامولي طازج",
+        "optional": false
+      },
+      {
+        "ingredientId": "kashkaval",
+        "quantity": 50.0,
+        "unit": "grams",
+        "displayText": "شرائح جبنة قشقوان فاخرة",
+        "optional": false
+      },
+      {
+        "ingredientId": "tomato",
+        "quantity": 0.5,
+        "unit": "piece",
+        "displayText": "نصف حبة طماطم مقطعة شرائح رفيعة",
+        "optional": false
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 0.5,
+        "unit": "tsp",
+        "displayText": "قطرات زيت زيتون",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "افتحي خبز الصامولي وضعي شرائح جبنة القشقوان والطماطم في قلبه.",
+      "سخني الساندوتش في شواية الساندوتشات دقيقتين حتى تذوب الجبنة وتتداخل النكهات.",
+      "اتركيه يهدأ دقيقة قبل وضعه في اللانش بوكس."
+    ]
+  },
+  {
+    "id": "boiled_egg_chickpea_salad",
+    "title": "سلطة البيض المسلوق والحمص",
+    "description": "سلطة غنية بالبروتينات تضم البيض المسلوق مع حبوب الحمص والطماطم الكرزية وزيت الزيتون البكر.",
+    "prepMinutes": 10,
+    "cookMinutes": 8,
+    "servings": 1,
+    "tags": ["lunchbox-friendly", "budget"],
+    "source": "curated",
+    "ageMinMonths": 18,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "egg",
+        "quantity": 1.0,
+        "unit": "piece",
+        "displayText": "بيضة مسلوقة جيداً ومقطعة أرباعاً",
+        "optional": false
+      },
+      {
+        "ingredientId": "chickpeas",
+        "quantity": 0.5,
+        "unit": "cup",
+        "displayText": "نصف كوب حمص حب مسلوق وطري",
+        "optional": false
+      },
+      {
+        "ingredientId": "cherry_tomato",
+        "quantity": 3.0,
+        "unit": "pieces",
+        "displayText": "ثلاث حبات طماطم كرزية مقطوعة أنصافاً",
+        "optional": false
+      },
+      {
+        "ingredientId": "olive_oil",
+        "quantity": 1.0,
+        "unit": "tbsp",
+        "displayText": "ملعقة كبيرة زيت زيتون",
+        "optional": false
+      }
+    ],
+    "steps": [
+      "في وعاء، اخلطي الحمص المسلوق مع أنصاف الطماطم الكرزية وزيت الزيتون ورشة ملح خفيفة.",
+      "ضعي خليط الحمص في علبة الطعام ورصي أرباع البيض المسلوق فوقه.",
+      "قدمي السلطة مع ملعقة أو شوكة طعام صغيرة."
+    ]
+  },
+  {
+    "id": "strawberry_date_smoothie_bowl",
+    "title": "وعاء سموذي الفراولة والتمر بالشوفان",
+    "description": "مزيج زبادي سميك ومهروس مع الفراولة والتمر الطبيعي، مغطى بملعقة شوفان لوجبة خفيفة مغذية.",
+    "prepMinutes": 6,
+    "cookMinutes": 0,
+    "servings": 1,
+    "tags": ["quick", "no-oven", "lunchbox-friendly", "picky-eater"],
+    "source": "curated",
+    "ageMinMonths": 12,
+    "imagePath": null,
+    "safetyVersion": 1,
+    "ingredients": [
+      {
+        "ingredientId": "strawberry",
+        "quantity": 5.0,
+        "unit": "pieces",
+        "displayText": "خمس حبات فراولة طازجة",
+        "optional": false
+      },
+      {
+        "ingredientId": "dates",
+        "quantity": 3.0,
+        "unit": "pieces",
+        "displayText": "ثلاث حبات تمر طري منزوع النوى",
+        "optional": false
+      },
+      {
+        "ingredientId": "yogurt",
+        "quantity": 1.0,
+        "unit": "cup",
+        "displayText": "كوب زبادي طبيعي",
+        "optional": false
+      },
+      {
+        "ingredientId": "oats",
+        "quantity": 1.0,
+        "unit": "tbsp",
+        "displayText": "ملعقة كبيرة شوفان للوجه",
+        "optional": true
+      }
+    ],
+    "steps": [
+      "اخفقي الفراولة والتمر والزبادي في الخلاط حتى يصبح المزيج سميكاً وناعماً ولونه وردياً جميلاً.",
+      "اسكبي المزيج في وعاء لانش بوكس محكم الإغلاق ورشي ملعقة الشوفان على الوجه.",
+      "احفظيه بارداً ليتناوله الطفل كتحلية أو سناك غني بالفيتامينات."
+    ]
+  }
+]
