@@ -82,9 +82,45 @@ class KidsScreen extends ConsumerWidget {
       body: SafeArea(
         child: kidsAsync.when(
           loading: () =>
-              Center(child: CircularProgressIndicator(color: colors.accent)),
-          error: (err, stack) =>
-              Center(child: Text(err.toString(), style: typography.bodyMedium)),
+              const Center(child: CircularProgressIndicator.adaptive()),
+          error: (err, stack) => Center(
+            child: Padding(
+              padding: EdgeInsetsDirectional.all(spacing.xl),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 80.0,
+                    height: 80.0,
+                    decoration: BoxDecoration(
+                      color: colors.errorContainer,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      Icons.error_outline_rounded,
+                      size: 40.0,
+                      color: colors.error,
+                    ),
+                  ),
+                  SizedBox(height: spacing.lg),
+                  Text(
+                    l10n.errorResultsTitle,
+                    style: typography.titleLarge.copyWith(
+                      color: colors.textPrimary,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: spacing.xl),
+                  AppButton(
+                    label: l10n.retryButton,
+                    icon: Icons.refresh_rounded,
+                    onPressed: () => ref.invalidate(kidsListNotifierProvider),
+                  ),
+                ],
+              ),
+            ),
+          ),
           data: (kids) {
             if (kids.isEmpty) {
               return Padding(

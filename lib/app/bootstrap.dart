@@ -26,7 +26,8 @@ Future<void> bootstrap() async {
   }
 
   // Set up Crashlytics global error reporting on supported mobile platforms
-  final isCrashlyticsSupported = !kIsWeb &&
+  final isCrashlyticsSupported =
+      !kIsWeb &&
       (defaultTargetPlatform == TargetPlatform.android ||
           defaultTargetPlatform == TargetPlatform.iOS ||
           defaultTargetPlatform == TargetPlatform.macOS);
@@ -62,12 +63,16 @@ Future<void> _initPostFrameServices(ProviderContainer container) async {
   // A. App Check activation (debug provider in debug builds)
   try {
     await FirebaseAppCheck.instance.activate(
-      providerAndroid:
-          kDebugMode ? const AndroidDebugProvider() : const AndroidPlayIntegrityProvider(),
-      providerApple:
-          kDebugMode ? const AppleDebugProvider() : const AppleDeviceCheckProvider(),
+      providerAndroid: kDebugMode
+          ? const AndroidDebugProvider()
+          : const AndroidPlayIntegrityProvider(),
+      providerApple: kDebugMode
+          ? const AppleDebugProvider()
+          : const AppleDeviceCheckProvider(),
     );
-    debugPrint('FirebaseAppCheck successfully activated (debugMode: $kDebugMode)');
+    debugPrint(
+      'FirebaseAppCheck successfully activated (debugMode: $kDebugMode)',
+    );
   } catch (e) {
     debugPrint('FirebaseAppCheck activation skipped or failed: $e');
   }
@@ -77,7 +82,9 @@ Future<void> _initPostFrameServices(ProviderContainer container) async {
     final auth = FirebaseAuth.instance;
     if (auth.currentUser == null) {
       final credential = await auth.signInAnonymously();
-      debugPrint('FirebaseAuth anonymous user established: ${credential.user?.uid}');
+      debugPrint(
+        'FirebaseAuth anonymous user established: ${credential.user?.uid}',
+      );
     } else {
       debugPrint('FirebaseAuth existing user active: ${auth.currentUser?.uid}');
     }

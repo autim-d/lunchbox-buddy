@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:crypto/crypto.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -46,9 +47,12 @@ class AiRankingService {
     List<MealFeedback> feedbacks = const [],
     DateTime? referenceDate,
   }) {
-    final map = ingredientMap ?? {
-      for (final ing in (allIngredients ?? const <Ingredient>[])) ing.id: ing,
-    };
+    final map =
+        ingredientMap ??
+        {
+          for (final ing in (allIngredients ?? const <Ingredient>[]))
+            ing.id: ing,
+        };
     return getAiRankedRecommendations(
       request: request,
       allRecipes: allRecipes,
@@ -243,7 +247,8 @@ class AiRankingService {
         .join('|');
     final candidateIds = candidates.map((c) => c.recipe.id).join(',');
     final note = request.freeTextNote ?? '';
-    final raw = 'ai_rank:$kidsConstraints:$candidateIds:$note:${request.mealType}:${request.maxMinutes}';
+    final raw =
+        'ai_rank:$kidsConstraints:$candidateIds:$note:${request.mealType}:${request.maxMinutes}';
     final digest = md5.convert(utf8.encode(raw));
     return 'ai_rank_$digest';
   }

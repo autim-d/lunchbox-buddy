@@ -24,10 +24,8 @@ typedef ModelInvoker = Future<String?> Function({
 /// - Maps errors into typed [Failure] results (never throws uncaught exceptions to UI)
 /// - UI widgets never call Firebase AI directly
 class AiClient {
-  AiClient({
-    required this.config,
-    ModelInvoker? invoker,
-  }) : _invoker = invoker ?? _defaultInvoker;
+  AiClient({required this.config, ModelInvoker? invoker})
+    : _invoker = invoker ?? _defaultInvoker;
 
   final AppConfig config;
   final ModelInvoker _invoker;
@@ -165,12 +163,12 @@ class AiClient {
         if (errorString.contains('socket') ||
             errorString.contains('network') ||
             errorString.contains('connection')) {
-          lastFailure = NetworkFailure(
-            'Network communication error: $e',
+          lastFailure = NetworkFailure('Network communication error: $e', e);
+        } else {
+          lastFailure = UnknownFailure(
+            'AI generation encountered error: $e',
             e,
           );
-        } else {
-          lastFailure = UnknownFailure('AI generation encountered error: $e', e);
         }
       }
 

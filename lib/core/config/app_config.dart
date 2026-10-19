@@ -75,8 +75,9 @@ class AppConfig {
 
     return AppConfig(
       geminiModel: modelVal.isNotEmpty ? modelVal : defaultGeminiModel,
-      requestTimeoutSeconds:
-          timeoutVal > 0 ? timeoutVal : defaultTimeoutSeconds,
+      requestTimeoutSeconds: timeoutVal > 0
+          ? timeoutVal
+          : defaultTimeoutSeconds,
       maxRetries: retriesVal >= 0 ? retriesVal : defaultMaxRetries,
       enableAiSuggestions: aiVal,
       enableFridgeScan: fridgeVal,
@@ -100,14 +101,14 @@ class AppConfig {
 
   @override
   int get hashCode => Object.hash(
-        geminiModel,
-        requestTimeoutSeconds,
-        maxRetries,
-        enableAiSuggestions,
-        enableFridgeScan,
-        enableVoiceInput,
-        maintenanceMode,
-      );
+    geminiModel,
+    requestTimeoutSeconds,
+    maxRetries,
+    enableAiSuggestions,
+    enableFridgeScan,
+    enableVoiceInput,
+    maintenanceMode,
+  );
 
   @override
   String toString() =>
@@ -128,8 +129,9 @@ class AppConfigService {
       await remoteConfig.setConfigSettings(
         RemoteConfigSettings(
           fetchTimeout: const Duration(seconds: 10),
-          minimumFetchInterval:
-              kDebugMode ? Duration.zero : const Duration(hours: 1),
+          minimumFetchInterval: kDebugMode
+              ? Duration.zero
+              : const Duration(hours: 1),
         ),
       );
 
@@ -156,8 +158,9 @@ class AppConfigService {
 }
 
 /// Riverpod provider delivering the current AppConfig
-final appConfigProvider =
-    NotifierProvider<AppConfigNotifier, AppConfig>(AppConfigNotifier.new);
+final appConfigProvider = NotifierProvider<AppConfigNotifier, AppConfig>(
+  AppConfigNotifier.new,
+);
 
 class AppConfigNotifier extends Notifier<AppConfig> {
   @override

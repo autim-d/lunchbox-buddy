@@ -5,7 +5,10 @@ import 'package:lunchbox_buddy/core/ui/tokens.dart';
 /// Custom clipper that clips the bottom edge of a container with a realistic
 /// zig-zag serrated tear edge, like thermal receipt paper torn from a dispenser.
 class ReceiptTornEdgeClipper extends CustomClipper<Path> {
-  const ReceiptTornEdgeClipper({this.toothWidth = 10.0, this.toothHeight = 5.0});
+  const ReceiptTornEdgeClipper({
+    this.toothWidth = 10.0,
+    this.toothHeight = 5.0,
+  });
 
   final double toothWidth;
   final double toothHeight;
@@ -196,14 +199,11 @@ class ReceiptPaperContainerState extends State<ReceiptPaperContainer>
       child: Container(
         decoration: BoxDecoration(
           color: colors.surface,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(radii.sm),
-            topRight: Radius.circular(radii.sm),
-          ),
-          border: Border(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(radii.sm)),
+          border: BorderDirectional(
             top: BorderSide(color: colors.borderSubtle),
-            left: BorderSide(color: colors.borderSubtle),
-            right: BorderSide(color: colors.borderSubtle),
+            start: BorderSide(color: colors.borderSubtle),
+            end: BorderSide(color: colors.borderSubtle),
           ),
           boxShadow: [
             BoxShadow(

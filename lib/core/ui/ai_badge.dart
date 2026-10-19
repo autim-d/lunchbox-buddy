@@ -3,11 +3,7 @@ import 'package:lunchbox_buddy/core/ui/tokens.dart';
 
 /// Small, warm AI badge displayed on AI-ranked or adapted recipe results.
 class AiBadge extends StatelessWidget {
-  const AiBadge({
-    super.key,
-    this.label = 'اقتراح ذكي',
-    this.isCompact = false,
-  });
+  const AiBadge({super.key, this.label = 'اقتراح ذكي', this.isCompact = false});
 
   final String label;
   final bool isCompact;

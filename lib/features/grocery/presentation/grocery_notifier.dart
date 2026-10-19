@@ -116,7 +116,9 @@ class GroceryListNotifier extends AsyncNotifier<List<GroceryItem>> {
       id: 'manual_${DateTime.now().microsecondsSinceEpoch}',
       ingredientId: 'manual_${DateTime.now().microsecondsSinceEpoch}',
       nameAr: nameAr.trim(),
-      nameEn: nameEn?.trim().isNotEmpty == true ? nameEn!.trim() : nameAr.trim(),
+      nameEn: nameEn?.trim().isNotEmpty == true
+          ? nameEn!.trim()
+          : nameAr.trim(),
       aisle: aisle,
       quantity: quantity,
       unit: unit?.trim().isNotEmpty == true ? unit!.trim() : null,

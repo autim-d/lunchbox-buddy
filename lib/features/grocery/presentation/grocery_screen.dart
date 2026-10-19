@@ -41,10 +41,7 @@ class _GroceryListScreenState extends ConsumerState<GroceryListScreen> {
       headerTitle: header,
     );
     // ignore: deprecated_member_use
-    Share.share(
-      text,
-      subject: header,
-    );
+    Share.share(text, subject: header);
   }
 
   void _showAddManualItemDialog() {
@@ -164,11 +161,44 @@ class _GroceryListScreenState extends ConsumerState<GroceryListScreen> {
         ),
       ),
       body: groceryAsync.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
+        loading: () =>
+            const Center(child: CircularProgressIndicator.adaptive()),
         error: (err, stack) => Center(
-          child: Text(
-            err.toString(),
-            style: typography.bodyMedium.copyWith(color: colors.error),
+          child: Padding(
+            padding: EdgeInsetsDirectional.all(spacing.xl),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 80.0,
+                  height: 80.0,
+                  decoration: BoxDecoration(
+                    color: colors.errorContainer,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    Icons.error_outline_rounded,
+                    size: 40.0,
+                    color: colors.error,
+                  ),
+                ),
+                SizedBox(height: spacing.lg),
+                Text(
+                  l10n.errorResultsTitle,
+                  style: typography.titleLarge.copyWith(
+                    color: colors.textPrimary,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: spacing.xl),
+                AppButton(
+                  label: l10n.retryButton,
+                  icon: Icons.refresh_rounded,
+                  onPressed: () => ref.invalidate(groceryListNotifierProvider),
+                ),
+              ],
+            ),
           ),
         ),
         data: (items) {
@@ -236,11 +266,7 @@ class _GroceryListScreenState extends ConsumerState<GroceryListScreen> {
 
     return Column(
       children: [
-        Icon(
-          Icons.storefront_rounded,
-          size: 28.0,
-          color: colors.primary,
-        ),
+        Icon(Icons.storefront_rounded, size: 28.0, color: colors.primary),
         SizedBox(height: spacing.xs),
         Text(
           l10n.receiptStoreName,
@@ -252,9 +278,7 @@ class _GroceryListScreenState extends ConsumerState<GroceryListScreen> {
         ),
         Text(
           l10n.receiptTagline,
-          style: typography.bodySmall.copyWith(
-            color: colors.textSecondary,
-          ),
+          style: typography.bodySmall.copyWith(color: colors.textSecondary),
         ),
         SizedBox(height: spacing.xs),
         Text(
@@ -298,7 +322,10 @@ class _GroceryListScreenState extends ConsumerState<GroceryListScreen> {
     );
   }
 
-  List<Widget> _buildAisleSections(BuildContext context, List<GroceryItem> items) {
+  List<Widget> _buildAisleSections(
+    BuildContext context,
+    List<GroceryItem> items,
+  ) {
     const spacing = AppTokens.spacing;
 
     // Group items by aisle key
@@ -358,7 +385,10 @@ class _GroceryListScreenState extends ConsumerState<GroceryListScreen> {
     );
   }
 
-  Widget _buildReceiptFooterActions(BuildContext context, List<GroceryItem> items) {
+  Widget _buildReceiptFooterActions(
+    BuildContext context,
+    List<GroceryItem> items,
+  ) {
     final l10n = context.l10n;
     const colors = AppTokens.colors;
     const spacing = AppTokens.spacing;
@@ -687,7 +717,9 @@ class _AddManualItemBottomSheetState
     final quantity = double.tryParse(quantityText);
 
     HapticFeedback.lightImpact();
-    ref.read(groceryListNotifierProvider.notifier).addManualItem(
+    ref
+        .read(groceryListNotifierProvider.notifier)
+        .addManualItem(
           nameAr: name,
           quantity: quantity,
           unit: _selectedUnit,
@@ -768,8 +800,9 @@ class _AddManualItemBottomSheetState
                   flex: 2,
                   child: TextField(
                     controller: _quantityController,
-                    keyboardType:
-                        const TextInputType.numberWithOptions(decimal: true),
+                    keyboardType: const TextInputType.numberWithOptions(
+                      decimal: true,
+                    ),
                     textInputAction: TextInputAction.done,
                     decoration: InputDecoration(
                       labelText: l10n.itemQuantityLabel,

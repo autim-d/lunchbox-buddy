@@ -7,7 +7,7 @@ import 'package:speech_to_text/speech_to_text.dart';
 /// Service managing speech-to-text recording with Arabic (Saudi) locale preference.
 class VoiceInputService {
   VoiceInputService({SpeechToText? speech})
-      : _speech = speech ?? SpeechToText();
+    : _speech = speech ?? SpeechToText();
 
   final SpeechToText _speech;
   bool _isInitialized = false;
@@ -23,7 +23,9 @@ class VoiceInputService {
     try {
       final available = await _speech.initialize(
         onError: (SpeechRecognitionError error) {
-          debugPrint('SpeechToText error: ${error.errorMsg} (permanent: ${error.permanent})');
+          debugPrint(
+            'SpeechToText error: ${error.errorMsg} (permanent: ${error.permanent})',
+          );
         },
         onStatus: (String status) {
           debugPrint('SpeechToText status: $status');
@@ -37,10 +39,14 @@ class VoiceInputService {
         // Priority 1: Saudi Arabic (ar_SA)
         // Priority 2: Any Arabic dialect (ar_*)
         // Priority 3: System default
-        final saudi = locales.where((l) =>
-            l.localeId.toLowerCase().replaceAll('-', '_') == 'ar_sa').firstOrNull;
-        final anyArabic = locales.where((l) =>
-            l.localeId.toLowerCase().startsWith('ar')).firstOrNull;
+        final saudi = locales
+            .where(
+              (l) => l.localeId.toLowerCase().replaceAll('-', '_') == 'ar_sa',
+            )
+            .firstOrNull;
+        final anyArabic = locales
+            .where((l) => l.localeId.toLowerCase().startsWith('ar'))
+            .firstOrNull;
 
         _preferredLocaleId = saudi?.localeId ?? anyArabic?.localeId ?? 'ar_SA';
       }

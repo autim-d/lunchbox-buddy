@@ -31,16 +31,15 @@ class AiPrompts {
       ),
       'excludedIngredientIds': Schema.array(
         items: Schema.string(),
-        description:
-            'List of matching canonical ingredient IDs user wants to avoid or exclude',
+        description: 'List of matching canonical ingredient IDs user wants to avoid or exclude',
       ),
       'unresolvedIngredients': Schema.array(
         items: Schema.string(),
-        description:
-            'Any food items or ingredients mentioned that could not be matched to canonical IDs',
+        description: 'Any food items or ingredients mentioned that could not be matched to canonical IDs',
       ),
       'confidenceReason': Schema.string(
-        description: 'Brief explanation in Arabic of how request was understood',
+        description:
+            'Brief explanation in Arabic of how request was understood',
       ),
     },
   );
@@ -66,7 +65,9 @@ class AiPrompts {
     buffer.writeln('طلب الأم:');
     buffer.writeln('"$rawUserInput"');
     buffer.writeln();
-    buffer.writeln('قائمة المكونات القياسية المعتمدة في التطبيق (معرّف: الاسم العربي):');
+    buffer.writeln(
+      'قائمة المكونات القياسية المعتمدة في التطبيق (معرّف: الاسم العربي):',
+    );
     for (final ing in canonicalIngredients) {
       buffer.writeln('- ${ing.id}: ${ing.nameAr}');
     }
@@ -87,8 +88,7 @@ class AiPrompts {
                   'The exact recipe ID selected from the candidate list',
             ),
             'reasonAr': Schema.string(
-              description:
-                  'Warm, friendly one-sentence Arabic explanation for why this meal fits',
+              description: 'Warm, friendly one-sentence Arabic explanation for why this meal fits',
             ),
             'substitutionTip': Schema.string(
               description:
@@ -121,16 +121,25 @@ class AiPrompts {
   }) {
     final buffer = StringBuffer();
 
-    buffer.writeln('=== ملخص ملفات الأطفال (للمحافظة على الخصوصية لا تُذكر أسماء) ===');
+    buffer.writeln(
+      '=== ملخص ملفات الأطفال (للمحافظة على الخصوصية لا تُذكر أسماء) ===',
+    );
     for (int i = 0; i < selectedKids.length; i++) {
       final kid = selectedKids[i];
       final ageYears = DateTime.now().difference(kid.birthDate).inDays ~/ 365;
-      final ageMonths = (DateTime.now().difference(kid.birthDate).inDays % 365) ~/ 30;
+      final ageMonths =
+          (DateTime.now().difference(kid.birthDate).inDays % 365) ~/ 30;
       buffer.writeln('الطفل رقم ${i + 1}:');
       buffer.writeln('- العمر: $ageYears سنة و $ageMonths شهر');
-      buffer.writeln('- الحساسية: ${kid.allergies.isEmpty ? "لا يوجد" : kid.allergies.join(", ")}');
-      buffer.writeln('- الأطعمة غير المفضلة: ${kid.dislikes.isEmpty ? "لا يوجد" : kid.dislikes.join(", ")}');
-      buffer.writeln('- الأطعمة المفضلة: ${kid.likes.isEmpty ? "لا يوجد" : kid.likes.join(", ")}');
+      buffer.writeln(
+        '- الحساسية: ${kid.allergies.isEmpty ? "لا يوجد" : kid.allergies.join(", ")}',
+      );
+      buffer.writeln(
+        '- الأطعمة غير المفضلة: ${kid.dislikes.isEmpty ? "لا يوجد" : kid.dislikes.join(", ")}',
+      );
+      buffer.writeln(
+        '- الأطعمة المفضلة: ${kid.likes.isEmpty ? "لا يوجد" : kid.likes.join(", ")}',
+      );
       buffer.writeln('- مستوى الصعوبة في الأكل (0-3): ${kid.pickyLevel}');
     }
     buffer.writeln();
@@ -138,7 +147,9 @@ class AiPrompts {
     if (recentFeedbacks.isNotEmpty) {
       buffer.writeln('=== سجل التغذية الراجعة الأخير للأطفال ===');
       for (final fb in recentFeedbacks.take(5)) {
-        buffer.writeln('- الوصفة: ${fb.recipeId} -> التفاعل: ${fb.reaction}${fb.reasonTag != null ? " (السبب: ${fb.reasonTag})" : ""}');
+        buffer.writeln(
+          '- الوصفة: ${fb.recipeId} -> التفاعل: ${fb.reaction}${fb.reasonTag != null ? " (السبب: ${fb.reasonTag})" : ""}',
+        );
       }
       buffer.writeln();
     }
@@ -149,11 +160,15 @@ class AiPrompts {
       buffer.writeln();
     }
 
-    buffer.writeln('=== قائمة الوصفات المرشحة (اختاري أفضل 3 فقط من معرّفاتها) ===');
+    buffer.writeln(
+      '=== قائمة الوصفات المرشحة (اختاري أفضل 3 فقط من معرّفاتها) ===',
+    );
     for (final recipe in candidates) {
       final totalMin = recipe.prepMinutes + recipe.cookMinutes;
       final ingIds = recipe.ingredients.map((e) => e.ingredientId).join(", ");
-      buffer.writeln('- معرّف: "${recipe.id}" | العنوان: ${recipe.title} | الوقت الإجمالي: $totalMin دقيقة | الوسوم: ${recipe.tags.join(", ")} | المكونات: $ingIds');
+      buffer.writeln(
+        '- معرّف: "${recipe.id}" | العنوان: ${recipe.title} | الوقت الإجمالي: $totalMin دقيقة | الوسوم: ${recipe.tags.join(", ")} | المكونات: $ingIds',
+      );
     }
 
     return buffer.toString();

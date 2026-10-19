@@ -9,10 +9,7 @@ import 'package:lunchbox_buddy/features/suggest/domain/ai_parsed_request.dart';
 
 /// Service that turns free text or spoken Arabic/English requests into structured [AiParsedRequest].
 class AiRequestParser {
-  AiRequestParser({
-    required this.aiClient,
-    required this.ingredientsDao,
-  });
+  AiRequestParser({required this.aiClient, required this.ingredientsDao});
 
   final AiClient aiClient;
   final IngredientsDao ingredientsDao;
@@ -26,13 +23,12 @@ class AiRequestParser {
     List<Ingredient>? customIngredients,
   }) async {
     if (rawText.trim().isEmpty) {
-      return const ErrorResult(
-        AiSchemaFailure('Input text cannot be empty'),
-      );
+      return const ErrorResult(AiSchemaFailure('Input text cannot be empty'));
     }
 
     try {
-      final ingredients = customIngredients ?? await ingredientsDao.getAllIngredients();
+      final ingredients =
+          customIngredients ?? await ingredientsDao.getAllIngredients();
 
       final prompt = AiPrompts.buildParseRequestPrompt(
         rawUserInput: rawText,
@@ -50,9 +46,7 @@ class AiRequestParser {
 
       return result;
     } catch (e) {
-      return ErrorResult(
-        UnknownFailure('Request parsing failed: $e', e),
-      );
+      return ErrorResult(UnknownFailure('Request parsing failed: $e', e));
     }
   }
 }

@@ -35,7 +35,9 @@ void main() {
     );
   }
 
-  testWidgets('AiDebugScreen displays environment card and button', (tester) async {
+  testWidgets('AiDebugScreen displays environment card and button', (
+    tester,
+  ) async {
     tester.view.physicalSize = const Size(800, 1600);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(() => tester.view.resetPhysicalSize());
@@ -50,7 +52,9 @@ void main() {
     await tester.pumpWidget(
       buildTestableWidget(
         overrides: [
-          appConfigProvider.overrideWith(() => _CustomConfigNotifier(testConfig)),
+          appConfigProvider.overrideWith(
+            () => _CustomConfigNotifier(testConfig),
+          ),
         ],
       ),
     );
@@ -63,7 +67,9 @@ void main() {
     expect(find.text('اختبار إرسال استعلام مهيكل (Ping AI)'), findsOneWidget);
   });
 
-  testWidgets('AiDebugScreen executes ping and renders success card', (tester) async {
+  testWidgets('AiDebugScreen executes ping and renders success card', (
+    tester,
+  ) async {
     tester.view.physicalSize = const Size(800, 1600);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(() => tester.view.resetPhysicalSize());
@@ -72,13 +78,14 @@ void main() {
     const testConfig = AppConfig();
     final mockAiClient = AiClient(
       config: testConfig,
-      invoker: ({
-        required String modelName,
-        required GenerationConfig generationConfig,
-        Content? systemInstruction,
-        required Iterable<Content> prompt,
-      }) async {
-        return '''
+      invoker:
+          ({
+            required String modelName,
+            required GenerationConfig generationConfig,
+            Content? systemInstruction,
+            required Iterable<Content> prompt,
+          }) async {
+            return '''
         {
           "snackName": "شرائح تفاح بزبدة الفول السوداني",
           "prepTimeMinutes": 3,
@@ -86,14 +93,12 @@ void main() {
           "tip": "قطعي التفاح لشرائح رفيعة لتسهيل القضم"
         }
         ''';
-      },
+          },
     );
 
     await tester.pumpWidget(
       buildTestableWidget(
-        overrides: [
-          aiClientProvider.overrideWithValue(mockAiClient),
-        ],
+        overrides: [aiClientProvider.overrideWithValue(mockAiClient)],
       ),
     );
 
@@ -105,7 +110,10 @@ void main() {
     await tester.pumpAndSettle();
 
     // Verify success card elements
-    expect(find.text('استجابة مهيكلة ناجحة (Schema Validated)'), findsOneWidget);
+    expect(
+      find.text('استجابة مهيكلة ناجحة (Schema Validated)'),
+      findsOneWidget,
+    );
     expect(find.text('شرائح تفاح بزبدة الفول السوداني'), findsOneWidget);
     expect(find.text('وقت التحضير: 3 دقائق'), findsOneWidget);
     expect(find.text('تفاح'), findsOneWidget);
@@ -113,43 +121,51 @@ void main() {
     expect(find.text('قطعي التفاح لشرائح رفيعة لتسهيل القضم'), findsOneWidget);
   });
 
-  testWidgets('AiDebugScreen displays clean Failure card on network error without crashing', (tester) async {
-    tester.view.physicalSize = const Size(800, 1600);
-    tester.view.devicePixelRatio = 1.0;
-    addTearDown(() => tester.view.resetPhysicalSize());
-    addTearDown(() => tester.view.resetDevicePixelRatio());
+  testWidgets(
+    'AiDebugScreen displays clean Failure card on network error without crashing',
+    (tester) async {
+      tester.view.physicalSize = const Size(800, 1600);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(() => tester.view.resetPhysicalSize());
+      addTearDown(() => tester.view.resetDevicePixelRatio());
 
-    const testConfig = AppConfig(maxRetries: 0);
-    final mockAiClient = AiClient(
-      config: testConfig,
-      invoker: ({
-        required String modelName,
-        required GenerationConfig generationConfig,
-        Content? systemInstruction,
-        required Iterable<Content> prompt,
-      }) async {
-        throw const SocketException('No route to host');
-      },
-    );
+      const testConfig = AppConfig(maxRetries: 0);
+      final mockAiClient = AiClient(
+        config: testConfig,
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              throw const SocketException('No route to host');
+            },
+      );
 
-    await tester.pumpWidget(
-      buildTestableWidget(
-        overrides: [
-          aiClientProvider.overrideWithValue(mockAiClient),
-        ],
-      ),
-    );
+      await tester.pumpWidget(
+        buildTestableWidget(
+          overrides: [aiClientProvider.overrideWithValue(mockAiClient)],
+        ),
+      );
 
-    final buttonFinder = find.byType(AppButton);
-    await tester.ensureVisible(buttonFinder);
-    await tester.tap(buttonFinder);
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 50));
-    await tester.pumpAndSettle();
+      final buttonFinder = find.byType(AppButton);
+      await tester.ensureVisible(buttonFinder);
+      await tester.tap(buttonFinder);
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 50));
+      await tester.pumpAndSettle();
 
-    // Verify failure card
-    expect(find.textContaining('فشل الاستعلام النظيف (NetworkFailure)'), findsOneWidget);
-    expect(find.textContaining('Network connection unavailable'), findsOneWidget);
-    expect(find.byIcon(Icons.error_outline_rounded), findsOneWidget);
-  });
+      // Verify failure card
+      expect(
+        find.textContaining('فشل الاستعلام النظيف (NetworkFailure)'),
+        findsOneWidget,
+      );
+      expect(
+        find.textContaining('Network connection unavailable'),
+        findsOneWidget,
+      );
+      expect(find.byIcon(Icons.error_outline_rounded), findsOneWidget);
+    },
+  );
 }

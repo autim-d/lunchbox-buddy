@@ -14,17 +14,77 @@ void main() {
     const scorer = Scorer();
 
     final allIngredients = <Ingredient>[
-      const Ingredient(id: 'chicken_breast', nameAr: 'صدر دجاج', nameEn: 'Chicken Breast', category: 'poultry'),
-      const Ingredient(id: 'white_rice', nameAr: 'أرز أبيض', nameEn: 'White Rice', category: 'grains'),
-      const Ingredient(id: 'cheddar_cheese', nameAr: 'جبن شيدر', nameEn: 'Cheddar Cheese', category: 'dairy', allergens: ['milk']),
-      const Ingredient(id: 'peanut_butter', nameAr: 'زبدة فول سوداني', nameEn: 'Peanut Butter', category: 'spreads', allergens: ['peanuts']),
-      const Ingredient(id: 'egg', nameAr: 'بيض', nameEn: 'Egg', category: 'dairy', allergens: ['eggs']),
-      const Ingredient(id: 'bread', nameAr: 'خبز', nameEn: 'Bread', category: 'bakery', allergens: ['gluten']),
-      const Ingredient(id: 'banana', nameAr: 'موز', nameEn: 'Banana', category: 'produce'),
-      const Ingredient(id: 'spinach', nameAr: 'سبانخ', nameEn: 'Spinach', category: 'produce'),
-      const Ingredient(id: 'carrot', nameAr: 'جزر', nameEn: 'Carrot', category: 'produce'),
-      const Ingredient(id: 'honey', nameAr: 'عسل', nameEn: 'Honey', category: 'sweeteners'),
-      const Ingredient(id: 'tuna', nameAr: 'تونة', nameEn: 'Tuna', category: 'seafood', allergens: ['fish']),
+      const Ingredient(
+        id: 'chicken_breast',
+        nameAr: 'صدر دجاج',
+        nameEn: 'Chicken Breast',
+        category: 'poultry',
+      ),
+      const Ingredient(
+        id: 'white_rice',
+        nameAr: 'أرز أبيض',
+        nameEn: 'White Rice',
+        category: 'grains',
+      ),
+      const Ingredient(
+        id: 'cheddar_cheese',
+        nameAr: 'جبن شيدر',
+        nameEn: 'Cheddar Cheese',
+        category: 'dairy',
+        allergens: ['milk'],
+      ),
+      const Ingredient(
+        id: 'peanut_butter',
+        nameAr: 'زبدة فول سوداني',
+        nameEn: 'Peanut Butter',
+        category: 'spreads',
+        allergens: ['peanuts'],
+      ),
+      const Ingredient(
+        id: 'egg',
+        nameAr: 'بيض',
+        nameEn: 'Egg',
+        category: 'dairy',
+        allergens: ['eggs'],
+      ),
+      const Ingredient(
+        id: 'bread',
+        nameAr: 'خبز',
+        nameEn: 'Bread',
+        category: 'bakery',
+        allergens: ['gluten'],
+      ),
+      const Ingredient(
+        id: 'banana',
+        nameAr: 'موز',
+        nameEn: 'Banana',
+        category: 'produce',
+      ),
+      const Ingredient(
+        id: 'spinach',
+        nameAr: 'سبانخ',
+        nameEn: 'Spinach',
+        category: 'produce',
+      ),
+      const Ingredient(
+        id: 'carrot',
+        nameAr: 'جزر',
+        nameEn: 'Carrot',
+        category: 'produce',
+      ),
+      const Ingredient(
+        id: 'honey',
+        nameAr: 'عسل',
+        nameEn: 'Honey',
+        category: 'sweeteners',
+      ),
+      const Ingredient(
+        id: 'tuna',
+        nameAr: 'تونة',
+        nameEn: 'Tuna',
+        category: 'seafood',
+        allergens: ['fish'],
+      ),
     ];
 
     final ingredientMap = {for (final i in allIngredients) i.id: i};
@@ -38,8 +98,16 @@ void main() {
         cookMinutes: 10,
         tags: ['quick', 'lunchbox', 'dinner'],
         ingredients: [
-          RecipeIngredient(ingredientId: 'chicken_breast', quantity: 150, unit: 'g'),
-          RecipeIngredient(ingredientId: 'white_rice', quantity: 1, unit: 'cup'),
+          RecipeIngredient(
+            ingredientId: 'chicken_breast',
+            quantity: 150,
+            unit: 'g',
+          ),
+          RecipeIngredient(
+            ingredientId: 'white_rice',
+            quantity: 1,
+            unit: 'cup',
+          ),
         ],
         steps: ['اطبخي وقدمي.'],
       ),
@@ -64,7 +132,11 @@ void main() {
         cookMinutes: 5,
         tags: ['quick', 'lunchbox'],
         ingredients: [
-          RecipeIngredient(ingredientId: 'cheddar_cheese', quantity: 40, unit: 'g'),
+          RecipeIngredient(
+            ingredientId: 'cheddar_cheese',
+            quantity: 40,
+            unit: 'g',
+          ),
           RecipeIngredient(ingredientId: 'bread', quantity: 2, unit: 'slices'),
         ],
         steps: ['حمري الساندوتش.'],
@@ -77,7 +149,11 @@ void main() {
         cookMinutes: 0,
         tags: ['quick', 'snack'],
         ingredients: [
-          RecipeIngredient(ingredientId: 'peanut_butter', quantity: 30, unit: 'g'),
+          RecipeIngredient(
+            ingredientId: 'peanut_butter',
+            quantity: 30,
+            unit: 'g',
+          ),
           RecipeIngredient(ingredientId: 'bread', quantity: 1, unit: 'piece'),
         ],
         steps: ['ادهني وقدمي.'],
@@ -169,7 +245,9 @@ void main() {
         ingredientMap: ingredientMap,
       );
 
-      final hasCheese = safe.any((r) => r.ingredients.any((i) => i.ingredientId == 'cheddar_cheese'));
+      final hasCheese = safe.any(
+        (r) => r.ingredients.any((i) => i.ingredientId == 'cheddar_cheese'),
+      );
       expect(hasCheese, isFalse);
     });
 
@@ -191,31 +269,36 @@ void main() {
       expect(hasPeanuts, isFalse);
     });
 
-    test('Case 08: Double allergy (egg + milk) removes egg toast and cheese toast', () {
-      final sensitiveKid = KidProfile(
-        id: 'k8',
-        name: 'يوسف',
-        birthDate: DateTime(2021, 5, 1),
-        allergies: const ['eggs', 'milk'],
-      );
+    test(
+      'Case 08: Double allergy (egg + milk) removes egg toast and cheese toast',
+      () {
+        final sensitiveKid = KidProfile(
+          id: 'k8',
+          name: 'يوسف',
+          birthDate: DateTime(2021, 5, 1),
+          allergies: const ['eggs', 'milk'],
+        );
 
-      final safe = safetyFilter.filterSafeRecipes(
-        recipes: testRecipes,
-        kids: [sensitiveKid],
-        ingredientMap: ingredientMap,
-      );
+        final safe = safetyFilter.filterSafeRecipes(
+          recipes: testRecipes,
+          kids: [sensitiveKid],
+          ingredientMap: ingredientMap,
+        );
 
-      final safeIds = safe.map((r) => r.id).toSet();
-      expect(safeIds, isNot(contains('rec_egg_toast')));
-      expect(safeIds, isNot(contains('rec_cheese_toast')));
-      expect(safeIds, contains('rec_chicken_rice'));
-    });
+        final safeIds = safe.map((r) => r.id).toSet();
+        expect(safeIds, isNot(contains('rec_egg_toast')));
+        expect(safeIds, isNot(contains('rec_cheese_toast')));
+        expect(safeIds, contains('rec_chicken_rice'));
+      },
+    );
 
     test('Case 18: Infant Honey Hazard -> baby under 12 months strictly rejected for honey', () {
       final infant = KidProfile(
         id: 'k18',
         name: 'رضيع',
-        birthDate: DateTime.now().subtract(const Duration(days: 200)), // ~6 months
+        birthDate: DateTime.now().subtract(
+          const Duration(days: 200),
+        ), // ~6 months
       );
 
       final safe = safetyFilter.filterSafeRecipes(

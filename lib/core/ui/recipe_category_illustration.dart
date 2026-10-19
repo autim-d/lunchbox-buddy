@@ -81,8 +81,8 @@ class RecipeCategoryIllustration extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           // Background decorative ambient circles
-          Positioned(
-            right: -20,
+          PositionedDirectional(
+            end: -20,
             bottom: -20,
             child: Icon(
               secondaryIcon,
@@ -90,8 +90,8 @@ class RecipeCategoryIllustration extends StatelessWidget {
               color: iconColor.withValues(alpha: 0.08),
             ),
           ),
-          Positioned(
-            left: -15,
+          PositionedDirectional(
+            start: -15,
             top: -15,
             child: Icon(
               primaryIcon,

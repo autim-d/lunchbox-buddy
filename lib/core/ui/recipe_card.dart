@@ -61,9 +61,11 @@ class RecipeCard extends ConsumerWidget {
     const radii = AppTokens.radii;
     const typography = AppTokens.typography;
 
-    final savedIds =
-        ref.watch(savedRecipeIdsProvider).asData?.value ?? const <String>{};
-    final isSaved = savedIds.contains(recipe.id);
+    final isSaved = ref.watch(
+      savedRecipeIdsProvider.select(
+        (async) => async.asData?.value.contains(recipe.id) ?? false,
+      ),
+    );
     final isLoved = ref.watch(isRecipeLovedProvider(recipe.id));
 
     final totalMinutes = recipe.prepMinutes + recipe.cookMinutes;
@@ -131,10 +133,7 @@ class RecipeCard extends ConsumerWidget {
                     ),
 
                     if (isAiRanked)
-                      AiBadge(
-                        label: l10n.aiSmartBadgeLabel,
-                        isCompact: true,
-                      ),
+                      AiBadge(label: l10n.aiSmartBadgeLabel, isCompact: true),
 
                     // Time badge
                     Container(
@@ -286,7 +285,8 @@ class RecipeCard extends ConsumerWidget {
                   ],
                 ),
               ),
-              if (substitutionTip != null && substitutionTip!.trim().isNotEmpty) ...[
+              if (substitutionTip != null &&
+                  substitutionTip!.trim().isNotEmpty) ...[
                 SizedBox(height: spacing.xs),
                 Container(
                   width: double.infinity,
@@ -297,10 +297,7 @@ class RecipeCard extends ConsumerWidget {
                   decoration: BoxDecoration(
                     color: colors.surfaceSubtle,
                     borderRadius: BorderRadius.circular(radii.sm),
-                    border: Border.all(
-                      color: colors.borderSubtle,
-                      width: 1.0,
-                    ),
+                    border: Border.all(color: colors.borderSubtle, width: 1.0),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,

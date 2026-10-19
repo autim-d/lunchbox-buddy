@@ -506,8 +506,13 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
                           ? TextButton.icon(
                               onPressed: _isParsing
                                   ? null
-                                  : () => _parseInputText(_noteController.text.trim()),
-                              icon: const Icon(Icons.auto_awesome_rounded, size: 14.0),
+                                  : () => _parseInputText(
+                                      _noteController.text.trim(),
+                                    ),
+                              icon: const Icon(
+                                Icons.auto_awesome_rounded,
+                                size: 14.0,
+                              ),
                               label: Text(
                                 l10n.parseVoicePromptAction,
                                 style: typography.labelSmall.copyWith(
@@ -534,7 +539,10 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
                               ),
                               suffixIcon: _noteController.text.trim().isNotEmpty
                                   ? IconButton(
-                                      icon: const Icon(Icons.clear_rounded, size: 18.0),
+                                      icon: const Icon(
+                                        Icons.clear_rounded,
+                                        size: 18.0,
+                                      ),
                                       onPressed: () {
                                         _noteController.clear();
                                         setState(() {});
@@ -580,7 +588,9 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
                                 boxShadow: _isListening
                                     ? [
                                         BoxShadow(
-                                          color: colors.accent.withValues(alpha: 0.3),
+                                          color: colors.accent.withValues(
+                                            alpha: 0.3,
+                                          ),
                                           blurRadius: 8,
                                           offset: const Offset(0, 2),
                                         ),
@@ -605,7 +615,9 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
                     if (_isParsing) ...[
                       SizedBox(height: spacing.sm),
                       LinearProgressIndicator(
-                        backgroundColor: colors.secondaryContainer.withValues(alpha: 0.3),
+                        backgroundColor: colors.secondaryContainer.withValues(
+                          alpha: 0.3,
+                        ),
                         color: colors.secondary,
                         borderRadius: BorderRadius.circular(radii.full),
                       ),
@@ -650,7 +662,9 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
     const radii = AppTokens.radii;
     const typography = AppTokens.typography;
 
-    final ingredientMap = {for (final ing in allIngredients) ing.id: ing.nameAr};
+    final ingredientMap = {
+      for (final ing in allIngredients) ing.id: ing.nameAr,
+    };
 
     return Container(
       padding: EdgeInsetsDirectional.all(spacing.md),
@@ -739,11 +753,15 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
               // Selected on-hand ingredients
               for (final ingId in _selectedIngredientIds)
                 Chip(
-                  avatar: const Icon(Icons.check_circle_outline_rounded, size: 14.0),
+                  avatar: const Icon(
+                    Icons.check_circle_outline_rounded,
+                    size: 14.0,
+                  ),
                   label: Text(ingredientMap[ingId] ?? ingId),
                   backgroundColor: colors.surface,
                   deleteIcon: const Icon(Icons.clear_rounded, size: 14.0),
-                  onDeleted: () => setState(() => _selectedIngredientIds.remove(ingId)),
+                  onDeleted: () =>
+                      setState(() => _selectedIngredientIds.remove(ingId)),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(radii.full),
                     side: BorderSide(color: colors.secondary),
@@ -752,14 +770,21 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
               // Excluded ingredients
               for (final exclId in _excludedIngredientIds)
                 Chip(
-                  avatar: Icon(Icons.block_rounded, size: 14.0, color: colors.error),
+                  avatar: Icon(
+                    Icons.block_rounded,
+                    size: 14.0,
+                    color: colors.error,
+                  ),
                   label: Text('بدون ${ingredientMap[exclId] ?? exclId}'),
                   backgroundColor: colors.surface,
                   deleteIcon: const Icon(Icons.clear_rounded, size: 14.0),
-                  onDeleted: () => setState(() => _excludedIngredientIds.remove(exclId)),
+                  onDeleted: () =>
+                      setState(() => _excludedIngredientIds.remove(exclId)),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(radii.full),
-                    side: BorderSide(color: colors.error.withValues(alpha: 0.5)),
+                    side: BorderSide(
+                      color: colors.error.withValues(alpha: 0.5),
+                    ),
                   ),
                 ),
             ],
@@ -793,10 +818,13 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
                     label: Text(item),
                     backgroundColor: colors.surface,
                     deleteIcon: const Icon(Icons.clear_rounded, size: 14.0),
-                    onDeleted: () => setState(() => _unresolvedIngredients.remove(item)),
+                    onDeleted: () =>
+                        setState(() => _unresolvedIngredients.remove(item)),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(radii.full),
-                      side: BorderSide(color: colors.accent.withValues(alpha: 0.6)),
+                      side: BorderSide(
+                        color: colors.accent.withValues(alpha: 0.6),
+                      ),
                     ),
                   ),
               ],

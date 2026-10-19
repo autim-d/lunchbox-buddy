@@ -55,9 +55,11 @@ class _DynamicSaveButtonState extends ConsumerState<DynamicSaveButton> {
     const radii = AppTokens.radii;
     const typography = AppTokens.typography;
 
-    final savedIds =
-        ref.watch(savedRecipeIdsProvider).asData?.value ?? const <String>{};
-    final isSaved = savedIds.contains(widget.recipeId);
+    final isSaved = ref.watch(
+      savedRecipeIdsProvider.select(
+        (async) => async.asData?.value.contains(widget.recipeId) ?? false,
+      ),
+    );
 
     // Dynamic width & content per state
     final double buttonWidth;

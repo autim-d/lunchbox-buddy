@@ -8,13 +8,7 @@ import 'package:lunchbox_buddy/core/data/models/ingredient.dart';
 import 'package:lunchbox_buddy/core/data/models/recipe.dart';
 
 /// Dimension category for measurement units
-enum UnitDimension {
-  mass,
-  metricVolume,
-  culinaryVolume,
-  count,
-  other,
-}
+enum UnitDimension { mass, metricVolume, culinaryVolume, count, other }
 
 /// Unit details containing dimension and conversion factor to dimension's base unit
 class UnitDefinition {
@@ -435,7 +429,8 @@ class UnitConverter {
         final totalGrams =
             (qty1 * def1.factorToBase) + (qty2 * def2.factorToBase);
         // If either unit was kg or total grams >= 1000, express in kg
-        final eitherKg = def1.canonicalUnit == 'kg' || def2.canonicalUnit == 'kg';
+        final eitherKg =
+            def1.canonicalUnit == 'kg' || def2.canonicalUnit == 'kg';
         if (eitherKg || totalGrams >= 1000.0) {
           final kg = totalGrams / 1000.0;
           return (quantity: _roundSmart(kg), unit: 'kg');
@@ -444,8 +439,7 @@ class UnitConverter {
         }
 
       case UnitDimension.metricVolume:
-        final totalMl =
-            (qty1 * def1.factorToBase) + (qty2 * def2.factorToBase);
+        final totalMl = (qty1 * def1.factorToBase) + (qty2 * def2.factorToBase);
         final eitherL = def1.canonicalUnit == 'l' || def2.canonicalUnit == 'l';
         if (eitherL || totalMl >= 1000.0) {
           final l = totalMl / 1000.0;
@@ -495,10 +489,7 @@ class UnitConverter {
         if (def1.canonicalUnit != def2.canonicalUnit) {
           return null;
         }
-        return (
-          quantity: _roundSmart(qty1 + qty2),
-          unit: def1.canonicalUnit,
-        );
+        return (quantity: _roundSmart(qty1 + qty2), unit: def1.canonicalUnit);
 
       case UnitDimension.other:
         if (norm1 == norm2) {
@@ -625,8 +616,9 @@ class GroceryMerger {
     required Set<String> tickedIngredientIds,
     required Map<String, Ingredient> ingredientMasterMap,
   }) {
-    final scaleFactor =
-        (recipe.servings > 0) ? (targetServings / recipe.servings) : 1.0;
+    final scaleFactor = (recipe.servings > 0)
+        ? (targetServings / recipe.servings)
+        : 1.0;
     final items = <GroceryItem>[];
 
     for (final ing in recipe.ingredients) {

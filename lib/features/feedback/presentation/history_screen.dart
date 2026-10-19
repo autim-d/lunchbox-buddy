@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:lunchbox_buddy/core/data/models/models.dart';
 import 'package:lunchbox_buddy/core/data/providers.dart';
 import 'package:lunchbox_buddy/core/l10n/l10n.dart';
+import 'package:lunchbox_buddy/core/ui/app_button.dart';
 import 'package:lunchbox_buddy/core/ui/kid_avatar_picker.dart';
 import 'package:lunchbox_buddy/core/ui/tokens.dart';
 import 'package:lunchbox_buddy/features/kids/presentation/kids_notifier.dart';
@@ -75,8 +76,46 @@ class HistoryScreen extends ConsumerWidget {
         elevation: 0,
       ),
       body: feedbacksAsync.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (err, _) => Center(child: Text('Error: $err')),
+        loading: () =>
+            const Center(child: CircularProgressIndicator.adaptive()),
+        error: (err, _) => Center(
+          child: Padding(
+            padding: EdgeInsetsDirectional.all(spacing.xl),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 80.0,
+                  height: 80.0,
+                  decoration: BoxDecoration(
+                    color: colors.errorContainer,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    Icons.error_outline_rounded,
+                    size: 40.0,
+                    color: colors.error,
+                  ),
+                ),
+                SizedBox(height: spacing.lg),
+                Text(
+                  l10n.errorResultsTitle,
+                  style: typography.titleLarge.copyWith(
+                    color: colors.textPrimary,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: spacing.xl),
+                AppButton(
+                  label: l10n.retryButton,
+                  icon: Icons.refresh_rounded,
+                  onPressed: () => ref.invalidate(feedbackListNotifierProvider),
+                ),
+              ],
+            ),
+          ),
+        ),
         data: (feedbacks) {
           if (feedbacks.isEmpty) {
             return Center(

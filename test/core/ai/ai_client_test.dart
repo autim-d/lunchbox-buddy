@@ -15,24 +15,21 @@ void main() {
       maxRetries: 1,
     );
 
-    final testSchema = Schema.object(
-      properties: {
-        'idea': Schema.string(),
-      },
-    );
+    final testSchema = Schema.object(properties: {'idea': Schema.string()});
 
     test('successful structured response parses valid JSON map', () async {
       final client = AiClient(
         config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          expect(modelName, 'gemini-2.5-flash');
-          return '{"idea": "Apple Slices"}';
-        },
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              expect(modelName, 'gemini-2.5-flash');
+              return '{"idea": "Apple Slices"}';
+            },
       );
 
       final result = await client.generateStructured<String>(
@@ -48,14 +45,15 @@ void main() {
     test('empty response returns AiSchemaFailure', () async {
       final client = AiClient(
         config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          return '   ';
-        },
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              return '   ';
+            },
       );
 
       final result = await client.generateStructured<String>(
@@ -72,15 +70,16 @@ void main() {
       var callCount = 0;
       final client = AiClient(
         config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          callCount++;
-          return '{not_valid_json}';
-        },
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              callCount++;
+              return '{not_valid_json}';
+            },
       );
 
       final result = await client.generateStructured<String>(
@@ -98,14 +97,15 @@ void main() {
     test('parser exception returns AiSchemaFailure', () async {
       final client = AiClient(
         config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          return '{"wrong_key": 123}';
-        },
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              return '{"wrong_key": 123}';
+            },
       );
 
       final result = await client.generateStructured<String>(
@@ -122,16 +122,17 @@ void main() {
       var callCount = 0;
       final client = AiClient(
         config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          callCount++;
-          await Future<void>.delayed(const Duration(milliseconds: 300));
-          return '{"idea": "Late snack"}';
-        },
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              callCount++;
+              await Future<void>.delayed(const Duration(milliseconds: 300));
+              return '{"idea": "Late snack"}';
+            },
       );
 
       final result = await client.generateStructured<String>(
@@ -151,15 +152,16 @@ void main() {
       var callCount = 0;
       final client = AiClient(
         config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          callCount++;
-          throw const SocketException('Network is down');
-        },
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              callCount++;
+              throw const SocketException('Network is down');
+            },
       );
 
       final result = await client.generateStructured<String>(
@@ -173,64 +175,72 @@ void main() {
       expect(callCount, 2);
     });
 
-    test('transient socket failure followed by success recovers on retry', () async {
-      var callCount = 0;
-      final client = AiClient(
-        config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          callCount++;
-          if (callCount == 1) {
-            throw const SocketException('Temporary glitch');
-          }
-          return '{"idea": "Carrot Sticks"}';
-        },
-      );
+    test(
+      'transient socket failure followed by success recovers on retry',
+      () async {
+        var callCount = 0;
+        final client = AiClient(
+          config: testConfig,
+          invoker:
+              ({
+                required String modelName,
+                required GenerationConfig generationConfig,
+                Content? systemInstruction,
+                required Iterable<Content> prompt,
+              }) async {
+                callCount++;
+                if (callCount == 1) {
+                  throw const SocketException('Temporary glitch');
+                }
+                return '{"idea": "Carrot Sticks"}';
+              },
+        );
 
-      final result = await client.generateStructured<String>(
-        prompt: 'Give me a snack',
-        responseSchema: testSchema,
-        parser: (json) => json['idea'] as String,
-      );
+        final result = await client.generateStructured<String>(
+          prompt: 'Give me a snack',
+          responseSchema: testSchema,
+          parser: (json) => json['idea'] as String,
+        );
 
-      expect(result.isSuccess, isTrue);
-      expect(result.valueOrNull, 'Carrot Sticks');
-      expect(callCount, 2);
-    });
+        expect(result.isSuccess, isTrue);
+        expect(result.valueOrNull, 'Carrot Sticks');
+        expect(callCount, 2);
+      },
+    );
 
-    test('App Check permission denial returns AppCheckFailure without retry', () async {
-      var callCount = 0;
-      final client = AiClient(
-        config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          callCount++;
-          throw FirebaseException(
-            plugin: 'firebase_ai',
-            code: 'app-check-failed',
-            message: 'App Check token is invalid or missing',
-          );
-        },
-      );
+    test(
+      'App Check permission denial returns AppCheckFailure without retry',
+      () async {
+        var callCount = 0;
+        final client = AiClient(
+          config: testConfig,
+          invoker:
+              ({
+                required String modelName,
+                required GenerationConfig generationConfig,
+                Content? systemInstruction,
+                required Iterable<Content> prompt,
+              }) async {
+                callCount++;
+                throw FirebaseException(
+                  plugin: 'firebase_ai',
+                  code: 'app-check-failed',
+                  message: 'App Check token is invalid or missing',
+                );
+              },
+        );
 
-      final result = await client.generateStructured<String>(
-        prompt: 'Give me a snack',
-        responseSchema: testSchema,
-        parser: (json) => json['idea'] as String,
-      );
+        final result = await client.generateStructured<String>(
+          prompt: 'Give me a snack',
+          responseSchema: testSchema,
+          parser: (json) => json['idea'] as String,
+        );
 
-      expect(result.isSuccess, isFalse);
-      expect(result.failureOrNull, isA<AppCheckFailure>());
-      // Security/App Check failure shouldn't retry uselessly
-      expect(callCount, 1);
-    });
+        expect(result.isSuccess, isFalse);
+        expect(result.failureOrNull, isA<AppCheckFailure>());
+        // Security/App Check failure shouldn't retry uselessly
+        expect(callCount, 1);
+      },
+    );
   });
 }

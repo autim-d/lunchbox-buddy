@@ -88,12 +88,10 @@ class _AiDebugScreenState extends ConsumerState<AiDebugScreen> {
     final aiClient = ref.read(aiClientProvider);
 
     final result = await aiClient.generateStructured<DebugSnackIdea>(
-      prompt:
-          'اقترحي تصبيرة سريعة وصحية للأطفال بمكونين فقط مع وقت التحضير بالدقائق ونصيحة صغيرة.',
+      prompt: 'اقترحي تصبيرة سريعة وصحية للأطفال بمكونين فقط مع وقت التحضير بالدقائق ونصيحة صغيرة.',
       responseSchema: _snackSchema,
       parser: DebugSnackIdea.fromJson,
-      systemInstruction:
-          'أنتِ مساعدة ذكية متخصصة في وجبات الأطفال الصحية. التزمي دائماً بإرجاع بيانات JSON مطابقة للمخطط بدقة.',
+      systemInstruction: 'أنتِ مساعدة ذكية متخصصة في وجبات الأطفال الصحية. التزمي دائماً بإرجاع بيانات JSON مطابقة للمخطط بدقة.',
     );
 
     if (!mounted) return;
@@ -154,7 +152,11 @@ class _AiDebugScreenState extends ConsumerState<AiDebugScreen> {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.hub_rounded, color: colors.secondary, size: 20.0),
+                      Icon(
+                        Icons.hub_rounded,
+                        color: colors.secondary,
+                        size: 20.0,
+                      ),
                       SizedBox(width: spacing.xs),
                       Text(
                         'بيئة التشغيل والاتصال',
@@ -166,11 +168,22 @@ class _AiDebugScreenState extends ConsumerState<AiDebugScreen> {
                     ],
                   ),
                   const Divider(height: 16.0),
-                  _buildInfoRow('Firebase Auth:', user != null ? 'مفعل (UID: ${user.uid.substring(0, 8)}...)' : 'غير مسجل'),
+                  _buildInfoRow(
+                    'Firebase Auth:',
+                    user != null
+                        ? 'مفعل (UID: ${user.uid.substring(0, 8)}...)'
+                        : 'غير مسجل',
+                  ),
                   _buildInfoRow('Active Gemini Model:', config.geminiModel),
-                  _buildInfoRow('Request Timeout:', '${config.requestTimeoutSeconds} ثوانٍ'),
+                  _buildInfoRow(
+                    'Request Timeout:',
+                    '${config.requestTimeoutSeconds} ثوانٍ',
+                  ),
                   _buildInfoRow('Max Retries:', '${config.maxRetries} محاولة'),
-                  _buildInfoRow('App Check Backend:', 'Gemini Developer API (Free)'),
+                  _buildInfoRow(
+                    'App Check Backend:',
+                    'Gemini Developer API (Free)',
+                  ),
                 ],
               ),
             ),
@@ -178,7 +191,9 @@ class _AiDebugScreenState extends ConsumerState<AiDebugScreen> {
 
             // 2. Action Test Button
             AppButton(
-              label: _isLoading ? 'جاري الاتصال بـ Gemini...' : 'اختبار إرسال استعلام مهيكل (Ping AI)',
+              label: _isLoading
+                  ? 'جاري الاتصال بـ Gemini...'
+                  : 'اختبار إرسال استعلام مهيكل (Ping AI)',
               icon: Icons.bolt_rounded,
               isLoading: _isLoading,
               onPressed: _isLoading ? null : _runDebugTest,
@@ -203,7 +218,10 @@ class _AiDebugScreenState extends ConsumerState<AiDebugScreen> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(label, style: typography.labelSmall.copyWith(color: colors.textSecondary)),
+          Text(
+            label,
+            style: typography.labelSmall.copyWith(color: colors.textSecondary),
+          ),
           Text(
             value,
             style: typography.labelSmall.copyWith(
@@ -222,7 +240,8 @@ class _AiDebugScreenState extends ConsumerState<AiDebugScreen> {
     const radii = AppTokens.radii;
     const typography = AppTokens.typography;
 
-    final jsonPretty = const JsonEncoder.withIndent('  ').convert(snack.rawJson);
+    final jsonPretty = const JsonEncoder.withIndent('  ')
+        .convert(snack.rawJson);
 
     return Container(
       decoration: BoxDecoration(
@@ -243,7 +262,11 @@ class _AiDebugScreenState extends ConsumerState<AiDebugScreen> {
         children: [
           Row(
             children: [
-              Icon(Icons.check_circle_rounded, color: colors.secondary, size: 24.0),
+              Icon(
+                Icons.check_circle_rounded,
+                color: colors.secondary,
+                size: 24.0,
+              ),
               SizedBox(width: spacing.xs),
               Text(
                 'استجابة مهيكلة ناجحة (Schema Validated)',
@@ -302,7 +325,9 @@ class _AiDebugScreenState extends ConsumerState<AiDebugScreen> {
                   Expanded(
                     child: Text(
                       snack.tip!,
-                      style: typography.bodySmall.copyWith(color: colors.textPrimary),
+                      style: typography.bodySmall.copyWith(
+                        color: colors.textPrimary,
+                      ),
                     ),
                   ),
                 ],
@@ -325,10 +350,7 @@ class _AiDebugScreenState extends ConsumerState<AiDebugScreen> {
             ),
             child: Text(
               jsonPretty,
-              style: const TextStyle(
-                fontFamily: 'monospace',
-                fontSize: 12.0,
-              ),
+              style: const TextStyle(fontFamily: 'monospace', fontSize: 12.0),
             ),
           ),
         ],
@@ -356,7 +378,11 @@ class _AiDebugScreenState extends ConsumerState<AiDebugScreen> {
         children: [
           Row(
             children: [
-              Icon(Icons.error_outline_rounded, color: colors.error, size: 24.0),
+              Icon(
+                Icons.error_outline_rounded,
+                color: colors.error,
+                size: 24.0,
+              ),
               SizedBox(width: spacing.xs),
               Expanded(
                 child: Text(

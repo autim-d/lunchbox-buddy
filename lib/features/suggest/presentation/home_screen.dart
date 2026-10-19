@@ -39,8 +39,9 @@ class HomeScreen extends ConsumerWidget {
     const radii = AppTokens.radii;
     const typography = AppTokens.typography;
 
-    final currentLocale = ref.watch(appLocaleProvider);
-    final isArabic = currentLocale.languageCode == 'ar';
+    final isArabic = ref.watch(
+      appLocaleProvider.select((loc) => loc.languageCode == 'ar'),
+    );
 
     final kidsAsync = ref.watch(kidsListNotifierProvider);
     final selectedKidIds = ref.watch(selectedKidIdsProvider);
@@ -80,7 +81,10 @@ class HomeScreen extends ConsumerWidget {
 
           // Grocery List Screen Link
           IconButton(
-            icon: Icon(Icons.shopping_cart_outlined, color: colors.textSecondary),
+            icon: Icon(
+              Icons.shopping_cart_outlined,
+              color: colors.textSecondary,
+            ),
             tooltip: l10n.groceryTitle,
             onPressed: () => context.push('/grocery'),
           ),

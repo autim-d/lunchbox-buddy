@@ -107,7 +107,11 @@ void main() {
       tags: ['quick', 'protein', 'lunchbox'],
       ageMinMonths: 24,
       ingredients: [
-        RecipeIngredient(ingredientId: 'chicken_breast', quantity: 150, unit: 'g'),
+        RecipeIngredient(
+          ingredientId: 'chicken_breast',
+          quantity: 150,
+          unit: 'g',
+        ),
         RecipeIngredient(ingredientId: 'white_rice', quantity: 1, unit: 'cup'),
       ],
       steps: ['اطبخي الأرز والدجاج جيداً.'],
@@ -122,7 +126,11 @@ void main() {
       tags: ['quick', 'fun', 'lunchbox'],
       ageMinMonths: 18,
       ingredients: [
-        RecipeIngredient(ingredientId: 'white_rice', quantity: 1, unit: 'piece'),
+        RecipeIngredient(
+          ingredientId: 'white_rice',
+          quantity: 1,
+          unit: 'piece',
+        ),
       ],
       steps: ['حمري التوست.'],
     ),
@@ -150,7 +158,11 @@ void main() {
       tags: ['quick', 'lunchbox'],
       ageMinMonths: 24,
       ingredients: [
-        RecipeIngredient(ingredientId: 'cheddar_cheese', quantity: 50, unit: 'g'),
+        RecipeIngredient(
+          ingredientId: 'cheddar_cheese',
+          quantity: 50,
+          unit: 'g',
+        ),
       ],
       steps: ['سخني اللفافة على المقلاة.'],
     ),
@@ -164,7 +176,11 @@ void main() {
       tags: ['quick', 'lunchbox'],
       ageMinMonths: 24,
       ingredients: [
-        RecipeIngredient(ingredientId: 'peanut_butter', quantity: 30, unit: 'g'),
+        RecipeIngredient(
+          ingredientId: 'peanut_butter',
+          quantity: 30,
+          unit: 'g',
+        ),
       ],
       steps: ['ادهني التوست وقدميه.'],
     ),
@@ -206,50 +222,61 @@ void main() {
   });
 
   group('Feature A: AiRequestParser', () {
-    test('successfully parses Gulf Arabic query into structured AiParsedRequest', () async {
-      final aiClient = AiClient(
-        config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          return AiFixtures.validParseArabicRequestJson;
-        },
-      );
+    test(
+      'successfully parses Gulf Arabic query into structured AiParsedRequest',
+      () async {
+        final aiClient = AiClient(
+          config: testConfig,
+          invoker:
+              ({
+                required String modelName,
+                required GenerationConfig generationConfig,
+                Content? systemInstruction,
+                required Iterable<Content> prompt,
+              }) async {
+                return AiFixtures.validParseArabicRequestJson;
+              },
+        );
 
-      final parser = AiRequestParser(
-        aiClient: aiClient,
-        ingredientsDao: ingredientsDao,
-      );
+        final parser = AiRequestParser(
+          aiClient: aiClient,
+          ingredientsDao: ingredientsDao,
+        );
 
-      final result = await parser.parseRequest(
-        rawText: 'ولدي ما يحب الخضار وعندي دجاج وأرز وما عندي وقت',
-        customIngredients: testIngredients,
-      );
+        final result = await parser.parseRequest(
+          rawText: 'ولدي ما يحب الخضار وعندي دجاج وأرز وما عندي وقت',
+          customIngredients: testIngredients,
+        );
 
-      expect(result.isSuccess, isTrue);
-      final parsed = result.valueOrNull!;
-      expect(parsed.mealType, 'lunchbox');
-      expect(parsed.maxMinutes, 20);
-      expect(parsed.moodTags, contains('quick'));
-      expect(parsed.availableIngredientIds, containsAll(['chicken_breast', 'white_rice']));
-      expect(parsed.excludedIngredientIds, containsAll(['spinach', 'broccoli', 'carrot']));
-      expect(parsed.unresolvedIngredients, isEmpty);
-    });
+        expect(result.isSuccess, isTrue);
+        final parsed = result.valueOrNull!;
+        expect(parsed.mealType, 'lunchbox');
+        expect(parsed.maxMinutes, 20);
+        expect(parsed.moodTags, contains('quick'));
+        expect(
+          parsed.availableIngredientIds,
+          containsAll(['chicken_breast', 'white_rice']),
+        );
+        expect(
+          parsed.excludedIngredientIds,
+          containsAll(['spinach', 'broccoli', 'carrot']),
+        );
+        expect(parsed.unresolvedIngredients, isEmpty);
+      },
+    );
 
     test('returns unknown food items in unresolvedIngredients list', () async {
       final aiClient = AiClient(
         config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          return AiFixtures.validParseWithUnresolvedJson;
-        },
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              return AiFixtures.validParseWithUnresolvedJson;
+            },
       );
 
       final parser = AiRequestParser(
@@ -268,74 +295,83 @@ void main() {
       expect(parsed.unresolvedIngredients, contains('خبز تنور'));
     });
 
-    test('empty raw text returns error immediately without invoking AI', () async {
-      var invoked = false;
-      final aiClient = AiClient(
-        config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          invoked = true;
-          return AiFixtures.validParseArabicRequestJson;
-        },
-      );
+    test(
+      'empty raw text returns error immediately without invoking AI',
+      () async {
+        var invoked = false;
+        final aiClient = AiClient(
+          config: testConfig,
+          invoker:
+              ({
+                required String modelName,
+                required GenerationConfig generationConfig,
+                Content? systemInstruction,
+                required Iterable<Content> prompt,
+              }) async {
+                invoked = true;
+                return AiFixtures.validParseArabicRequestJson;
+              },
+        );
 
-      final parser = AiRequestParser(
-        aiClient: aiClient,
-        ingredientsDao: ingredientsDao,
-      );
+        final parser = AiRequestParser(
+          aiClient: aiClient,
+          ingredientsDao: ingredientsDao,
+        );
 
-      final result = await parser.parseRequest(rawText: '   ');
-      expect(result.isSuccess, isFalse);
-      expect(invoked, isFalse);
-    });
+        final result = await parser.parseRequest(rawText: '   ');
+        expect(result.isSuccess, isFalse);
+        expect(invoked, isFalse);
+      },
+    );
 
-    test('malformed JSON response retries once and safely returns error failure', () async {
-      var callCount = 0;
-      final aiClient = AiClient(
-        config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          callCount++;
-          return AiFixtures.malformedParseRequestJson;
-        },
-      );
+    test(
+      'malformed JSON response retries once and safely returns error failure',
+      () async {
+        var callCount = 0;
+        final aiClient = AiClient(
+          config: testConfig,
+          invoker:
+              ({
+                required String modelName,
+                required GenerationConfig generationConfig,
+                Content? systemInstruction,
+                required Iterable<Content> prompt,
+              }) async {
+                callCount++;
+                return AiFixtures.malformedParseRequestJson;
+              },
+        );
 
-      final parser = AiRequestParser(
-        aiClient: aiClient,
-        ingredientsDao: ingredientsDao,
-      );
+        final parser = AiRequestParser(
+          aiClient: aiClient,
+          ingredientsDao: ingredientsDao,
+        );
 
-      final result = await parser.parseRequest(
-        rawText: 'سوي لي غداء سريع',
-        customIngredients: testIngredients,
-      );
+        final result = await parser.parseRequest(
+          rawText: 'سوي لي غداء سريع',
+          customIngredients: testIngredients,
+        );
 
-      expect(result.isSuccess, isFalse);
-      // Retried once: total 2 attempts
-      expect(callCount, 2);
-    });
+        expect(result.isSuccess, isFalse);
+        // Retried once: total 2 attempts
+        expect(callCount, 2);
+      },
+    );
   });
 
   group('Feature B: AiRankingService', () {
     test('takes candidates and returns top 3 with warm Arabic reasons & substitution tips', () async {
       final aiClient = AiClient(
         config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          return AiFixtures.validRankingJson;
-        },
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              return AiFixtures.validRankingJson;
+            },
       );
 
       final rankingService = AiRankingService(
@@ -365,47 +401,51 @@ void main() {
       expect(recommendations.first.substitutionTip, isNotNull);
     });
 
-    test('rejects unknown candidate IDs and falls back silently to rule-based', () async {
-      final aiClient = AiClient(
-        config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          return AiFixtures.unknownIdsRankingJson;
-        },
-      );
+    test(
+      'rejects unknown candidate IDs and falls back silently to rule-based',
+      () async {
+        final aiClient = AiClient(
+          config: testConfig,
+          invoker:
+              ({
+                required String modelName,
+                required GenerationConfig generationConfig,
+                Content? systemInstruction,
+                required Iterable<Content> prompt,
+              }) async {
+                return AiFixtures.unknownIdsRankingJson;
+              },
+        );
 
-      final rankingService = AiRankingService(
-        aiClient: aiClient,
-        recommendationService: recommendationService,
-        safetyFilter: safetyFilter,
-        appMetadataDao: appMetadataDao,
-      );
+        final rankingService = AiRankingService(
+          aiClient: aiClient,
+          recommendationService: recommendationService,
+          safetyFilter: safetyFilter,
+          appMetadataDao: appMetadataDao,
+        );
 
-      final request = MealSuggestionRequest(
-        selectedKids: [testKid],
-        mealType: 'lunchbox',
-        maxMinutes: 30,
-      );
+        final request = MealSuggestionRequest(
+          selectedKids: [testKid],
+          mealType: 'lunchbox',
+          maxMinutes: 30,
+        );
 
-      final recommendations = await rankingService.rankAndAdapt(
-        request: request,
-        allRecipes: testRecipes,
-        allIngredients: testIngredients,
-        feedbacks: const <MealFeedback>[],
-      );
+        final recommendations = await rankingService.rankAndAdapt(
+          request: request,
+          allRecipes: testRecipes,
+          allIngredients: testIngredients,
+          feedbacks: const <MealFeedback>[],
+        );
 
-      // Successfully fell back to rule-based engine results
-      expect(recommendations.length, greaterThanOrEqualTo(1));
-      // None of the unknown fake IDs are returned
-      for (final rec in recommendations) {
-        expect(rec.recipe.id, isNot('mystery_recipe_9999'));
-        expect(rec.recipe.id, isNot('fake_nuggets_ultra'));
-      }
-    });
+        // Successfully fell back to rule-based engine results
+        expect(recommendations.length, greaterThanOrEqualTo(1));
+        // None of the unknown fake IDs are returned
+        for (final rec in recommendations) {
+          expect(rec.recipe.id, isNot('mystery_recipe_9999'));
+          expect(rec.recipe.id, isNot('fake_nuggets_ultra'));
+        }
+      },
+    );
 
     test('re-runs SafetyFilter strictly: no result ever contains an allergen of selected kids', () async {
       // Suppose AI mistakenly included rec_peanut_toast for Salem who has a peanut allergy
@@ -433,14 +473,15 @@ void main() {
 
       final aiClient = AiClient(
         config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          return allergyViolationRankingJson;
-        },
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              return allergyViolationRankingJson;
+            },
       );
 
       final rankingService = AiRankingService(
@@ -472,15 +513,16 @@ void main() {
       var callCount = 0;
       final aiClient = AiClient(
         config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          callCount++;
-          return AiFixtures.validRankingJson;
-        },
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              callCount++;
+              return AiFixtures.validRankingJson;
+            },
       );
 
       final rankingService = AiRankingService(
@@ -520,14 +562,17 @@ void main() {
     test('silent fallback to rule-based recommendations on network error or airplane mode', () async {
       final aiClient = AiClient(
         config: testConfig,
-        invoker: ({
-          required String modelName,
-          required GenerationConfig generationConfig,
-          Content? systemInstruction,
-          required Iterable<Content> prompt,
-        }) async {
-          throw Exception('SocketException: Failed host lookup (airplane mode)');
-        },
+        invoker:
+            ({
+              required String modelName,
+              required GenerationConfig generationConfig,
+              Content? systemInstruction,
+              required Iterable<Content> prompt,
+            }) async {
+              throw Exception(
+                'SocketException: Failed host lookup (airplane mode)',
+              );
+            },
       );
 
       final rankingService = AiRankingService(

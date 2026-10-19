@@ -95,16 +95,18 @@ Widget createTestWidget({
 }
 
 void main() {
-  testWidgets('ReceiptTornEdgeClipper produces valid path with zigzag teeth',
-      (tester) async {
+  testWidgets('ReceiptTornEdgeClipper produces valid path with zigzag teeth', (
+    tester,
+  ) async {
     const clipper = ReceiptTornEdgeClipper(toothWidth: 10.0, toothHeight: 5.0);
     final path = clipper.getClip(const Size(100.0, 200.0));
     expect(path, isNotNull);
     expect(clipper.shouldReclip(clipper), isFalse);
   });
 
-  testWidgets('GroceryListScreen displays empty state when list is empty',
-      (tester) async {
+  testWidgets('GroceryListScreen displays empty state when list is empty', (
+    tester,
+  ) async {
     await tester.pumpWidget(createTestWidget(items: []));
     await tester.pumpAndSettle();
 
@@ -113,54 +115,57 @@ void main() {
     expect(find.text('إضافة غرض'), findsWidgets);
   });
 
-  testWidgets('GroceryListScreen displays receipt and aisle groups when populated',
-      (tester) async {
-    final testItems = [
-      const GroceryItem(
-        id: '1',
-        ingredientId: 'cucumber',
-        nameAr: 'خيار صغير طازج',
-        nameEn: 'Cucumber',
-        aisle: 'produce',
-        quantity: 1.5,
-        unit: 'piece',
-        isChecked: false,
-      ),
-      const GroceryItem(
-        id: '2',
-        ingredientId: 'labneh',
-        nameAr: 'لبنة طازجة',
-        nameEn: 'Labneh',
-        aisle: 'dairy',
-        quantity: 3.0,
-        unit: 'tbsp',
-        isChecked: false,
-      ),
-    ];
+  testWidgets(
+    'GroceryListScreen displays receipt and aisle groups when populated',
+    (tester) async {
+      final testItems = [
+        const GroceryItem(
+          id: '1',
+          ingredientId: 'cucumber',
+          nameAr: 'خيار صغير طازج',
+          nameEn: 'Cucumber',
+          aisle: 'produce',
+          quantity: 1.5,
+          unit: 'piece',
+          isChecked: false,
+        ),
+        const GroceryItem(
+          id: '2',
+          ingredientId: 'labneh',
+          nameAr: 'لبنة طازجة',
+          nameEn: 'Labneh',
+          aisle: 'dairy',
+          quantity: 3.0,
+          unit: 'tbsp',
+          isChecked: false,
+        ),
+      ];
 
-    await tester.pumpWidget(createTestWidget(items: testItems));
-    await tester.pumpAndSettle();
+      await tester.pumpWidget(createTestWidget(items: testItems));
+      await tester.pumpAndSettle();
 
-    // Receipt header
-    expect(find.text('لانش بوكس بادي'), findsOneWidget);
+      // Receipt header
+      expect(find.text('لانش بوكس بادي'), findsOneWidget);
 
-    // Aisle headers
-    expect(find.text('الخضار والفواكه'), findsOneWidget);
-    expect(find.text('الألبان والأجبان'), findsOneWidget);
+      // Aisle headers
+      expect(find.text('الخضار والفواكه'), findsOneWidget);
+      expect(find.text('الألبان والأجبان'), findsOneWidget);
 
-    // Items
-    expect(find.text('خيار صغير طازج'), findsOneWidget);
-    expect(find.text('1 1/2 حبة'), findsOneWidget);
+      // Items
+      expect(find.text('خيار صغير طازج'), findsOneWidget);
+      expect(find.text('1 1/2 حبة'), findsOneWidget);
 
-    expect(find.text('لبنة طازجة'), findsOneWidget);
-    expect(find.text('3 ملعقة كبيرة'), findsOneWidget);
+      expect(find.text('لبنة طازجة'), findsOneWidget);
+      expect(find.text('3 ملعقة كبيرة'), findsOneWidget);
 
-    // Share button
-    expect(find.text('مشاركة عبر واتساب'), findsOneWidget);
-  });
+      // Share button
+      expect(find.text('مشاركة عبر واتساب'), findsOneWidget);
+    },
+  );
 
-  testWidgets('Tapping an item toggles checked state and strikethrough',
-      (tester) async {
+  testWidgets('Tapping an item toggles checked state and strikethrough', (
+    tester,
+  ) async {
     final testItems = [
       const GroceryItem(
         id: 'item_1',

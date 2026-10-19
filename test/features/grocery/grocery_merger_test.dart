@@ -186,11 +186,7 @@ void main() {
           quantity: 2.0,
           unit: 'slices',
         ),
-        RecipeIngredient(
-          ingredientId: 'labneh',
-          quantity: 2.0,
-          unit: 'tbsp',
-        ),
+        RecipeIngredient(ingredientId: 'labneh', quantity: 2.0, unit: 'tbsp'),
         RecipeIngredient(
           ingredientId: 'cucumber',
           quantity: 0.5,
@@ -208,21 +204,13 @@ void main() {
       cookMinutes: 0,
       steps: ['خطوة 1'],
       ingredients: [
-        RecipeIngredient(
-          ingredientId: 'labneh',
-          quantity: 1.0,
-          unit: 'tbsp',
-        ),
+        RecipeIngredient(ingredientId: 'labneh', quantity: 1.0, unit: 'tbsp'),
         RecipeIngredient(
           ingredientId: 'cucumber',
           quantity: 1.0,
           unit: 'piece',
         ),
-        RecipeIngredient(
-          ingredientId: 'chicken',
-          quantity: 100.0,
-          unit: 'g',
-        ),
+        RecipeIngredient(ingredientId: 'chicken', quantity: 100.0, unit: 'g'),
       ],
     );
 
@@ -437,11 +425,7 @@ void main() {
             quantity: 2.0,
             unit: 'slices',
           ),
-          RecipeIngredient(
-            ingredientId: 'labneh',
-            quantity: 2.0,
-            unit: 'tbsp',
-          ),
+          RecipeIngredient(ingredientId: 'labneh', quantity: 2.0, unit: 'tbsp'),
           RecipeIngredient(
             ingredientId: 'cucumber',
             quantity: 0.5,
@@ -465,11 +449,7 @@ void main() {
             quantity: 2.0,
             unit: 'slices',
           ),
-          RecipeIngredient(
-            ingredientId: 'labneh',
-            quantity: 1.0,
-            unit: 'tbsp',
-          ),
+          RecipeIngredient(ingredientId: 'labneh', quantity: 1.0, unit: 'tbsp'),
           RecipeIngredient(
             ingredientId: 'cucumber',
             quantity: 1.0,
@@ -502,9 +482,13 @@ void main() {
       // Acceptance: Merged correctly
       expect(mergedList.length, 3);
 
-      final toast = mergedList.firstWhere((it) => it.ingredientId == 'toast_brown');
+      final toast = mergedList.firstWhere(
+        (it) => it.ingredientId == 'toast_brown',
+      );
       final labneh = mergedList.firstWhere((it) => it.ingredientId == 'labneh');
-      final cucumber = mergedList.firstWhere((it) => it.ingredientId == 'cucumber');
+      final cucumber = mergedList.firstWhere(
+        (it) => it.ingredientId == 'cucumber',
+      );
 
       expect(toast.quantity, 4.0); // 2 + 2 = 4 slices
       expect(toast.unit, 'slices');
