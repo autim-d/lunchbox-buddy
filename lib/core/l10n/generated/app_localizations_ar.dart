@@ -776,4 +776,26 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get confirmClearAllMessage =>
       'هل أنتِ متأكدة من رغبتك في حذف جميع الأغراض من قائمة التسوق؟';
+
+  @override
+  String get parseVoicePromptAction => 'تحليل الطلب';
+
+  @override
+  String get listeningVoiceTooltip => 'جاري الاستماع... تحدثي الآن';
+
+  @override
+  String get startVoiceTooltip => 'تحدثي لتسجيل طلبكِ صوتياً';
+
+  @override
+  String get parsedChipsHeader =>
+      'الخيارات المستخرجة من طلبكِ (اضغطي للتعديل):';
+
+  @override
+  String get unresolvedItemsWarning => 'أصناف غير مؤكدة:';
+
+  @override
+  String get aiSmartBadgeLabel => 'اقتراح ذكي';
+
+  @override
+  String get substitutionTipTitle => 'نصيحة الاستبدال:';
 }

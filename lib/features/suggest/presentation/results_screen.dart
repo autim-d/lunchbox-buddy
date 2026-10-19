@@ -165,8 +165,11 @@ class _ResultsScreenState extends ConsumerState<ResultsScreen> {
                                       child: RecipeCard(
                                         recipe: rec.recipe,
                                         reasonKey: rec.reasonKey,
+                                        reasonText: rec.aiReason,
                                         score: rec.score,
                                         isScrollable: true,
+                                        isAiRanked: rec.isAiRanked,
+                                        substitutionTip: rec.substitutionTip,
                                         onTap: () {
                                           context.push(
                                             '/recipe/${rec.recipe.id}',

@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:lunchbox_buddy/core/data/models/ingredient.dart';
 import 'package:lunchbox_buddy/core/data/providers.dart';
 import 'package:lunchbox_buddy/core/l10n/l10n.dart';
 import 'package:lunchbox_buddy/core/ui/app_button.dart';
 import 'package:lunchbox_buddy/core/ui/tokens.dart';
 import 'package:lunchbox_buddy/features/kids/presentation/kids_notifier.dart';
+import 'package:lunchbox_buddy/features/suggest/domain/ai_parsed_request.dart';
+import 'package:lunchbox_buddy/features/suggest/domain/ai_request_parser.dart';
 import 'package:lunchbox_buddy/features/suggest/domain/meal_suggestion_request.dart';
 import 'package:lunchbox_buddy/features/suggest/presentation/suggest_provider.dart';
+import 'package:lunchbox_buddy/features/suggest/presentation/voice_input_service.dart';
 
 /// Modal bottom sheet allowing the mother to customize meal type, time,
 /// mood tags, and optional on-hand ingredients before suggesting.
@@ -33,16 +37,92 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
   int _maxMinutes = 20;
   final Set<String> _moodTags = {'quick'};
   final Set<String> _selectedIngredientIds = {};
+  final Set<String> _excludedIngredientIds = {};
+  final List<String> _unresolvedIngredients = [];
   String _ingredientSearchQuery = '';
   final TextEditingController _noteController = TextEditingController();
   final TextEditingController _ingredientSearchController =
       TextEditingController();
+
+  bool _isListening = false;
+  bool _isParsing = false;
+  AiParsedRequest? _parsedRequest;
 
   @override
   void dispose() {
     _noteController.dispose();
     _ingredientSearchController.dispose();
     super.dispose();
+  }
+
+  Future<void> _toggleVoiceRecording() async {
+    final voiceService = ref.read(voiceInputServiceProvider);
+
+    if (_isListening) {
+      await voiceService.stopListening();
+      if (!mounted) return;
+      setState(() => _isListening = false);
+      if (_noteController.text.trim().isNotEmpty) {
+        await _parseInputText(_noteController.text.trim());
+      }
+    } else {
+      final started = await voiceService.startListening(
+        onResult: (words) {
+          if (!mounted) return;
+          setState(() {
+            _noteController.text = words;
+          });
+        },
+        onListeningComplete: () {
+          if (!mounted) return;
+          setState(() => _isListening = false);
+          if (_noteController.text.trim().isNotEmpty) {
+            _parseInputText(_noteController.text.trim());
+          }
+        },
+      );
+
+      if (mounted) {
+        setState(() => _isListening = started);
+      }
+    }
+  }
+
+  Future<void> _parseInputText(String text) async {
+    if (text.trim().isEmpty) return;
+
+    setState(() {
+      _isParsing = true;
+    });
+
+    final parser = ref.read(aiRequestParserProvider);
+    final result = await parser.parseRequest(rawText: text.trim());
+
+    if (!mounted) return;
+
+    setState(() {
+      _isParsing = false;
+      result.when(
+        success: (parsed) {
+          _parsedRequest = parsed;
+          if (parsed.mealType.isNotEmpty) {
+            _mealType = parsed.mealType;
+          }
+          if (parsed.maxMinutes != null && parsed.maxMinutes! > 0) {
+            _maxMinutes = parsed.maxMinutes!;
+          }
+          _moodTags.addAll(parsed.moodTags);
+          _selectedIngredientIds.addAll(parsed.availableIngredientIds);
+          _excludedIngredientIds.addAll(parsed.excludedIngredientIds);
+          _unresolvedIngredients.clear();
+          _unresolvedIngredients.addAll(parsed.unresolvedIngredients);
+          HapticFeedback.lightImpact();
+        },
+        error: (failure) {
+          debugPrint('Request parsing error (silent fallback): $failure');
+        },
+      );
+    });
   }
 
   void _submit() {
@@ -54,7 +134,13 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
         .toList();
 
     // Fallback if none selected: take all kids
-    final effectiveKids = selectedKids.isNotEmpty ? selectedKids : allKids;
+    final baseKids = selectedKids.isNotEmpty ? selectedKids : allKids;
+
+    // Apply any excluded ingredients to kids' dislikes so Scorer factors them in
+    final effectiveKids = baseKids.map((k) {
+      final combined = {...k.dislikes, ..._excludedIngredientIds}.toList();
+      return k.copyWith(dislikes: combined);
+    }).toList();
 
     final request = MealSuggestionRequest(
       selectedKids: effectiveKids,
@@ -412,10 +498,24 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
                     ),
                     SizedBox(height: spacing.xl),
 
-                    // Section 5: Notes & Mic Row
+                    // Section 5: Notes & Voice Input Row
                     _SectionHeader(
                       title: l10n.notesFieldLabel,
                       icon: Icons.edit_note_rounded,
+                      trailing: _noteController.text.trim().isNotEmpty
+                          ? TextButton.icon(
+                              onPressed: _isParsing
+                                  ? null
+                                  : () => _parseInputText(_noteController.text.trim()),
+                              icon: const Icon(Icons.auto_awesome_rounded, size: 14.0),
+                              label: Text(
+                                l10n.parseVoicePromptAction,
+                                style: typography.labelSmall.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
+                          : null,
                     ),
                     SizedBox(height: spacing.sm),
                     Row(
@@ -423,6 +523,8 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
                         Expanded(
                           child: TextField(
                             controller: _noteController,
+                            onChanged: (_) => setState(() {}),
+                            onSubmitted: (text) => _parseInputText(text),
                             decoration: InputDecoration(
                               hintText: l10n.notesFieldPlaceholder,
                               filled: true,
@@ -430,6 +532,15 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
                               contentPadding: EdgeInsetsDirectional.all(
                                 spacing.md,
                               ),
+                              suffixIcon: _noteController.text.trim().isNotEmpty
+                                  ? IconButton(
+                                      icon: const Icon(Icons.clear_rounded, size: 18.0),
+                                      onPressed: () {
+                                        _noteController.clear();
+                                        setState(() {});
+                                      },
+                                    )
+                                  : null,
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(radii.card),
                                 borderSide: BorderSide(color: colors.border),
@@ -442,25 +553,72 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
                           ),
                         ),
                         SizedBox(width: spacing.sm),
-                        // Mic Icon (disabled state for now)
-                        Tooltip(
-                          message: l10n.micVoiceDisabledTooltip,
-                          child: Container(
-                            width: AppTokens.touchTargets.min,
-                            height: AppTokens.touchTargets.min,
-                            decoration: BoxDecoration(
-                              color: colors.surfaceSubtle,
-                              borderRadius: BorderRadius.circular(radii.card),
-                              border: Border.all(color: colors.border),
-                            ),
-                            child: Icon(
-                              Icons.mic_off_rounded,
-                              color: colors.textMuted,
+                        // Active Mic Button with listening indicator
+                        Semantics(
+                          button: true,
+                          label: _isListening
+                              ? l10n.listeningVoiceTooltip
+                              : l10n.startVoiceTooltip,
+                          child: InkWell(
+                            onTap: _toggleVoiceRecording,
+                            borderRadius: BorderRadius.circular(radii.card),
+                            child: AnimatedContainer(
+                              duration: AppTokens.durations.quick,
+                              width: AppTokens.touchTargets.min,
+                              height: AppTokens.touchTargets.min,
+                              decoration: BoxDecoration(
+                                color: _isListening
+                                    ? colors.accentContainer
+                                    : colors.surface,
+                                borderRadius: BorderRadius.circular(radii.card),
+                                border: Border.all(
+                                  color: _isListening
+                                      ? colors.accent
+                                      : colors.border,
+                                  width: _isListening ? 2.0 : 1.0,
+                                ),
+                                boxShadow: _isListening
+                                    ? [
+                                        BoxShadow(
+                                          color: colors.accent.withValues(alpha: 0.3),
+                                          blurRadius: 8,
+                                          offset: const Offset(0, 2),
+                                        ),
+                                      ]
+                                    : null,
+                              ),
+                              child: Icon(
+                                _isListening
+                                    ? Icons.mic_rounded
+                                    : Icons.mic_none_rounded,
+                                color: _isListening
+                                    ? colors.accent
+                                    : colors.secondary,
+                              ),
                             ),
                           ),
                         ),
                       ],
                     ),
+
+                    // AI Parsing indicator
+                    if (_isParsing) ...[
+                      SizedBox(height: spacing.sm),
+                      LinearProgressIndicator(
+                        backgroundColor: colors.secondaryContainer.withValues(alpha: 0.3),
+                        color: colors.secondary,
+                        borderRadius: BorderRadius.circular(radii.full),
+                      ),
+                    ],
+
+                    // Parsed Editable Chips Section
+                    if (_parsedRequest != null) ...[
+                      SizedBox(height: spacing.md),
+                      _buildParsedChipsSection(
+                        ingredientsAsync.asData?.value ?? const [],
+                      ),
+                    ],
+
                     SizedBox(height: spacing.xxl),
                   ],
                 ),
@@ -482,6 +640,170 @@ class _SuggestBottomSheetState extends ConsumerState<SuggestBottomSheet> {
           ),
         );
       },
+    );
+  }
+
+  Widget _buildParsedChipsSection(List<Ingredient> allIngredients) {
+    final l10n = context.l10n;
+    const colors = AppTokens.colors;
+    const spacing = AppTokens.spacing;
+    const radii = AppTokens.radii;
+    const typography = AppTokens.typography;
+
+    final ingredientMap = {for (final ing in allIngredients) ing.id: ing.nameAr};
+
+    return Container(
+      padding: EdgeInsetsDirectional.all(spacing.md),
+      decoration: BoxDecoration(
+        color: colors.secondaryContainer.withValues(alpha: 0.25),
+        borderRadius: BorderRadius.circular(radii.card),
+        border: Border.all(
+          color: colors.secondary.withValues(alpha: 0.35),
+          width: 1.0,
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(
+                Icons.auto_awesome_rounded,
+                size: 16.0,
+                color: colors.secondary,
+              ),
+              SizedBox(width: spacing.xs),
+              Expanded(
+                child: Text(
+                  l10n.parsedChipsHeader,
+                  style: typography.labelMedium.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: colors.secondary,
+                  ),
+                ),
+              ),
+              IconButton(
+                icon: const Icon(Icons.close_rounded, size: 16.0),
+                padding: EdgeInsets.zero,
+                constraints: const BoxConstraints(),
+                onPressed: () {
+                  setState(() {
+                    _parsedRequest = null;
+                  });
+                },
+              ),
+            ],
+          ),
+          SizedBox(height: spacing.sm),
+          Wrap(
+            spacing: spacing.xs,
+            runSpacing: spacing.xs,
+            children: [
+              // Meal type
+              Chip(
+                avatar: const Icon(Icons.restaurant_rounded, size: 14.0),
+                label: Text(_mealType),
+                backgroundColor: colors.surface,
+                deleteIcon: const Icon(Icons.clear_rounded, size: 14.0),
+                onDeleted: () => setState(() => _mealType = 'lunchbox'),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(radii.full),
+                  side: BorderSide(color: colors.border),
+                ),
+              ),
+              // Max minutes
+              Chip(
+                avatar: const Icon(Icons.schedule_rounded, size: 14.0),
+                label: Text('$_maxMinutes min'),
+                backgroundColor: colors.surface,
+                deleteIcon: const Icon(Icons.clear_rounded, size: 14.0),
+                onDeleted: () => setState(() => _maxMinutes = 20),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(radii.full),
+                  side: BorderSide(color: colors.border),
+                ),
+              ),
+              // Mood tags
+              for (final mood in _moodTags)
+                Chip(
+                  avatar: const Icon(Icons.mood_rounded, size: 14.0),
+                  label: Text(mood),
+                  backgroundColor: colors.surface,
+                  deleteIcon: const Icon(Icons.clear_rounded, size: 14.0),
+                  onDeleted: () => setState(() => _moodTags.remove(mood)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(radii.full),
+                    side: BorderSide(color: colors.border),
+                  ),
+                ),
+              // Selected on-hand ingredients
+              for (final ingId in _selectedIngredientIds)
+                Chip(
+                  avatar: const Icon(Icons.check_circle_outline_rounded, size: 14.0),
+                  label: Text(ingredientMap[ingId] ?? ingId),
+                  backgroundColor: colors.surface,
+                  deleteIcon: const Icon(Icons.clear_rounded, size: 14.0),
+                  onDeleted: () => setState(() => _selectedIngredientIds.remove(ingId)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(radii.full),
+                    side: BorderSide(color: colors.secondary),
+                  ),
+                ),
+              // Excluded ingredients
+              for (final exclId in _excludedIngredientIds)
+                Chip(
+                  avatar: Icon(Icons.block_rounded, size: 14.0, color: colors.error),
+                  label: Text('بدون ${ingredientMap[exclId] ?? exclId}'),
+                  backgroundColor: colors.surface,
+                  deleteIcon: const Icon(Icons.clear_rounded, size: 14.0),
+                  onDeleted: () => setState(() => _excludedIngredientIds.remove(exclId)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(radii.full),
+                    side: BorderSide(color: colors.error.withValues(alpha: 0.5)),
+                  ),
+                ),
+            ],
+          ),
+          if (_unresolvedIngredients.isNotEmpty) ...[
+            SizedBox(height: spacing.sm),
+            Row(
+              children: [
+                Icon(
+                  Icons.help_outline_rounded,
+                  size: 14.0,
+                  color: colors.accent,
+                ),
+                SizedBox(width: spacing.xs),
+                Text(
+                  l10n.unresolvedItemsWarning,
+                  style: typography.bodySmall.copyWith(
+                    color: colors.accent,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: spacing.xs),
+            Wrap(
+              spacing: spacing.xs,
+              runSpacing: spacing.xs,
+              children: [
+                for (final item in _unresolvedIngredients)
+                  Chip(
+                    label: Text(item),
+                    backgroundColor: colors.surface,
+                    deleteIcon: const Icon(Icons.clear_rounded, size: 14.0),
+                    onDeleted: () => setState(() => _unresolvedIngredients.remove(item)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(radii.full),
+                      side: BorderSide(color: colors.accent.withValues(alpha: 0.6)),
+                    ),
+                  ),
+              ],
+            ),
+          ],
+        ],
+      ),
     );
   }
 }

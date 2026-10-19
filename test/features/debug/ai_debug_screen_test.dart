@@ -7,7 +7,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:lunchbox_buddy/core/ai/ai_client.dart';
 import 'package:lunchbox_buddy/core/config/app_config.dart';
-import 'package:lunchbox_buddy/core/errors/failures.dart';
 import 'package:lunchbox_buddy/core/ui/app_button.dart';
 import 'package:lunchbox_buddy/features/debug/presentation/ai_debug_screen.dart';
 

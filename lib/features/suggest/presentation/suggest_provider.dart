@@ -1,7 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lunchbox_buddy/core/config/app_config.dart';
 import 'package:lunchbox_buddy/core/data/providers.dart';
 import 'package:lunchbox_buddy/core/safety/safety_filter.dart';
 import 'package:lunchbox_buddy/features/kids/presentation/kids_notifier.dart';
+import 'package:lunchbox_buddy/features/suggest/domain/ai_ranking_service.dart';
 import 'package:lunchbox_buddy/features/suggest/domain/meal_recommendation.dart';
 import 'package:lunchbox_buddy/features/suggest/domain/meal_suggestion_request.dart';
 import 'package:lunchbox_buddy/features/suggest/domain/recommendation_service.dart';
@@ -37,6 +39,26 @@ final mealSuggestionsProvider =
       // Ensure seed data is ready
       final seedService = ref.watch(seedServiceProvider);
       await seedService.seedIfNeeded();
+
+      final config = ref.watch(appConfigProvider);
+      final recipesDao = ref.watch(recipesDaoProvider);
+      final ingredientsDao = ref.watch(ingredientsDaoProvider);
+      final feedbackDao = ref.watch(feedbackDaoProvider);
+
+      if (config.enableAiSuggestions) {
+        final aiRankingService = ref.watch(aiRankingServiceProvider);
+        final allRecipes = await recipesDao.getAllRecipes();
+        final allIngredients = await ingredientsDao.getAllIngredients();
+        final allFeedback = await feedbackDao.getAllFeedback();
+        final ingredientMap = {for (final ing in allIngredients) ing.id: ing};
+
+        return aiRankingService.getAiRankedRecommendations(
+          request: request,
+          allRecipes: allRecipes,
+          ingredientMap: ingredientMap,
+          feedbacks: allFeedback,
+        );
+      }
 
       final service = ref.watch(recommendationServiceProvider);
       return service.getRecommendations(request);

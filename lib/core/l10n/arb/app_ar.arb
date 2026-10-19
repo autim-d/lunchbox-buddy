@@ -1075,5 +1075,33 @@
   "confirmClearAllMessage": "هل أنتِ متأكدة من رغبتك في حذف جميع الأغراض من قائمة التسوق؟",
   "@confirmClearAllMessage": {
     "description": "Dialog message confirming deletion of all grocery items"
+  },
+  "parseVoicePromptAction": "تحليل الطلب",
+  "@parseVoicePromptAction": {
+    "description": "Button to trigger AI parsing on typed or dictated text"
+  },
+  "listeningVoiceTooltip": "جاري الاستماع... تحدثي الآن",
+  "@listeningVoiceTooltip": {
+    "description": "Tooltip when speech recognizer is active"
+  },
+  "startVoiceTooltip": "تحدثي لتسجيل طلبكِ صوتياً",
+  "@startVoiceTooltip": {
+    "description": "Tooltip to activate voice recording"
+  },
+  "parsedChipsHeader": "الخيارات المستخرجة من طلبكِ (اضغطي للتعديل):",
+  "@parsedChipsHeader": {
+    "description": "Header for editable parsed chips from AI request parsing"
+  },
+  "unresolvedItemsWarning": "أصناف غير مؤكدة:",
+  "@unresolvedItemsWarning": {
+    "description": "Label for unresolved food items in parsed request"
+  },
+  "aiSmartBadgeLabel": "اقتراح ذكي",
+  "@aiSmartBadgeLabel": {
+    "description": "Badge label on AI-ranked recipe cards"
+  },
+  "substitutionTipTitle": "نصيحة الاستبدال:",
+  "@substitutionTipTitle": {
+    "description": "Title for substitution tip on recipe card"
   }
 }

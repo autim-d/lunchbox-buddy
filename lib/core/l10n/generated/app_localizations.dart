@@ -1519,6 +1519,48 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'هل أنتِ متأكدة من رغبتك في حذف جميع الأغراض من قائمة التسوق؟'**
   String get confirmClearAllMessage;
+
+  /// Button to trigger AI parsing on typed or dictated text
+  ///
+  /// In ar, this message translates to:
+  /// **'تحليل الطلب'**
+  String get parseVoicePromptAction;
+
+  /// Tooltip when speech recognizer is active
+  ///
+  /// In ar, this message translates to:
+  /// **'جاري الاستماع... تحدثي الآن'**
+  String get listeningVoiceTooltip;
+
+  /// Tooltip to activate voice recording
+  ///
+  /// In ar, this message translates to:
+  /// **'تحدثي لتسجيل طلبكِ صوتياً'**
+  String get startVoiceTooltip;
+
+  /// Header for editable parsed chips from AI request parsing
+  ///
+  /// In ar, this message translates to:
+  /// **'الخيارات المستخرجة من طلبكِ (اضغطي للتعديل):'**
+  String get parsedChipsHeader;
+
+  /// Label for unresolved food items in parsed request
+  ///
+  /// In ar, this message translates to:
+  /// **'أصناف غير مؤكدة:'**
+  String get unresolvedItemsWarning;
+
+  /// Badge label on AI-ranked recipe cards
+  ///
+  /// In ar, this message translates to:
+  /// **'اقتراح ذكي'**
+  String get aiSmartBadgeLabel;
+
+  /// Title for substitution tip on recipe card
+  ///
+  /// In ar, this message translates to:
+  /// **'نصيحة الاستبدال:'**
+  String get substitutionTipTitle;
 }
 
 class _AppLocalizationsDelegate

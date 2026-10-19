@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:firebase_ai/firebase_ai.dart';
@@ -77,7 +78,7 @@ class _AiDebugScreenState extends ConsumerState<AiDebugScreen> {
   );
 
   Future<void> _runDebugTest() async {
-    HapticFeedback.lightImpact();
+    unawaited(HapticFeedback.lightImpact());
     setState(() {
       _isLoading = true;
       _successResult = null;

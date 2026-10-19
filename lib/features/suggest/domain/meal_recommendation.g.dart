@@ -16,6 +16,9 @@ _MealRecommendation _$MealRecommendationFromJson(Map<String, dynamic> json) =>
             (k, e) => MapEntry(k, (e as num).toDouble()),
           ) ??
           const <String, double>{},
+      aiReason: json['aiReason'] as String?,
+      substitutionTip: json['substitutionTip'] as String?,
+      isAiRanked: json['isAiRanked'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$MealRecommendationToJson(_MealRecommendation instance) =>
@@ -24,4 +27,7 @@ Map<String, dynamic> _$MealRecommendationToJson(_MealRecommendation instance) =>
       'score': instance.score,
       'reasonKey': instance.reasonKey,
       'breakdown': instance.breakdown,
+      'aiReason': instance.aiReason,
+      'substitutionTip': instance.substitutionTip,
+      'isAiRanked': instance.isAiRanked,
     };

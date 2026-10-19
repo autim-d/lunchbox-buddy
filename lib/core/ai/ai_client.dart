@@ -60,6 +60,7 @@ class AiClient {
     required T Function(Map<String, dynamic> json) parser,
     String? systemInstruction,
     int? timeoutSeconds,
+    bool retryOnFormatError = false,
   }) async {
     final timeout = Duration(
       seconds: timeoutSeconds ?? config.requestTimeoutSeconds,
@@ -103,12 +104,19 @@ class AiClient {
           final parsed = parser(decoded);
           return Success(parsed);
         } catch (parseError) {
-          return ErrorResult(
-            AiSchemaFailure(
+          if (retryOnFormatError) {
+            lastFailure = AiSchemaFailure(
               'Failed to parse JSON response into target model: $parseError',
               parseError,
-            ),
-          );
+            );
+          } else {
+            return ErrorResult(
+              AiSchemaFailure(
+                'Failed to parse JSON response into target model: $parseError',
+                parseError,
+              ),
+            );
+          }
         }
       } on TimeoutException catch (e) {
         lastFailure = AiTimeoutFailure(
@@ -121,13 +129,19 @@ class AiClient {
           e,
         );
       } on FormatException catch (e) {
-        // Response format is invalid, do not retry same format
-        return ErrorResult(
-          AiSchemaFailure(
+        if (retryOnFormatError) {
+          lastFailure = AiSchemaFailure(
             'Malformed JSON received from model: ${e.message}',
             e,
-          ),
-        );
+          );
+        } else {
+          return ErrorResult(
+            AiSchemaFailure(
+              'Malformed JSON received from model: ${e.message}',
+              e,
+            ),
+          );
+        }
       } on FirebaseException catch (e) {
         final msg = e.message ?? '';
         if (e.code == 'app-check-failed' ||

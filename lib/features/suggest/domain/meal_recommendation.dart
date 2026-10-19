@@ -11,6 +11,9 @@ abstract class MealRecommendation with _$MealRecommendation {
     required double score,
     required String reasonKey,
     @Default(<String, double>{}) Map<String, double> breakdown,
+    String? aiReason,
+    String? substitutionTip,
+    @Default(false) bool isAiRanked,
   }) = _MealRecommendation;
 
   factory MealRecommendation.fromJson(Map<String, dynamic> json) =>

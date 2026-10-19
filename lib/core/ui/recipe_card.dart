@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lunchbox_buddy/core/data/models/models.dart';
 import 'package:lunchbox_buddy/core/data/providers.dart';
 import 'package:lunchbox_buddy/core/l10n/l10n.dart';
+import 'package:lunchbox_buddy/core/ui/ai_badge.dart';
 import 'package:lunchbox_buddy/core/ui/recipe_category_illustration.dart';
 import 'package:lunchbox_buddy/core/ui/ticket_clipper.dart';
 import 'package:lunchbox_buddy/core/ui/tokens.dart';
@@ -22,6 +23,8 @@ class RecipeCard extends ConsumerWidget {
     this.onTap,
     this.elevation = 4.0,
     this.isScrollable = false,
+    this.isAiRanked = false,
+    this.substitutionTip,
   });
 
   final Recipe recipe;
@@ -31,6 +34,8 @@ class RecipeCard extends ConsumerWidget {
   final VoidCallback? onTap;
   final double elevation;
   final bool isScrollable;
+  final bool isAiRanked;
+  final String? substitutionTip;
 
   String _resolveReason(BuildContext context) {
     if (reasonText != null && reasonText!.isNotEmpty) {
@@ -124,6 +129,12 @@ class RecipeCard extends ConsumerWidget {
                         ],
                       ),
                     ),
+
+                    if (isAiRanked)
+                      AiBadge(
+                        label: l10n.aiSmartBadgeLabel,
+                        isCompact: true,
+                      ),
 
                     // Time badge
                     Container(
@@ -275,6 +286,44 @@ class RecipeCard extends ConsumerWidget {
                   ],
                 ),
               ),
+              if (substitutionTip != null && substitutionTip!.trim().isNotEmpty) ...[
+                SizedBox(height: spacing.xs),
+                Container(
+                  width: double.infinity,
+                  padding: EdgeInsetsDirectional.symmetric(
+                    horizontal: spacing.sm,
+                    vertical: 6.0,
+                  ),
+                  decoration: BoxDecoration(
+                    color: colors.surfaceSubtle,
+                    borderRadius: BorderRadius.circular(radii.sm),
+                    border: Border.all(
+                      color: colors.borderSubtle,
+                      width: 1.0,
+                    ),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Icon(
+                        Icons.tips_and_updates_outlined,
+                        size: 15.0,
+                        color: colors.accent,
+                      ),
+                      SizedBox(width: spacing.xs),
+                      Expanded(
+                        child: Text(
+                          '${l10n.substitutionTipTitle} $substitutionTip',
+                          style: typography.bodySmall.copyWith(
+                            color: colors.textSecondary,
+                            fontSize: 12.0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
               SizedBox(height: spacing.md),
 
               // Tags row (Halal, Lunchbox, Mood tags)

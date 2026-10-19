@@ -1075,5 +1075,33 @@
   "confirmClearAllMessage": "Are you sure you want to remove all items from your grocery list?",
   "@confirmClearAllMessage": {
     "description": "Dialog message confirming deletion of all grocery items"
+  },
+  "parseVoicePromptAction": "Analyze Request",
+  "@parseVoicePromptAction": {
+    "description": "Button to trigger AI parsing on typed or dictated text"
+  },
+  "listeningVoiceTooltip": "Listening... Speak now",
+  "@listeningVoiceTooltip": {
+    "description": "Tooltip when speech recognizer is active"
+  },
+  "startVoiceTooltip": "Tap to speak your request",
+  "@startVoiceTooltip": {
+    "description": "Tooltip to activate voice recording"
+  },
+  "parsedChipsHeader": "Parsed options (tap to edit):",
+  "@parsedChipsHeader": {
+    "description": "Header for editable parsed chips from AI request parsing"
+  },
+  "unresolvedItemsWarning": "Unverified items:",
+  "@unresolvedItemsWarning": {
+    "description": "Label for unresolved food items in parsed request"
+  },
+  "aiSmartBadgeLabel": "Smart Suggestion",
+  "@aiSmartBadgeLabel": {
+    "description": "Badge label on AI-ranked recipe cards"
+  },
+  "substitutionTipTitle": "Substitution Tip:",
+  "@substitutionTipTitle": {
+    "description": "Title for substitution tip on recipe card"
   }
 }

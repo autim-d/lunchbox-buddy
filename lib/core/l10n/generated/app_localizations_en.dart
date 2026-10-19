@@ -783,4 +783,25 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get confirmClearAllMessage =>
       'Are you sure you want to remove all items from your grocery list?';
+
+  @override
+  String get parseVoicePromptAction => 'Analyze Request';
+
+  @override
+  String get listeningVoiceTooltip => 'Listening... Speak now';
+
+  @override
+  String get startVoiceTooltip => 'Tap to speak your request';
+
+  @override
+  String get parsedChipsHeader => 'Parsed options (tap to edit):';
+
+  @override
+  String get unresolvedItemsWarning => 'Unverified items:';
+
+  @override
+  String get aiSmartBadgeLabel => 'Smart Suggestion';
+
+  @override
+  String get substitutionTipTitle => 'Substitution Tip:';
 }
