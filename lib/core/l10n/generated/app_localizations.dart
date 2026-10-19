@@ -1231,6 +1231,162 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'العودة للرئيسية'**
   String get backToHome;
+
+  /// Feedback section title on cook finish screen
+  ///
+  /// In ar, this message translates to:
+  /// **'هل أكلوها؟ شاركينا رأيهم:'**
+  String get feedbackPrompt;
+
+  /// Prompt for kid reaction
+  ///
+  /// In ar, this message translates to:
+  /// **'رأي {kidName} في الوجبة:'**
+  String kidReactionPrompt(String kidName);
+
+  /// Loved reaction button
+  ///
+  /// In ar, this message translates to:
+  /// **'أحبها'**
+  String get reactionLoved;
+
+  /// Ok reaction button
+  ///
+  /// In ar, this message translates to:
+  /// **'عادية'**
+  String get reactionOk;
+
+  /// Refused reaction button
+  ///
+  /// In ar, this message translates to:
+  /// **'رفضها'**
+  String get reactionRefused;
+
+  /// Optional reason prompt
+  ///
+  /// In ar, this message translates to:
+  /// **'ما السبب؟ (اختياري)'**
+  String get reasonPrompt;
+
+  /// Too spicy reason tag
+  ///
+  /// In ar, this message translates to:
+  /// **'حار جداً 🌶️'**
+  String get reasonTooSpicy;
+
+  /// Texture reason tag
+  ///
+  /// In ar, this message translates to:
+  /// **'القوام 🥣'**
+  String get reasonTexture;
+
+  /// Disliked ingredient reason tag
+  ///
+  /// In ar, this message translates to:
+  /// **'مكون ما عجبه 🥦'**
+  String get reasonDislikedIngredient;
+
+  /// Not hungry reason tag
+  ///
+  /// In ar, this message translates to:
+  /// **'ما كان جيعان ⏰'**
+  String get reasonNotHungry;
+
+  /// Prompt to select which ingredient was disliked
+  ///
+  /// In ar, this message translates to:
+  /// **'أي مكون لم يعجبه؟'**
+  String get whichIngredientPrompt;
+
+  /// Title for confirmation dialog to add ingredient to kid dislikes
+  ///
+  /// In ar, this message translates to:
+  /// **'إضافة إلى غير المفضلة؟'**
+  String get addDislikeConfirmTitle;
+
+  /// Message for confirmation dialog to add ingredient to kid dislikes
+  ///
+  /// In ar, this message translates to:
+  /// **'هل ترغبين في إضافة {ingredient} إلى قائمة المكونات غير المفضلة لـ {kidName} لتجنبها مستقبلاً؟'**
+  String addDislikeConfirmMessage(String ingredient, String kidName);
+
+  /// Confirm button in add dislike dialog
+  ///
+  /// In ar, this message translates to:
+  /// **'نعم، أضيفيها'**
+  String get confirmAddDislike;
+
+  /// Cancel button
+  ///
+  /// In ar, this message translates to:
+  /// **'إلغاء'**
+  String get cancel;
+
+  /// Snackbar shown when ingredient is added to dislikes
+  ///
+  /// In ar, this message translates to:
+  /// **'تمت إضافة {ingredient} إلى غير المفضلة لـ {kidName}'**
+  String dislikeAddedSnackbar(String ingredient, String kidName);
+
+  /// Snackbar or toast indicating feedback has been saved
+  ///
+  /// In ar, this message translates to:
+  /// **'تم حفظ رأيكِ، شكراً لكِ! ✨'**
+  String get feedbackSavedToast;
+
+  /// Button to save feedback and navigate to home
+  ///
+  /// In ar, this message translates to:
+  /// **'حفظ والعودة للرئيسية'**
+  String get saveFeedbackAndDone;
+
+  /// Stamp text on recipe card when loved by kids
+  ///
+  /// In ar, this message translates to:
+  /// **'معتمد من الصغار ✓'**
+  String get kidsApprovedStamp;
+
+  /// Title for meal history screen
+  ///
+  /// In ar, this message translates to:
+  /// **'سجل الوجبات'**
+  String get historyTitle;
+
+  /// Subtitle for meal history screen
+  ///
+  /// In ar, this message translates to:
+  /// **'الوجبات السابقة وردود أفعال الصغار'**
+  String get historySubtitle;
+
+  /// Title for empty meal history
+  ///
+  /// In ar, this message translates to:
+  /// **'لا توجد وجبات مسجلة بعد'**
+  String get emptyHistoryTitle;
+
+  /// Subtitle for empty meal history
+  ///
+  /// In ar, this message translates to:
+  /// **'اطبخي وسجلي رأي أطفالك لتظهر الوجبات هنا'**
+  String get emptyHistorySubtitle;
+
+  /// Today label
+  ///
+  /// In ar, this message translates to:
+  /// **'اليوم'**
+  String get today;
+
+  /// Yesterday label
+  ///
+  /// In ar, this message translates to:
+  /// **'أمس'**
+  String get yesterday;
+
+  /// Days ago label
+  ///
+  /// In ar, this message translates to:
+  /// **'منذ {days} أيام'**
+  String daysAgo(int days);
 }
 
 class _AppLocalizationsDelegate

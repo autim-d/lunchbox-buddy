@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lunchbox_buddy/core/data/models/models.dart';
+import 'package:lunchbox_buddy/core/data/providers.dart';
 import 'package:lunchbox_buddy/core/l10n/l10n.dart';
 import 'package:lunchbox_buddy/core/ui/recipe_category_illustration.dart';
 import 'package:lunchbox_buddy/core/ui/ticket_clipper.dart';
@@ -57,6 +59,7 @@ class RecipeCard extends ConsumerWidget {
     final savedIds =
         ref.watch(savedRecipeIdsProvider).asData?.value ?? const <String>{};
     final isSaved = savedIds.contains(recipe.id);
+    final isLoved = ref.watch(isRecipeLovedProvider(recipe.id));
 
     final totalMinutes = recipe.prepMinutes + recipe.cookMinutes;
     final resolvedReason = _resolveReason(context);
@@ -339,6 +342,21 @@ class RecipeCard extends ConsumerWidget {
       cardBody = SingleChildScrollView(child: cardBody);
     }
 
+    Widget content = cardBody;
+    if (isLoved) {
+      content = Stack(
+        clipBehavior: Clip.none,
+        children: [
+          cardBody,
+          PositionedDirectional(
+            top: notchY - 14,
+            end: spacing.md,
+            child: const IgnorePointer(child: KidsApprovedStamp()),
+          ),
+        ],
+      );
+    }
+
     return Container(
       decoration: BoxDecoration(
         color: colors.surface,
@@ -359,10 +377,70 @@ class RecipeCard extends ConsumerWidget {
         ),
         child: Material(
           color: colors.surface,
-          child: InkWell(onTap: onTap, child: cardBody),
+          child: InkWell(onTap: onTap, child: content),
         ),
       ),
     );
+  }
+}
+
+/// Animated ink-style rubber stamp shown when a kid loved this recipe
+class KidsApprovedStamp extends StatelessWidget {
+  const KidsApprovedStamp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = context.l10n;
+    const colors = AppTokens.colors;
+    final stampColor = colors.primary;
+    final reduceMotion = MediaQuery.of(context).disableAnimations;
+
+    final badge = Transform.rotate(
+      angle: -0.16, // ~ -9 degrees tilt
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+        decoration: BoxDecoration(
+          color: colors.primaryContainer.withValues(alpha: 0.95),
+          borderRadius: BorderRadius.circular(6),
+          border: Border.all(color: stampColor, width: 2.0),
+          boxShadow: [
+            BoxShadow(
+              color: stampColor.withValues(alpha: 0.25),
+              offset: const Offset(0, 2),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.verified_rounded, size: 15.0, color: stampColor),
+            const SizedBox(width: 4),
+            Text(
+              l10n.kidsApprovedStamp,
+              style: TextStyle(
+                color: stampColor,
+                fontSize: 11.5,
+                fontWeight: FontWeight.w900,
+                letterSpacing: 0.3,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+
+    if (reduceMotion) return badge;
+
+    return badge
+        .animate()
+        .scale(
+          duration: 350.ms,
+          curve: Curves.easeOutBack,
+          begin: const Offset(1.6, 1.6),
+          end: const Offset(1.0, 1.0),
+        )
+        .fadeIn(duration: 250.ms);
   }
 }
 

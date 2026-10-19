@@ -852,5 +852,135 @@
   "backToHome": "Back to Home",
   "@backToHome": {
     "description": "Back to home button"
+  },
+  "feedbackPrompt": "Did they eat it? Share their reaction:",
+  "@feedbackPrompt": {
+    "description": "Feedback section title on cook finish screen"
+  },
+  "kidReactionPrompt": "{kidName}'s reaction:",
+  "@kidReactionPrompt": {
+    "description": "Prompt for kid reaction",
+    "placeholders": {
+      "kidName": {
+        "type": "String"
+      }
+    }
+  },
+  "reactionLoved": "Loved it",
+  "@reactionLoved": {
+    "description": "Loved reaction button"
+  },
+  "reactionOk": "It was OK",
+  "@reactionOk": {
+    "description": "Ok reaction button"
+  },
+  "reactionRefused": "Refused it",
+  "@reactionRefused": {
+    "description": "Refused reaction button"
+  },
+  "reasonPrompt": "What was the reason? (optional)",
+  "@reasonPrompt": {
+    "description": "Optional reason prompt"
+  },
+  "reasonTooSpicy": "Too spicy 🌶️",
+  "@reasonTooSpicy": {
+    "description": "Too spicy reason tag"
+  },
+  "reasonTexture": "Texture 🥣",
+  "@reasonTexture": {
+    "description": "Texture reason tag"
+  },
+  "reasonDislikedIngredient": "Didn't like an ingredient 🥦",
+  "@reasonDislikedIngredient": {
+    "description": "Disliked ingredient reason tag"
+  },
+  "reasonNotHungry": "Just not hungry ⏰",
+  "@reasonNotHungry": {
+    "description": "Not hungry reason tag"
+  },
+  "whichIngredientPrompt": "Which ingredient didn't they like?",
+  "@whichIngredientPrompt": {
+    "description": "Prompt to select which ingredient was disliked"
+  },
+  "addDislikeConfirmTitle": "Add to dislikes?",
+  "@addDislikeConfirmTitle": {
+    "description": "Title for confirmation dialog to add ingredient to kid dislikes"
+  },
+  "addDislikeConfirmMessage": "Would you like to add {ingredient} to {kidName}'s dislikes to avoid it in future suggestions?",
+  "@addDislikeConfirmMessage": {
+    "description": "Message for confirmation dialog to add ingredient to kid dislikes",
+    "placeholders": {
+      "ingredient": {
+        "type": "String"
+      },
+      "kidName": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmAddDislike": "Yes, add it",
+  "@confirmAddDislike": {
+    "description": "Confirm button in add dislike dialog"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "dislikeAddedSnackbar": "Added {ingredient} to {kidName}'s dislikes",
+  "@dislikeAddedSnackbar": {
+    "description": "Snackbar shown when ingredient is added to dislikes",
+    "placeholders": {
+      "ingredient": {
+        "type": "String"
+      },
+      "kidName": {
+        "type": "String"
+      }
+    }
+  },
+  "feedbackSavedToast": "Feedback saved, thank you! ✨",
+  "@feedbackSavedToast": {
+    "description": "Snackbar or toast indicating feedback has been saved"
+  },
+  "saveFeedbackAndDone": "Save & Back to Home",
+  "@saveFeedbackAndDone": {
+    "description": "Button to save feedback and navigate to home"
+  },
+  "kidsApprovedStamp": "Kids Approved ✓",
+  "@kidsApprovedStamp": {
+    "description": "Stamp text on recipe card when loved by kids"
+  },
+  "historyTitle": "Meal History",
+  "@historyTitle": {
+    "description": "Title for meal history screen"
+  },
+  "historySubtitle": "Past meals and kids' reactions",
+  "@historySubtitle": {
+    "description": "Subtitle for meal history screen"
+  },
+  "emptyHistoryTitle": "No meals logged yet",
+  "@emptyHistoryTitle": {
+    "description": "Title for empty meal history"
+  },
+  "emptyHistorySubtitle": "Cook and log your kids' reactions to see them here",
+  "@emptyHistorySubtitle": {
+    "description": "Subtitle for empty meal history"
+  },
+  "today": "Today",
+  "@today": {
+    "description": "Today label"
+  },
+  "yesterday": "Yesterday",
+  "@yesterday": {
+    "description": "Yesterday label"
+  },
+  "daysAgo": "{days} days ago",
+  "@daysAgo": {
+    "description": "Days ago label",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   }
 }

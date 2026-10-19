@@ -258,7 +258,7 @@ void main() {
     );
 
     test(
-      'Recent feedback: refused drops score by 8.0, loved raises by 2.0',
+      'Recent feedback: refused drops score by 15.0, loved raises by 3.0',
       () {
         final request = MealSuggestionRequest(selectedKids: [defaultKid]);
 
@@ -266,6 +266,7 @@ void main() {
           MealFeedback(
             id: 'fb1',
             recipeId: testRecipes[0].id,
+            kidId: defaultKid.id,
             reaction: 'refused',
             date: refDate.subtract(const Duration(days: 4)),
           ),
@@ -275,6 +276,7 @@ void main() {
           MealFeedback(
             id: 'fb2',
             recipeId: testRecipes[0].id,
+            kidId: defaultKid.id,
             reaction: 'loved',
             date: refDate.subtract(const Duration(days: 4)),
           ),
@@ -296,11 +298,116 @@ void main() {
           referenceDate: refDate,
         );
 
-        expect(recRefused.breakdown['feedback']!, equals(-8.0));
-        expect(recLoved.breakdown['feedback']!, equals(2.0));
+        expect(recRefused.breakdown['feedback']!, equals(-15.0));
+        expect(recLoved.breakdown['feedback']!, equals(3.0));
         expect(recLoved.score, greaterThan(recRefused.score));
       },
     );
+
+    test(
+      'Feedback for a different unselected kid does not penalize selected kid',
+      () {
+        final kidA = defaultKid.copyWith(id: 'kid_a');
+        final kidB = defaultKid.copyWith(id: 'kid_b');
+        final request = MealSuggestionRequest(selectedKids: [kidA]);
+
+        final otherKidFeedback = [
+          MealFeedback(
+            id: 'fb_b',
+            recipeId: testRecipes[0].id,
+            kidId: kidB.id,
+            reaction: 'refused',
+            date: refDate.subtract(const Duration(days: 4)),
+          ),
+        ];
+
+        final rec = scorer.scoreRecipe(
+          recipe: testRecipes[0],
+          request: request,
+          ingredientMap: testIngredients,
+          recentFeedbacks: otherKidFeedback,
+          referenceDate: refDate,
+        );
+
+        expect(rec.breakdown['feedback']!, equals(0.0));
+      },
+    );
+
+    test('Refused recipe drops out of top 3 suggestions', () {
+      final kid = defaultKid.copyWith(id: 'kid_test');
+      final request = MealSuggestionRequest(
+        selectedKids: [kid],
+        mealType: 'lunchbox',
+        moodTags: const ['quick'],
+      );
+
+      // Initial top 3 without feedback
+      final initialTop3 = scorer.rankTopRecommendations(
+        safeRecipes: testRecipes,
+        request: request,
+        ingredientMap: testIngredients,
+        referenceDate: refDate,
+        limit: 3,
+      );
+
+      final topRecipe = initialTop3.first.recipe;
+      expect(initialTop3.map((r) => r.recipe.id), contains(topRecipe.id));
+
+      // Now add refused feedback for the top recipe
+      final feedbacks = [
+        MealFeedback(
+          id: 'fb_refused',
+          recipeId: topRecipe.id,
+          kidId: kid.id,
+          reaction: 'refused',
+          date: refDate.subtract(const Duration(days: 4)),
+        ),
+      ];
+
+      final newTop3 = scorer.rankTopRecommendations(
+        safeRecipes: testRecipes,
+        request: request,
+        ingredientMap: testIngredients,
+        recentFeedbacks: feedbacks,
+        referenceDate: refDate,
+        limit: 3,
+      );
+
+      // Top recipe dropped completely out of the top 3!
+      expect(newTop3.map((r) => r.recipe.id), isNot(contains(topRecipe.id)));
+    });
+
+    test('Reason "didn\'t like an ingredient" adds that ingredient to kid\'s soft dislikes and lowers score', () {
+      final kid = defaultKid.copyWith(id: 'kid_dislike');
+      final requestBefore = MealSuggestionRequest(selectedKids: [kid]);
+
+      final recipeWithCucumber = testRecipes[0]; // has bread, cheese, cucumber
+      final scoreBefore = scorer
+          .scoreRecipe(
+            recipe: recipeWithCucumber,
+            request: requestBefore,
+            ingredientMap: testIngredients,
+            referenceDate: refDate,
+          )
+          .score;
+
+      // Mother confirmed adding 'cucumber' to soft dislikes
+      final updatedKid = kid.copyWith(dislikes: [...kid.dislikes, 'cucumber']);
+      final requestAfter = MealSuggestionRequest(selectedKids: [updatedKid]);
+
+      final scoreAfter = scorer
+          .scoreRecipe(
+            recipe: recipeWithCucumber,
+            request: requestAfter,
+            ingredientMap: testIngredients,
+            referenceDate: refDate,
+          )
+          .score;
+
+      // Score is penalized by at least 4.0 for the disliked ingredient
+      expect(scoreAfter, lessThan(scoreBefore));
+      expect(scoreBefore - scoreAfter, greaterThanOrEqualTo(4.0));
+    });
 
     test('Recent repeat penalty: cooked in last 3 days penalizes -5.0', () {
       final request = MealSuggestionRequest(selectedKids: [defaultKid]);

@@ -339,7 +339,9 @@ class FeedbackDao {
   final AppDatabase db;
 
   Future<List<MealFeedback>> getAllFeedback() async {
-    final entries = await db.select(db.mealFeedbacksTable).get();
+    final entries = await (db.select(
+      db.mealFeedbacksTable,
+    )..orderBy([(tbl) => OrderingTerm.desc(tbl.date)])).get();
     return entries.map((e) {
       return MealFeedback(
         id: e.id,
@@ -351,6 +353,24 @@ class FeedbackDao {
         notes: e.notes,
       );
     }).toList();
+  }
+
+  Stream<List<MealFeedback>> watchAllFeedback() {
+    final query = db.select(db.mealFeedbacksTable)
+      ..orderBy([(tbl) => OrderingTerm.desc(tbl.date)]);
+    return query.watch().map((entries) {
+      return entries.map((e) {
+        return MealFeedback(
+          id: e.id,
+          recipeId: e.recipeId,
+          kidId: e.kidId,
+          reaction: e.reaction,
+          reasonTag: e.reasonTag,
+          date: e.date,
+          notes: e.notes,
+        );
+      }).toList();
+    });
   }
 
   Future<void> insertFeedback(MealFeedback feedback) async {
@@ -367,6 +387,12 @@ class FeedbackDao {
             notes: feedback.notes,
           ),
         );
+  }
+
+  Future<void> deleteFeedback(String id) async {
+    await (db.delete(
+      db.mealFeedbacksTable,
+    )..where((tbl) => tbl.id.equals(id))).go();
   }
 }
 

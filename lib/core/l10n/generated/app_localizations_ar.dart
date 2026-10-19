@@ -620,4 +620,90 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get backToHome => 'العودة للرئيسية';
+
+  @override
+  String get feedbackPrompt => 'هل أكلوها؟ شاركينا رأيهم:';
+
+  @override
+  String kidReactionPrompt(String kidName) {
+    return 'رأي $kidName في الوجبة:';
+  }
+
+  @override
+  String get reactionLoved => 'أحبها';
+
+  @override
+  String get reactionOk => 'عادية';
+
+  @override
+  String get reactionRefused => 'رفضها';
+
+  @override
+  String get reasonPrompt => 'ما السبب؟ (اختياري)';
+
+  @override
+  String get reasonTooSpicy => 'حار جداً 🌶️';
+
+  @override
+  String get reasonTexture => 'القوام 🥣';
+
+  @override
+  String get reasonDislikedIngredient => 'مكون ما عجبه 🥦';
+
+  @override
+  String get reasonNotHungry => 'ما كان جيعان ⏰';
+
+  @override
+  String get whichIngredientPrompt => 'أي مكون لم يعجبه؟';
+
+  @override
+  String get addDislikeConfirmTitle => 'إضافة إلى غير المفضلة؟';
+
+  @override
+  String addDislikeConfirmMessage(String ingredient, String kidName) {
+    return 'هل ترغبين في إضافة $ingredient إلى قائمة المكونات غير المفضلة لـ $kidName لتجنبها مستقبلاً؟';
+  }
+
+  @override
+  String get confirmAddDislike => 'نعم، أضيفيها';
+
+  @override
+  String get cancel => 'إلغاء';
+
+  @override
+  String dislikeAddedSnackbar(String ingredient, String kidName) {
+    return 'تمت إضافة $ingredient إلى غير المفضلة لـ $kidName';
+  }
+
+  @override
+  String get feedbackSavedToast => 'تم حفظ رأيكِ، شكراً لكِ! ✨';
+
+  @override
+  String get saveFeedbackAndDone => 'حفظ والعودة للرئيسية';
+
+  @override
+  String get kidsApprovedStamp => 'معتمد من الصغار ✓';
+
+  @override
+  String get historyTitle => 'سجل الوجبات';
+
+  @override
+  String get historySubtitle => 'الوجبات السابقة وردود أفعال الصغار';
+
+  @override
+  String get emptyHistoryTitle => 'لا توجد وجبات مسجلة بعد';
+
+  @override
+  String get emptyHistorySubtitle => 'اطبخي وسجلي رأي أطفالك لتظهر الوجبات هنا';
+
+  @override
+  String get today => 'اليوم';
+
+  @override
+  String get yesterday => 'أمس';
+
+  @override
+  String daysAgo(int days) {
+    return 'منذ $days أيام';
+  }
 }

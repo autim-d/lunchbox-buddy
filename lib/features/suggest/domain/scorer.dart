@@ -142,8 +142,15 @@ class Scorer {
     // 6. Recent Feedback Adjustment
     // -------------------------------------------------------------------------
     double feedbackAdjustment = 0.0;
+    final selectedKidIds = request.selectedKids.map((k) => k.id).toSet();
     final recipeFeedbacks = recentFeedbacks
-        .where((f) => f.recipeId == recipe.id)
+        .where(
+          (f) =>
+              f.recipeId == recipe.id &&
+              (f.kidId == null ||
+                  selectedKidIds.isEmpty ||
+                  selectedKidIds.contains(f.kidId)),
+        )
         .toList();
 
     for (final fb in recipeFeedbacks) {
@@ -152,9 +159,9 @@ class Scorer {
       // Only consider feedback within the last 14 days
       if (daysAgo <= 14) {
         if (fb.reaction == 'refused') {
-          feedbackAdjustment -= 8.0;
+          feedbackAdjustment -= 15.0;
         } else if (fb.reaction == 'loved') {
-          feedbackAdjustment += 2.0;
+          feedbackAdjustment += 3.0;
         }
 
         // Recent repeats penalty (cooked within last 3 days)

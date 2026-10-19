@@ -78,6 +78,13 @@ class HomeScreen extends ConsumerWidget {
             ),
           ),
 
+          // Meal History Screen Link
+          IconButton(
+            icon: Icon(Icons.history_rounded, color: colors.textSecondary),
+            tooltip: l10n.historyTitle,
+            onPressed: () => context.push('/history'),
+          ),
+
           // Debug Recipes Screen Link
           IconButton(
             icon: Icon(Icons.menu_book_rounded, color: colors.textSecondary),

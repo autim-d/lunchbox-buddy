@@ -34,6 +34,11 @@ class AppColors {
   final Color accentContainer = const Color(0xFFFDEEEA);
   final Color onAccent = const Color(0xFFFFFFFF);
 
+  // Aliases for Material / primary semantic convention
+  Color get primary => accent;
+  Color get primaryContainer => accentContainer;
+  Color get onPrimary => onAccent;
+
   // Secondary: fresh herb green
   final Color secondary = const Color(0xFF2D6A4F);
   final Color secondaryHover = const Color(0xFF22523D);

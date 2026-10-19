@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lunchbox_buddy/core/data/database/daos.dart';
 import 'package:lunchbox_buddy/core/data/database/database.dart';
@@ -60,4 +62,57 @@ final allIngredientsProvider = FutureProvider<List<Ingredient>>((ref) async {
   await seedService.seedIfNeeded();
   final ingredientsDao = ref.watch(ingredientsDaoProvider);
   return ingredientsDao.getAllIngredients();
+});
+
+/// Notifier managing recorded meal feedbacks (most recent first)
+class FeedbackListNotifier extends AsyncNotifier<List<MealFeedback>> {
+  @override
+  FutureOr<List<MealFeedback>> build() async {
+    final dao = ref.watch(feedbackDaoProvider);
+    return dao.getAllFeedback();
+  }
+
+  Future<void> addFeedback(MealFeedback feedback) async {
+    final dao = ref.read(feedbackDaoProvider);
+    await dao.insertFeedback(feedback);
+    ref.invalidateSelf();
+    await future;
+  }
+
+  Future<void> deleteFeedback(String id) async {
+    final dao = ref.read(feedbackDaoProvider);
+    await dao.deleteFeedback(id);
+    ref.invalidateSelf();
+    await future;
+  }
+}
+
+final feedbackListNotifierProvider =
+    AsyncNotifierProvider<FeedbackListNotifier, List<MealFeedback>>(
+      FeedbackListNotifier.new,
+    );
+
+/// Provider checking whether a recipe was ever marked as 'loved' by any kid
+final isRecipeLovedProvider = Provider.family<bool, String>((ref, recipeId) {
+  final feedbacksAsync = ref.watch(feedbackListNotifierProvider);
+  return feedbacksAsync.maybeWhen(
+    data: (feedbacks) => feedbacks.any(
+      (fb) => fb.recipeId == recipeId && fb.reaction == 'loved',
+    ),
+    orElse: () => false,
+  );
+});
+
+/// Stream provider for all recorded meal feedbacks (most recent first)
+final allFeedbacksStreamProvider = StreamProvider<List<MealFeedback>>((ref) {
+  final dao = ref.watch(feedbackDaoProvider);
+  return dao.watchAllFeedback();
+});
+
+/// Future provider for all recorded meal feedbacks
+final allFeedbacksFutureProvider = FutureProvider<List<MealFeedback>>((
+  ref,
+) async {
+  final dao = ref.watch(feedbackDaoProvider);
+  return dao.getAllFeedback();
 });

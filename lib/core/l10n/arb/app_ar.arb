@@ -852,5 +852,135 @@
   "backToHome": "العودة للرئيسية",
   "@backToHome": {
     "description": "Back to home button"
+  },
+  "feedbackPrompt": "هل أكلوها؟ شاركينا رأيهم:",
+  "@feedbackPrompt": {
+    "description": "Feedback section title on cook finish screen"
+  },
+  "kidReactionPrompt": "رأي {kidName} في الوجبة:",
+  "@kidReactionPrompt": {
+    "description": "Prompt for kid reaction",
+    "placeholders": {
+      "kidName": {
+        "type": "String"
+      }
+    }
+  },
+  "reactionLoved": "أحبها",
+  "@reactionLoved": {
+    "description": "Loved reaction button"
+  },
+  "reactionOk": "عادية",
+  "@reactionOk": {
+    "description": "Ok reaction button"
+  },
+  "reactionRefused": "رفضها",
+  "@reactionRefused": {
+    "description": "Refused reaction button"
+  },
+  "reasonPrompt": "ما السبب؟ (اختياري)",
+  "@reasonPrompt": {
+    "description": "Optional reason prompt"
+  },
+  "reasonTooSpicy": "حار جداً 🌶️",
+  "@reasonTooSpicy": {
+    "description": "Too spicy reason tag"
+  },
+  "reasonTexture": "القوام 🥣",
+  "@reasonTexture": {
+    "description": "Texture reason tag"
+  },
+  "reasonDislikedIngredient": "مكون ما عجبه 🥦",
+  "@reasonDislikedIngredient": {
+    "description": "Disliked ingredient reason tag"
+  },
+  "reasonNotHungry": "ما كان جيعان ⏰",
+  "@reasonNotHungry": {
+    "description": "Not hungry reason tag"
+  },
+  "whichIngredientPrompt": "أي مكون لم يعجبه؟",
+  "@whichIngredientPrompt": {
+    "description": "Prompt to select which ingredient was disliked"
+  },
+  "addDislikeConfirmTitle": "إضافة إلى غير المفضلة؟",
+  "@addDislikeConfirmTitle": {
+    "description": "Title for confirmation dialog to add ingredient to kid dislikes"
+  },
+  "addDislikeConfirmMessage": "هل ترغبين في إضافة {ingredient} إلى قائمة المكونات غير المفضلة لـ {kidName} لتجنبها مستقبلاً؟",
+  "@addDislikeConfirmMessage": {
+    "description": "Message for confirmation dialog to add ingredient to kid dislikes",
+    "placeholders": {
+      "ingredient": {
+        "type": "String"
+      },
+      "kidName": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmAddDislike": "نعم، أضيفيها",
+  "@confirmAddDislike": {
+    "description": "Confirm button in add dislike dialog"
+  },
+  "cancel": "إلغاء",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "dislikeAddedSnackbar": "تمت إضافة {ingredient} إلى غير المفضلة لـ {kidName}",
+  "@dislikeAddedSnackbar": {
+    "description": "Snackbar shown when ingredient is added to dislikes",
+    "placeholders": {
+      "ingredient": {
+        "type": "String"
+      },
+      "kidName": {
+        "type": "String"
+      }
+    }
+  },
+  "feedbackSavedToast": "تم حفظ رأيكِ، شكراً لكِ! ✨",
+  "@feedbackSavedToast": {
+    "description": "Snackbar or toast indicating feedback has been saved"
+  },
+  "saveFeedbackAndDone": "حفظ والعودة للرئيسية",
+  "@saveFeedbackAndDone": {
+    "description": "Button to save feedback and navigate to home"
+  },
+  "kidsApprovedStamp": "معتمد من الصغار ✓",
+  "@kidsApprovedStamp": {
+    "description": "Stamp text on recipe card when loved by kids"
+  },
+  "historyTitle": "سجل الوجبات",
+  "@historyTitle": {
+    "description": "Title for meal history screen"
+  },
+  "historySubtitle": "الوجبات السابقة وردود أفعال الصغار",
+  "@historySubtitle": {
+    "description": "Subtitle for meal history screen"
+  },
+  "emptyHistoryTitle": "لا توجد وجبات مسجلة بعد",
+  "@emptyHistoryTitle": {
+    "description": "Title for empty meal history"
+  },
+  "emptyHistorySubtitle": "اطبخي وسجلي رأي أطفالك لتظهر الوجبات هنا",
+  "@emptyHistorySubtitle": {
+    "description": "Subtitle for empty meal history"
+  },
+  "today": "اليوم",
+  "@today": {
+    "description": "Today label"
+  },
+  "yesterday": "أمس",
+  "@yesterday": {
+    "description": "Yesterday label"
+  },
+  "daysAgo": "منذ {days} أيام",
+  "@daysAgo": {
+    "description": "Days ago label",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   }
 }

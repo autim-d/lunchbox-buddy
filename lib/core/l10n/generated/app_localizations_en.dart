@@ -626,4 +626,91 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backToHome => 'Back to Home';
+
+  @override
+  String get feedbackPrompt => 'Did they eat it? Share their reaction:';
+
+  @override
+  String kidReactionPrompt(String kidName) {
+    return '$kidName\'s reaction:';
+  }
+
+  @override
+  String get reactionLoved => 'Loved it';
+
+  @override
+  String get reactionOk => 'It was OK';
+
+  @override
+  String get reactionRefused => 'Refused it';
+
+  @override
+  String get reasonPrompt => 'What was the reason? (optional)';
+
+  @override
+  String get reasonTooSpicy => 'Too spicy 🌶️';
+
+  @override
+  String get reasonTexture => 'Texture 🥣';
+
+  @override
+  String get reasonDislikedIngredient => 'Didn\'t like an ingredient 🥦';
+
+  @override
+  String get reasonNotHungry => 'Just not hungry ⏰';
+
+  @override
+  String get whichIngredientPrompt => 'Which ingredient didn\'t they like?';
+
+  @override
+  String get addDislikeConfirmTitle => 'Add to dislikes?';
+
+  @override
+  String addDislikeConfirmMessage(String ingredient, String kidName) {
+    return 'Would you like to add $ingredient to $kidName\'s dislikes to avoid it in future suggestions?';
+  }
+
+  @override
+  String get confirmAddDislike => 'Yes, add it';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String dislikeAddedSnackbar(String ingredient, String kidName) {
+    return 'Added $ingredient to $kidName\'s dislikes';
+  }
+
+  @override
+  String get feedbackSavedToast => 'Feedback saved, thank you! ✨';
+
+  @override
+  String get saveFeedbackAndDone => 'Save & Back to Home';
+
+  @override
+  String get kidsApprovedStamp => 'Kids Approved ✓';
+
+  @override
+  String get historyTitle => 'Meal History';
+
+  @override
+  String get historySubtitle => 'Past meals and kids\' reactions';
+
+  @override
+  String get emptyHistoryTitle => 'No meals logged yet';
+
+  @override
+  String get emptyHistorySubtitle =>
+      'Cook and log your kids\' reactions to see them here';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get yesterday => 'Yesterday';
+
+  @override
+  String daysAgo(int days) {
+    return '$days days ago';
+  }
 }
