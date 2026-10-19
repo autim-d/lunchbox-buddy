@@ -1387,6 +1387,138 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'منذ {days} أيام'**
   String daysAgo(int days);
+
+  /// Title of grocery list screen
+  ///
+  /// In ar, this message translates to:
+  /// **'قائمة التسوق'**
+  String get groceryTitle;
+
+  /// Subtitle of grocery list screen
+  ///
+  /// In ar, this message translates to:
+  /// **'مكونات منظمة لسهولة التسوق'**
+  String get grocerySubtitle;
+
+  /// Title when grocery list has no items
+  ///
+  /// In ar, this message translates to:
+  /// **'قائمة التسوق فارغة'**
+  String get emptyGroceryTitle;
+
+  /// Subtitle when grocery list is empty
+  ///
+  /// In ar, this message translates to:
+  /// **'أضيفي المكونات الناقصة من أي وصفة أو سجلي أغراضكِ يدوياً'**
+  String get emptyGrocerySubtitle;
+
+  /// Button to add a manual item to the grocery list
+  ///
+  /// In ar, this message translates to:
+  /// **'إضافة غرض'**
+  String get addCustomItem;
+
+  /// Dialog title for adding a manual grocery item
+  ///
+  /// In ar, this message translates to:
+  /// **'إضافة غرض جديد'**
+  String get addItemTitle;
+
+  /// Label for item name text field
+  ///
+  /// In ar, this message translates to:
+  /// **'اسم المكون أو الغرض'**
+  String get itemNameLabel;
+
+  /// Label for item quantity text field
+  ///
+  /// In ar, this message translates to:
+  /// **'الكمية (اختياري)'**
+  String get itemQuantityLabel;
+
+  /// Label for item unit selection
+  ///
+  /// In ar, this message translates to:
+  /// **'الوحدة (اختياري)'**
+  String get itemUnitLabel;
+
+  /// Label for aisle category selection
+  ///
+  /// In ar, this message translates to:
+  /// **'القسم في السوبرماركت'**
+  String get itemAisleLabel;
+
+  /// Button to share grocery list
+  ///
+  /// In ar, this message translates to:
+  /// **'مشاركة القائمة'**
+  String get shareList;
+
+  /// Button to share grocery list via WhatsApp
+  ///
+  /// In ar, this message translates to:
+  /// **'مشاركة عبر واتساب'**
+  String get shareListWhatsApp;
+
+  /// Button to clear purchased grocery items
+  ///
+  /// In ar, this message translates to:
+  /// **'مسح المكتمل'**
+  String get clearCheckedItems;
+
+  /// Button to clear all grocery items
+  ///
+  /// In ar, this message translates to:
+  /// **'مسح الكل'**
+  String get clearAllItems;
+
+  /// Snackbar message when a grocery item is deleted
+  ///
+  /// In ar, this message translates to:
+  /// **'تم حذف الغرض'**
+  String get itemDeleted;
+
+  /// Snackbar when ingredients are added to grocery list
+  ///
+  /// In ar, this message translates to:
+  /// **'تمت إضافة {count} من المكونات لقائمة التسوق'**
+  String itemsAddedToGrocery(int count);
+
+  /// Action label in snackbar to open grocery list
+  ///
+  /// In ar, this message translates to:
+  /// **'عرض القائمة'**
+  String get viewGroceryList;
+
+  /// Tooltip or button to replay receipt printing animation
+  ///
+  /// In ar, this message translates to:
+  /// **'طباعة الفاتورة'**
+  String get printReceipt;
+
+  /// Receipt header store name
+  ///
+  /// In ar, this message translates to:
+  /// **'لانش بوكس بادي'**
+  String get receiptStoreName;
+
+  /// Receipt header tagline
+  ///
+  /// In ar, this message translates to:
+  /// **'قائمة تسوق طازجة لطبخات الصغار'**
+  String get receiptTagline;
+
+  /// Dialog title confirming deletion of all grocery items
+  ///
+  /// In ar, this message translates to:
+  /// **'مسح قائمة التسوق بالكامل؟'**
+  String get confirmClearAllTitle;
+
+  /// Dialog message confirming deletion of all grocery items
+  ///
+  /// In ar, this message translates to:
+  /// **'هل أنتِ متأكدة من رغبتك في حذف جميع الأغراض من قائمة التسوق؟'**
+  String get confirmClearAllMessage;
 }
 
 class _AppLocalizationsDelegate

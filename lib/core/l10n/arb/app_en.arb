@@ -982,5 +982,98 @@
         "type": "int"
       }
     }
+  },
+  "groceryTitle": "Grocery List",
+  "@groceryTitle": {
+    "description": "Title of grocery list screen"
+  },
+  "grocerySubtitle": "Organized ingredients for easy shopping",
+  "@grocerySubtitle": {
+    "description": "Subtitle of grocery list screen"
+  },
+  "emptyGroceryTitle": "Your grocery list is empty",
+  "@emptyGroceryTitle": {
+    "description": "Title when grocery list has no items"
+  },
+  "emptyGrocerySubtitle": "Add missing items from any recipe or add items manually",
+  "@emptyGrocerySubtitle": {
+    "description": "Subtitle when grocery list is empty"
+  },
+  "addCustomItem": "Add Item",
+  "@addCustomItem": {
+    "description": "Button to add a manual item to the grocery list"
+  },
+  "addItemTitle": "Add New Item",
+  "@addItemTitle": {
+    "description": "Dialog title for adding a manual grocery item"
+  },
+  "itemNameLabel": "Item Name",
+  "@itemNameLabel": {
+    "description": "Label for item name text field"
+  },
+  "itemQuantityLabel": "Quantity (optional)",
+  "@itemQuantityLabel": {
+    "description": "Label for item quantity text field"
+  },
+  "itemUnitLabel": "Unit (optional)",
+  "@itemUnitLabel": {
+    "description": "Label for item unit selection"
+  },
+  "itemAisleLabel": "Supermarket Aisle",
+  "@itemAisleLabel": {
+    "description": "Label for aisle category selection"
+  },
+  "shareList": "Share List",
+  "@shareList": {
+    "description": "Button to share grocery list"
+  },
+  "shareListWhatsApp": "Share via WhatsApp",
+  "@shareListWhatsApp": {
+    "description": "Button to share grocery list via WhatsApp"
+  },
+  "clearCheckedItems": "Clear Purchased",
+  "@clearCheckedItems": {
+    "description": "Button to clear purchased grocery items"
+  },
+  "clearAllItems": "Clear All",
+  "@clearAllItems": {
+    "description": "Button to clear all grocery items"
+  },
+  "itemDeleted": "Item deleted",
+  "@itemDeleted": {
+    "description": "Snackbar message when a grocery item is deleted"
+  },
+  "itemsAddedToGrocery": "Added {count} items to grocery list",
+  "@itemsAddedToGrocery": {
+    "description": "Snackbar when ingredients are added to grocery list",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "viewGroceryList": "View List",
+  "@viewGroceryList": {
+    "description": "Action label in snackbar to open grocery list"
+  },
+  "printReceipt": "Print Receipt",
+  "@printReceipt": {
+    "description": "Tooltip or button to replay receipt printing animation"
+  },
+  "receiptStoreName": "Lunchbox Buddy",
+  "@receiptStoreName": {
+    "description": "Receipt header store name"
+  },
+  "receiptTagline": "Fresh groceries for little tummies",
+  "@receiptTagline": {
+    "description": "Receipt header tagline"
+  },
+  "confirmClearAllTitle": "Clear entire grocery list?",
+  "@confirmClearAllTitle": {
+    "description": "Dialog title confirming deletion of all grocery items"
+  },
+  "confirmClearAllMessage": "Are you sure you want to remove all items from your grocery list?",
+  "@confirmClearAllMessage": {
+    "description": "Dialog message confirming deletion of all grocery items"
   }
 }

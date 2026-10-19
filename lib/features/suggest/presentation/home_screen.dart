@@ -78,6 +78,13 @@ class HomeScreen extends ConsumerWidget {
             ),
           ),
 
+          // Grocery List Screen Link
+          IconButton(
+            icon: Icon(Icons.shopping_cart_outlined, color: colors.textSecondary),
+            tooltip: l10n.groceryTitle,
+            onPressed: () => context.push('/grocery'),
+          ),
+
           // Meal History Screen Link
           IconButton(
             icon: Icon(Icons.history_rounded, color: colors.textSecondary),

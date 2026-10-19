@@ -706,4 +706,74 @@ class AppLocalizationsAr extends AppLocalizations {
   String daysAgo(int days) {
     return 'منذ $days أيام';
   }
+
+  @override
+  String get groceryTitle => 'قائمة التسوق';
+
+  @override
+  String get grocerySubtitle => 'مكونات منظمة لسهولة التسوق';
+
+  @override
+  String get emptyGroceryTitle => 'قائمة التسوق فارغة';
+
+  @override
+  String get emptyGrocerySubtitle =>
+      'أضيفي المكونات الناقصة من أي وصفة أو سجلي أغراضكِ يدوياً';
+
+  @override
+  String get addCustomItem => 'إضافة غرض';
+
+  @override
+  String get addItemTitle => 'إضافة غرض جديد';
+
+  @override
+  String get itemNameLabel => 'اسم المكون أو الغرض';
+
+  @override
+  String get itemQuantityLabel => 'الكمية (اختياري)';
+
+  @override
+  String get itemUnitLabel => 'الوحدة (اختياري)';
+
+  @override
+  String get itemAisleLabel => 'القسم في السوبرماركت';
+
+  @override
+  String get shareList => 'مشاركة القائمة';
+
+  @override
+  String get shareListWhatsApp => 'مشاركة عبر واتساب';
+
+  @override
+  String get clearCheckedItems => 'مسح المكتمل';
+
+  @override
+  String get clearAllItems => 'مسح الكل';
+
+  @override
+  String get itemDeleted => 'تم حذف الغرض';
+
+  @override
+  String itemsAddedToGrocery(int count) {
+    return 'تمت إضافة $count من المكونات لقائمة التسوق';
+  }
+
+  @override
+  String get viewGroceryList => 'عرض القائمة';
+
+  @override
+  String get printReceipt => 'طباعة الفاتورة';
+
+  @override
+  String get receiptStoreName => 'لانش بوكس بادي';
+
+  @override
+  String get receiptTagline => 'قائمة تسوق طازجة لطبخات الصغار';
+
+  @override
+  String get confirmClearAllTitle => 'مسح قائمة التسوق بالكامل؟';
+
+  @override
+  String get confirmClearAllMessage =>
+      'هل أنتِ متأكدة من رغبتك في حذف جميع الأغراض من قائمة التسوق؟';
 }

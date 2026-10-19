@@ -288,37 +288,29 @@ class GroceryDao {
 
   Future<List<GroceryItem>> getAllItems() async {
     final entries = await db.select(db.groceryItemsTable).get();
-    return entries.map((e) {
-      return GroceryItem(
-        id: e.id,
-        ingredientId: e.ingredientId,
-        nameAr: e.nameAr,
-        nameEn: e.nameEn,
-        aisle: e.aisle,
-        quantity: e.quantity,
-        unit: e.unit,
-        isChecked: e.isChecked,
-        recipeId: e.recipeId,
-      );
-    }).toList();
+    return entries.map(_mapEntryToItem).toList();
+  }
+
+  Stream<List<GroceryItem>> watchAllItems() {
+    return db.select(db.groceryItemsTable).watch().map((entries) {
+      return entries.map(_mapEntryToItem).toList();
+    });
   }
 
   Future<void> insertItem(GroceryItem item) async {
     await db
         .into(db.groceryItemsTable)
-        .insertOnConflictUpdate(
-          GroceryItemEntry(
-            id: item.id,
-            ingredientId: item.ingredientId,
-            nameAr: item.nameAr,
-            nameEn: item.nameEn,
-            aisle: item.aisle,
-            quantity: item.quantity,
-            unit: item.unit,
-            isChecked: item.isChecked,
-            recipeId: item.recipeId,
-          ),
-        );
+        .insertOnConflictUpdate(_mapItemToEntry(item));
+  }
+
+  Future<void> insertItems(List<GroceryItem> items) async {
+    await db.transaction(() async {
+      for (final item in items) {
+        await db
+            .into(db.groceryItemsTable)
+            .insertOnConflictUpdate(_mapItemToEntry(item));
+      }
+    });
   }
 
   Future<void> toggleItem(String id, bool isChecked) async {
@@ -330,6 +322,44 @@ class GroceryDao {
     await (db.delete(
       db.groceryItemsTable,
     )..where((tbl) => tbl.id.equals(id))).go();
+  }
+
+  Future<void> deleteCheckedItems() async {
+    await (db.delete(
+      db.groceryItemsTable,
+    )..where((tbl) => tbl.isChecked.equals(true))).go();
+  }
+
+  Future<void> clearAllItems() async {
+    await db.delete(db.groceryItemsTable).go();
+  }
+
+  GroceryItem _mapEntryToItem(GroceryItemEntry e) {
+    return GroceryItem(
+      id: e.id,
+      ingredientId: e.ingredientId,
+      nameAr: e.nameAr,
+      nameEn: e.nameEn,
+      aisle: e.aisle,
+      quantity: e.quantity,
+      unit: e.unit,
+      isChecked: e.isChecked,
+      recipeId: e.recipeId,
+    );
+  }
+
+  GroceryItemEntry _mapItemToEntry(GroceryItem item) {
+    return GroceryItemEntry(
+      id: item.id,
+      ingredientId: item.ingredientId,
+      nameAr: item.nameAr,
+      nameEn: item.nameEn,
+      aisle: item.aisle,
+      quantity: item.quantity,
+      unit: item.unit,
+      isChecked: item.isChecked,
+      recipeId: item.recipeId,
+    );
   }
 }
 

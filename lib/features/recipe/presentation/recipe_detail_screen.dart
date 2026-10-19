@@ -10,6 +10,7 @@ import 'package:lunchbox_buddy/core/ui/recipe_category_illustration.dart';
 import 'package:lunchbox_buddy/core/ui/scroll_fade_container.dart';
 import 'package:lunchbox_buddy/core/ui/tokens.dart';
 import 'package:lunchbox_buddy/core/utils/quantity_formatter.dart';
+import 'package:lunchbox_buddy/features/grocery/presentation/grocery_notifier.dart';
 import 'package:lunchbox_buddy/features/recipe/presentation/saved_recipes_notifier.dart';
 
 /// Screen displaying complete details for a recipe, including:
@@ -561,13 +562,25 @@ class _RecipeDetailScreenState extends ConsumerState<RecipeDetailScreen> {
                         child: OutlinedButton.icon(
                           onPressed: () {
                             HapticFeedback.lightImpact();
+                            ref
+                                .read(groceryListNotifierProvider.notifier)
+                                .addMissingFromRecipe(
+                                  recipe: recipe,
+                                  targetServings: _currentServings,
+                                  tickedIngredientIds: _haveIngredients,
+                                );
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content: Text(
                                   l10n.missingAddedToGrocerySnackbar,
                                 ),
                                 behavior: SnackBarBehavior.floating,
-                                duration: const Duration(seconds: 3),
+                                duration: const Duration(seconds: 4),
+                                action: SnackBarAction(
+                                  label: l10n.viewGroceryList,
+                                  textColor: colors.accent,
+                                  onPressed: () => context.push('/grocery'),
+                                ),
                               ),
                             );
                           },

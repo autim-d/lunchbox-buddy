@@ -713,4 +713,74 @@ class AppLocalizationsEn extends AppLocalizations {
   String daysAgo(int days) {
     return '$days days ago';
   }
+
+  @override
+  String get groceryTitle => 'Grocery List';
+
+  @override
+  String get grocerySubtitle => 'Organized ingredients for easy shopping';
+
+  @override
+  String get emptyGroceryTitle => 'Your grocery list is empty';
+
+  @override
+  String get emptyGrocerySubtitle =>
+      'Add missing items from any recipe or add items manually';
+
+  @override
+  String get addCustomItem => 'Add Item';
+
+  @override
+  String get addItemTitle => 'Add New Item';
+
+  @override
+  String get itemNameLabel => 'Item Name';
+
+  @override
+  String get itemQuantityLabel => 'Quantity (optional)';
+
+  @override
+  String get itemUnitLabel => 'Unit (optional)';
+
+  @override
+  String get itemAisleLabel => 'Supermarket Aisle';
+
+  @override
+  String get shareList => 'Share List';
+
+  @override
+  String get shareListWhatsApp => 'Share via WhatsApp';
+
+  @override
+  String get clearCheckedItems => 'Clear Purchased';
+
+  @override
+  String get clearAllItems => 'Clear All';
+
+  @override
+  String get itemDeleted => 'Item deleted';
+
+  @override
+  String itemsAddedToGrocery(int count) {
+    return 'Added $count items to grocery list';
+  }
+
+  @override
+  String get viewGroceryList => 'View List';
+
+  @override
+  String get printReceipt => 'Print Receipt';
+
+  @override
+  String get receiptStoreName => 'Lunchbox Buddy';
+
+  @override
+  String get receiptTagline => 'Fresh groceries for little tummies';
+
+  @override
+  String get confirmClearAllTitle => 'Clear entire grocery list?';
+
+  @override
+  String get confirmClearAllMessage =>
+      'Are you sure you want to remove all items from your grocery list?';
 }

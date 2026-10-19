@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:lunchbox_buddy/core/data/models/models.dart';
 import 'package:lunchbox_buddy/features/cook/presentation/cook_mode_screen.dart';
 import 'package:lunchbox_buddy/features/feedback/presentation/history_screen.dart';
+import 'package:lunchbox_buddy/features/grocery/presentation/grocery_screen.dart';
 import 'package:lunchbox_buddy/features/kids/presentation/kids_notifier.dart';
 import 'package:lunchbox_buddy/features/kids/presentation/kids_screen.dart';
 import 'package:lunchbox_buddy/features/onboarding/presentation/onboarding_screen.dart';
@@ -102,6 +103,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
           final extraRecipe = state.extra as Recipe?;
           return CookModeScreen(recipeId: recipeId, initialRecipe: extraRecipe);
         },
+      ),
+      GoRoute(
+        path: '/grocery',
+        name: 'grocery',
+        builder: (context, state) => const GroceryListScreen(),
       ),
     ],
   );

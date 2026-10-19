@@ -982,5 +982,98 @@
         "type": "int"
       }
     }
+  },
+  "groceryTitle": "قائمة التسوق",
+  "@groceryTitle": {
+    "description": "Title of grocery list screen"
+  },
+  "grocerySubtitle": "مكونات منظمة لسهولة التسوق",
+  "@grocerySubtitle": {
+    "description": "Subtitle of grocery list screen"
+  },
+  "emptyGroceryTitle": "قائمة التسوق فارغة",
+  "@emptyGroceryTitle": {
+    "description": "Title when grocery list has no items"
+  },
+  "emptyGrocerySubtitle": "أضيفي المكونات الناقصة من أي وصفة أو سجلي أغراضكِ يدوياً",
+  "@emptyGrocerySubtitle": {
+    "description": "Subtitle when grocery list is empty"
+  },
+  "addCustomItem": "إضافة غرض",
+  "@addCustomItem": {
+    "description": "Button to add a manual item to the grocery list"
+  },
+  "addItemTitle": "إضافة غرض جديد",
+  "@addItemTitle": {
+    "description": "Dialog title for adding a manual grocery item"
+  },
+  "itemNameLabel": "اسم المكون أو الغرض",
+  "@itemNameLabel": {
+    "description": "Label for item name text field"
+  },
+  "itemQuantityLabel": "الكمية (اختياري)",
+  "@itemQuantityLabel": {
+    "description": "Label for item quantity text field"
+  },
+  "itemUnitLabel": "الوحدة (اختياري)",
+  "@itemUnitLabel": {
+    "description": "Label for item unit selection"
+  },
+  "itemAisleLabel": "القسم في السوبرماركت",
+  "@itemAisleLabel": {
+    "description": "Label for aisle category selection"
+  },
+  "shareList": "مشاركة القائمة",
+  "@shareList": {
+    "description": "Button to share grocery list"
+  },
+  "shareListWhatsApp": "مشاركة عبر واتساب",
+  "@shareListWhatsApp": {
+    "description": "Button to share grocery list via WhatsApp"
+  },
+  "clearCheckedItems": "مسح المكتمل",
+  "@clearCheckedItems": {
+    "description": "Button to clear purchased grocery items"
+  },
+  "clearAllItems": "مسح الكل",
+  "@clearAllItems": {
+    "description": "Button to clear all grocery items"
+  },
+  "itemDeleted": "تم حذف الغرض",
+  "@itemDeleted": {
+    "description": "Snackbar message when a grocery item is deleted"
+  },
+  "itemsAddedToGrocery": "تمت إضافة {count} من المكونات لقائمة التسوق",
+  "@itemsAddedToGrocery": {
+    "description": "Snackbar when ingredients are added to grocery list",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "viewGroceryList": "عرض القائمة",
+  "@viewGroceryList": {
+    "description": "Action label in snackbar to open grocery list"
+  },
+  "printReceipt": "طباعة الفاتورة",
+  "@printReceipt": {
+    "description": "Tooltip or button to replay receipt printing animation"
+  },
+  "receiptStoreName": "لانش بوكس بادي",
+  "@receiptStoreName": {
+    "description": "Receipt header store name"
+  },
+  "receiptTagline": "قائمة تسوق طازجة لطبخات الصغار",
+  "@receiptTagline": {
+    "description": "Receipt header tagline"
+  },
+  "confirmClearAllTitle": "مسح قائمة التسوق بالكامل؟",
+  "@confirmClearAllTitle": {
+    "description": "Dialog title confirming deletion of all grocery items"
+  },
+  "confirmClearAllMessage": "هل أنتِ متأكدة من رغبتك في حذف جميع الأغراض من قائمة التسوق؟",
+  "@confirmClearAllMessage": {
+    "description": "Dialog message confirming deletion of all grocery items"
   }
 }
