@@ -565,4 +565,59 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get optionalIngredient => '(اختياري)';
+
+  @override
+  String get cookModeTitle => 'وضع الطهي';
+
+  @override
+  String stepProgressLabel(int current, int total) {
+    return 'الخطوة $current من $total';
+  }
+
+  @override
+  String get nextStepButton => 'الخطوة التالية';
+
+  @override
+  String get prevStepButton => 'الخطوة السابقة';
+
+  @override
+  String get finishCookingButton => 'إتمام الطهي';
+
+  @override
+  String get exitCookModeTitle => 'مغادرة وضع الطهي؟';
+
+  @override
+  String get exitCookModeMessage =>
+      'هل أنتِ متأكدة من المغادرة؟ ستتوقف المؤقتات النشطة.';
+
+  @override
+  String get stayInCookMode => 'متابعة الطهي';
+
+  @override
+  String get confirmExitCookMode => 'خروج';
+
+  @override
+  String get startTimer => 'بدء المؤقت';
+
+  @override
+  String get pauseTimer => 'إيقاف مؤقت';
+
+  @override
+  String get resumeTimer => 'استئناف';
+
+  @override
+  String get resetTimer => 'إعادة ضبط';
+
+  @override
+  String get timerFinished => 'انتهى الوقت! 🔔';
+
+  @override
+  String get celebrationTitle => 'تسلم الأيادي يا أمي! 🌟';
+
+  @override
+  String get celebrationSubtitle =>
+      'الوجبة جاهزة ولذيذة، بالهناء والشفاء لأطفالكِ!';
+
+  @override
+  String get backToHome => 'العودة للرئيسية';
 }

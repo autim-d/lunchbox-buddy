@@ -243,6 +243,7 @@ void main() {
 
       // Tap save button
       await tester.tap(find.text('حفظ الوصفة').first);
+      await tester.pump();
       // Pump short duration for saving animation
       await tester.pump(const Duration(milliseconds: 350));
       await tester.pumpAndSettle();

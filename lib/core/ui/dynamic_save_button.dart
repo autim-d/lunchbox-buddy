@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -21,7 +23,9 @@ class _DynamicSaveButtonState extends ConsumerState<DynamicSaveButton> {
   bool _isSaving = false;
 
   Future<void> _handlePress(bool currentlySaved) async {
-    await HapticFeedback.lightImpact();
+    try {
+      unawaited(HapticFeedback.lightImpact());
+    } catch (_) {}
 
     if (!currentlySaved) {
       setState(() => _isSaving = true);

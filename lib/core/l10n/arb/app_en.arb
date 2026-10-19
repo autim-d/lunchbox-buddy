@@ -776,5 +776,81 @@
   "optionalIngredient": "(Optional)",
   "@optionalIngredient": {
     "description": "Optional ingredient label"
+  },
+  "cookModeTitle": "Cook Mode",
+  "@cookModeTitle": {
+    "description": "Cook mode screen title"
+  },
+  "stepProgressLabel": "Step {current} of {total}",
+  "@stepProgressLabel": {
+    "description": "Step progress indicator label",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "nextStepButton": "Next Step",
+  "@nextStepButton": {
+    "description": "Next step button"
+  },
+  "prevStepButton": "Previous Step",
+  "@prevStepButton": {
+    "description": "Previous step button"
+  },
+  "finishCookingButton": "Finish Cooking",
+  "@finishCookingButton": {
+    "description": "Finish cooking button on final step"
+  },
+  "exitCookModeTitle": "Leave Cook Mode?",
+  "@exitCookModeTitle": {
+    "description": "Exit cook mode dialog title"
+  },
+  "exitCookModeMessage": "Are you sure you want to leave? Active timers will stop.",
+  "@exitCookModeMessage": {
+    "description": "Exit cook mode dialog message"
+  },
+  "stayInCookMode": "Keep Cooking",
+  "@stayInCookMode": {
+    "description": "Cancel exit dialog button"
+  },
+  "confirmExitCookMode": "Exit",
+  "@confirmExitCookMode": {
+    "description": "Confirm exit cook mode button"
+  },
+  "startTimer": "Start Timer",
+  "@startTimer": {
+    "description": "Start timer button label"
+  },
+  "pauseTimer": "Pause",
+  "@pauseTimer": {
+    "description": "Pause timer button label"
+  },
+  "resumeTimer": "Resume",
+  "@resumeTimer": {
+    "description": "Resume timer button label"
+  },
+  "resetTimer": "Reset",
+  "@resetTimer": {
+    "description": "Reset timer button label"
+  },
+  "timerFinished": "Time's Up! 🔔",
+  "@timerFinished": {
+    "description": "Timer finished alert label"
+  },
+  "celebrationTitle": "Well done, mom! 🌟",
+  "@celebrationTitle": {
+    "description": "Cook celebration title"
+  },
+  "celebrationSubtitle": "The meal is ready and delicious! Enjoy, kids!",
+  "@celebrationSubtitle": {
+    "description": "Cook celebration subtitle"
+  },
+  "backToHome": "Back to Home",
+  "@backToHome": {
+    "description": "Back to home button"
   }
 }

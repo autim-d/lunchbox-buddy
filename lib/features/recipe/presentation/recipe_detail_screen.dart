@@ -698,14 +698,7 @@ class _RecipeDetailScreenState extends ConsumerState<RecipeDetailScreen> {
                       icon: Icons.soup_kitchen_rounded,
                       onPressed: () {
                         HapticFeedback.mediumImpact();
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text(
-                              'جاهزون لبدء الطهي! (وضع الطهي في الخطوة القادمة)',
-                            ),
-                            behavior: SnackBarBehavior.floating,
-                          ),
-                        );
+                        context.push('/cook/${recipe.id}', extra: recipe);
                       },
                     ),
                   ],

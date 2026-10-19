@@ -571,4 +571,59 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get optionalIngredient => '(Optional)';
+
+  @override
+  String get cookModeTitle => 'Cook Mode';
+
+  @override
+  String stepProgressLabel(int current, int total) {
+    return 'Step $current of $total';
+  }
+
+  @override
+  String get nextStepButton => 'Next Step';
+
+  @override
+  String get prevStepButton => 'Previous Step';
+
+  @override
+  String get finishCookingButton => 'Finish Cooking';
+
+  @override
+  String get exitCookModeTitle => 'Leave Cook Mode?';
+
+  @override
+  String get exitCookModeMessage =>
+      'Are you sure you want to leave? Active timers will stop.';
+
+  @override
+  String get stayInCookMode => 'Keep Cooking';
+
+  @override
+  String get confirmExitCookMode => 'Exit';
+
+  @override
+  String get startTimer => 'Start Timer';
+
+  @override
+  String get pauseTimer => 'Pause';
+
+  @override
+  String get resumeTimer => 'Resume';
+
+  @override
+  String get resetTimer => 'Reset';
+
+  @override
+  String get timerFinished => 'Time\'s Up! 🔔';
+
+  @override
+  String get celebrationTitle => 'Well done, mom! 🌟';
+
+  @override
+  String get celebrationSubtitle =>
+      'The meal is ready and delicious! Enjoy, kids!';
+
+  @override
+  String get backToHome => 'Back to Home';
 }

@@ -1129,6 +1129,108 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'(اختياري)'**
   String get optionalIngredient;
+
+  /// Cook mode screen title
+  ///
+  /// In ar, this message translates to:
+  /// **'وضع الطهي'**
+  String get cookModeTitle;
+
+  /// Step progress indicator label
+  ///
+  /// In ar, this message translates to:
+  /// **'الخطوة {current} من {total}'**
+  String stepProgressLabel(int current, int total);
+
+  /// Next step button
+  ///
+  /// In ar, this message translates to:
+  /// **'الخطوة التالية'**
+  String get nextStepButton;
+
+  /// Previous step button
+  ///
+  /// In ar, this message translates to:
+  /// **'الخطوة السابقة'**
+  String get prevStepButton;
+
+  /// Finish cooking button on final step
+  ///
+  /// In ar, this message translates to:
+  /// **'إتمام الطهي'**
+  String get finishCookingButton;
+
+  /// Exit cook mode dialog title
+  ///
+  /// In ar, this message translates to:
+  /// **'مغادرة وضع الطهي؟'**
+  String get exitCookModeTitle;
+
+  /// Exit cook mode dialog message
+  ///
+  /// In ar, this message translates to:
+  /// **'هل أنتِ متأكدة من المغادرة؟ ستتوقف المؤقتات النشطة.'**
+  String get exitCookModeMessage;
+
+  /// Cancel exit dialog button
+  ///
+  /// In ar, this message translates to:
+  /// **'متابعة الطهي'**
+  String get stayInCookMode;
+
+  /// Confirm exit cook mode button
+  ///
+  /// In ar, this message translates to:
+  /// **'خروج'**
+  String get confirmExitCookMode;
+
+  /// Start timer button label
+  ///
+  /// In ar, this message translates to:
+  /// **'بدء المؤقت'**
+  String get startTimer;
+
+  /// Pause timer button label
+  ///
+  /// In ar, this message translates to:
+  /// **'إيقاف مؤقت'**
+  String get pauseTimer;
+
+  /// Resume timer button label
+  ///
+  /// In ar, this message translates to:
+  /// **'استئناف'**
+  String get resumeTimer;
+
+  /// Reset timer button label
+  ///
+  /// In ar, this message translates to:
+  /// **'إعادة ضبط'**
+  String get resetTimer;
+
+  /// Timer finished alert label
+  ///
+  /// In ar, this message translates to:
+  /// **'انتهى الوقت! 🔔'**
+  String get timerFinished;
+
+  /// Cook celebration title
+  ///
+  /// In ar, this message translates to:
+  /// **'تسلم الأيادي يا أمي! 🌟'**
+  String get celebrationTitle;
+
+  /// Cook celebration subtitle
+  ///
+  /// In ar, this message translates to:
+  /// **'الوجبة جاهزة ولذيذة، بالهناء والشفاء لأطفالكِ!'**
+  String get celebrationSubtitle;
+
+  /// Back to home button
+  ///
+  /// In ar, this message translates to:
+  /// **'العودة للرئيسية'**
+  String get backToHome;
 }
 
 class _AppLocalizationsDelegate
