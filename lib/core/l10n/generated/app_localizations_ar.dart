@@ -366,4 +366,139 @@ class AppLocalizationsAr extends AppLocalizations {
   String safeRecipesCount(int count) {
     return '$count وصفة آمنة تماماً';
   }
+
+  @override
+  String get greetingMorning => 'صباح الخير يا أمي';
+
+  @override
+  String get greetingAfternoon => 'مساء الخير يا أمي';
+
+  @override
+  String get greetingEvening => 'مساء الورد يا أمي';
+
+  @override
+  String get cookingForWhom => 'تجهيز وجبة لمن؟';
+
+  @override
+  String get allKidsOption => 'كل أطفالي';
+
+  @override
+  String get savedRecipesSectionTitle => 'الوصفات المحفوظة';
+
+  @override
+  String get noSavedRecipesTitle => 'لا توجد وصفات محفوظة بعد';
+
+  @override
+  String get noSavedRecipesSubtitle =>
+      'احفظي وجبات أطفالكِ المفضلة للرجوع إليها سريعاً';
+
+  @override
+  String get suggestSheetTitle => 'تخصيص الوجبة';
+
+  @override
+  String get mealTypeSectionTitle => 'نوع الوجبة';
+
+  @override
+  String get mealTypeBreakfast => 'فطور';
+
+  @override
+  String get mealTypeLunchbox => 'لانش بوكس';
+
+  @override
+  String get mealTypeDinner => 'عشاء';
+
+  @override
+  String get mealTypeSnack => 'سناك';
+
+  @override
+  String get timeSectionTitle => 'الوقت المتاح للتحضير';
+
+  @override
+  String get time10Min => '١٠ دقائق';
+
+  @override
+  String get time20Min => '٢٠ دقيقة';
+
+  @override
+  String get time30PlusMin => '٣٠+ دقيقة';
+
+  @override
+  String get moodSectionTitle => 'مزاج اليوم والوجبة';
+
+  @override
+  String get moodPicky => 'للطفل الانتقائي';
+
+  @override
+  String get moodQuick => 'سريع وخفيف';
+
+  @override
+  String get moodFun => 'ممتع ومرح';
+
+  @override
+  String get moodHiddenVeggies => 'خضار مخفية';
+
+  @override
+  String get ingredientsOnHandTitle => 'مكونات متوفرة في مطبخكِ';
+
+  @override
+  String get ingredientsOnHandOptional => '(اختياري)';
+
+  @override
+  String get searchIngredientsPlaceholder => 'ابحثي عن مكون...';
+
+  @override
+  String get notesFieldLabel => 'ملاحظة أو تفضيل خاص';
+
+  @override
+  String get notesFieldPlaceholder => 'مثال: بدون بصل، أو شيء مقرمش...';
+
+  @override
+  String get micVoiceDisabledTooltip => 'التسجيل الصوتي سيكون متاحاً قريباً!';
+
+  @override
+  String get submitSuggestionButton => 'اقترحي الوجبات الآن';
+
+  @override
+  String get resultsScreenTitle => 'اقتراحات الوجبات';
+
+  @override
+  String get resultsScreenSubtitle => '٣ أفكار مدروسة وآمنة لأطفالكِ';
+
+  @override
+  String get ticketLabel => 'تذكرة وجبة';
+
+  @override
+  String totalMinutesFormat(int minutes) {
+    return '$minutes دقيقة';
+  }
+
+  @override
+  String get cardActionDetails => 'طريقة التحضير';
+
+  @override
+  String get saveRecipeTooltip => 'حفظ في المفضلة';
+
+  @override
+  String get unsaveRecipeTooltip => 'إزالة من المفضلة';
+
+  @override
+  String get emptyResultsTitle => 'لم نعثر على وجبة مطابقة تماماً';
+
+  @override
+  String get emptyResultsMessage =>
+      'حساسيات الأطفال أو ضيق الوقت استبعدت بعض الوصفات. جربي زيادة الوقت أو اختيار فلاتر أخرى.';
+
+  @override
+  String get adjustFiltersButton => 'تعديل الفلاتر';
+
+  @override
+  String get errorResultsTitle => 'حدث خطأ غير متوقع';
+
+  @override
+  String get retryButton => 'إعادة المحاولة';
+
+  @override
+  String cardCounter(int current, int total) {
+    return '$current من $total';
+  }
 }

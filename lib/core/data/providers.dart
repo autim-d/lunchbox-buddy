@@ -53,3 +53,11 @@ final allRecipesProvider = FutureProvider<List<Recipe>>((ref) async {
   final recipesDao = ref.watch(recipesDaoProvider);
   return recipesDao.getAllRecipes();
 });
+
+/// Provider that guarantees database is seeded and yields all ingredients
+final allIngredientsProvider = FutureProvider<List<Ingredient>>((ref) async {
+  final seedService = ref.watch(seedServiceProvider);
+  await seedService.seedIfNeeded();
+  final ingredientsDao = ref.watch(ingredientsDaoProvider);
+  return ingredientsDao.getAllIngredients();
+});

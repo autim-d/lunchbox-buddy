@@ -757,6 +757,264 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'{count} وصفة آمنة تماماً'**
   String safeRecipesCount(int count);
+
+  /// Morning greeting on home screen
+  ///
+  /// In ar, this message translates to:
+  /// **'صباح الخير يا أمي'**
+  String get greetingMorning;
+
+  /// Afternoon greeting on home screen
+  ///
+  /// In ar, this message translates to:
+  /// **'مساء الخير يا أمي'**
+  String get greetingAfternoon;
+
+  /// Evening greeting on home screen
+  ///
+  /// In ar, this message translates to:
+  /// **'مساء الورد يا أمي'**
+  String get greetingEvening;
+
+  /// Kid selector title on home screen
+  ///
+  /// In ar, this message translates to:
+  /// **'تجهيز وجبة لمن؟'**
+  String get cookingForWhom;
+
+  /// Option to select all kids
+  ///
+  /// In ar, this message translates to:
+  /// **'كل أطفالي'**
+  String get allKidsOption;
+
+  /// Saved recipes title on home screen
+  ///
+  /// In ar, this message translates to:
+  /// **'الوصفات المحفوظة'**
+  String get savedRecipesSectionTitle;
+
+  /// Title when no recipes are saved
+  ///
+  /// In ar, this message translates to:
+  /// **'لا توجد وصفات محفوظة بعد'**
+  String get noSavedRecipesTitle;
+
+  /// Subtitle when no recipes are saved
+  ///
+  /// In ar, this message translates to:
+  /// **'احفظي وجبات أطفالكِ المفضلة للرجوع إليها سريعاً'**
+  String get noSavedRecipesSubtitle;
+
+  /// Title for suggest bottom sheet
+  ///
+  /// In ar, this message translates to:
+  /// **'تخصيص الوجبة'**
+  String get suggestSheetTitle;
+
+  /// Meal type section title
+  ///
+  /// In ar, this message translates to:
+  /// **'نوع الوجبة'**
+  String get mealTypeSectionTitle;
+
+  /// Breakfast meal type
+  ///
+  /// In ar, this message translates to:
+  /// **'فطور'**
+  String get mealTypeBreakfast;
+
+  /// Lunchbox meal type
+  ///
+  /// In ar, this message translates to:
+  /// **'لانش بوكس'**
+  String get mealTypeLunchbox;
+
+  /// Dinner meal type
+  ///
+  /// In ar, this message translates to:
+  /// **'عشاء'**
+  String get mealTypeDinner;
+
+  /// Snack meal type
+  ///
+  /// In ar, this message translates to:
+  /// **'سناك'**
+  String get mealTypeSnack;
+
+  /// Time section title
+  ///
+  /// In ar, this message translates to:
+  /// **'الوقت المتاح للتحضير'**
+  String get timeSectionTitle;
+
+  /// 10 minutes option
+  ///
+  /// In ar, this message translates to:
+  /// **'١٠ دقائق'**
+  String get time10Min;
+
+  /// 20 minutes option
+  ///
+  /// In ar, this message translates to:
+  /// **'٢٠ دقيقة'**
+  String get time20Min;
+
+  /// 30+ minutes option
+  ///
+  /// In ar, this message translates to:
+  /// **'٣٠+ دقيقة'**
+  String get time30PlusMin;
+
+  /// Mood section title
+  ///
+  /// In ar, this message translates to:
+  /// **'مزاج اليوم والوجبة'**
+  String get moodSectionTitle;
+
+  /// Picky mood option
+  ///
+  /// In ar, this message translates to:
+  /// **'للطفل الانتقائي'**
+  String get moodPicky;
+
+  /// Quick mood option
+  ///
+  /// In ar, this message translates to:
+  /// **'سريع وخفيف'**
+  String get moodQuick;
+
+  /// Fun mood option
+  ///
+  /// In ar, this message translates to:
+  /// **'ممتع ومرح'**
+  String get moodFun;
+
+  /// Hidden veggies mood option
+  ///
+  /// In ar, this message translates to:
+  /// **'خضار مخفية'**
+  String get moodHiddenVeggies;
+
+  /// Ingredients on hand title
+  ///
+  /// In ar, this message translates to:
+  /// **'مكونات متوفرة في مطبخكِ'**
+  String get ingredientsOnHandTitle;
+
+  /// Optional label
+  ///
+  /// In ar, this message translates to:
+  /// **'(اختياري)'**
+  String get ingredientsOnHandOptional;
+
+  /// Placeholder for ingredients search
+  ///
+  /// In ar, this message translates to:
+  /// **'ابحثي عن مكون...'**
+  String get searchIngredientsPlaceholder;
+
+  /// Notes field label
+  ///
+  /// In ar, this message translates to:
+  /// **'ملاحظة أو تفضيل خاص'**
+  String get notesFieldLabel;
+
+  /// Notes field placeholder
+  ///
+  /// In ar, this message translates to:
+  /// **'مثال: بدون بصل، أو شيء مقرمش...'**
+  String get notesFieldPlaceholder;
+
+  /// Disabled mic tooltip
+  ///
+  /// In ar, this message translates to:
+  /// **'التسجيل الصوتي سيكون متاحاً قريباً!'**
+  String get micVoiceDisabledTooltip;
+
+  /// Submit suggestion CTA button
+  ///
+  /// In ar, this message translates to:
+  /// **'اقترحي الوجبات الآن'**
+  String get submitSuggestionButton;
+
+  /// Results screen title
+  ///
+  /// In ar, this message translates to:
+  /// **'اقتراحات الوجبات'**
+  String get resultsScreenTitle;
+
+  /// Results screen subtitle
+  ///
+  /// In ar, this message translates to:
+  /// **'٣ أفكار مدروسة وآمنة لأطفالكِ'**
+  String get resultsScreenSubtitle;
+
+  /// Meal ticket label
+  ///
+  /// In ar, this message translates to:
+  /// **'تذكرة وجبة'**
+  String get ticketLabel;
+
+  /// Formatted total minutes
+  ///
+  /// In ar, this message translates to:
+  /// **'{minutes} دقيقة'**
+  String totalMinutesFormat(int minutes);
+
+  /// Action on recipe card
+  ///
+  /// In ar, this message translates to:
+  /// **'طريقة التحضير'**
+  String get cardActionDetails;
+
+  /// Save recipe tooltip
+  ///
+  /// In ar, this message translates to:
+  /// **'حفظ في المفضلة'**
+  String get saveRecipeTooltip;
+
+  /// Unsave recipe tooltip
+  ///
+  /// In ar, this message translates to:
+  /// **'إزالة من المفضلة'**
+  String get unsaveRecipeTooltip;
+
+  /// Empty results title
+  ///
+  /// In ar, this message translates to:
+  /// **'لم نعثر على وجبة مطابقة تماماً'**
+  String get emptyResultsTitle;
+
+  /// Empty results description
+  ///
+  /// In ar, this message translates to:
+  /// **'حساسيات الأطفال أو ضيق الوقت استبعدت بعض الوصفات. جربي زيادة الوقت أو اختيار فلاتر أخرى.'**
+  String get emptyResultsMessage;
+
+  /// Adjust filters button
+  ///
+  /// In ar, this message translates to:
+  /// **'تعديل الفلاتر'**
+  String get adjustFiltersButton;
+
+  /// Error results title
+  ///
+  /// In ar, this message translates to:
+  /// **'حدث خطأ غير متوقع'**
+  String get errorResultsTitle;
+
+  /// Retry button
+  ///
+  /// In ar, this message translates to:
+  /// **'إعادة المحاولة'**
+  String get retryButton;
+
+  /// Card counter in results screen
+  ///
+  /// In ar, this message translates to:
+  /// **'{current} من {total}'**
+  String cardCounter(int current, int total);
 }
 
 class _AppLocalizationsDelegate

@@ -6,6 +6,7 @@ import 'package:lunchbox_buddy/features/kids/presentation/kids_screen.dart';
 import 'package:lunchbox_buddy/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:lunchbox_buddy/features/recipe/presentation/debug_recipes_screen.dart';
 import 'package:lunchbox_buddy/features/suggest/presentation/home_screen.dart';
+import 'package:lunchbox_buddy/features/suggest/presentation/results_screen.dart';
 
 /// Listenable that triggers GoRouter redirect re-evaluation when kids list changes
 class _RouterListenable extends ChangeNotifier {
@@ -60,6 +61,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         path: '/debug-recipes',
         name: 'debug-recipes',
         builder: (context, state) => const DebugRecipesScreen(),
+      ),
+      GoRoute(
+        path: '/results',
+        name: 'results',
+        builder: (context, state) => const ResultsScreen(),
       ),
     ],
   );

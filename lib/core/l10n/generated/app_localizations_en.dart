@@ -370,4 +370,141 @@ class AppLocalizationsEn extends AppLocalizations {
   String safeRecipesCount(int count) {
     return '$count Strictly Safe Recipes';
   }
+
+  @override
+  String get greetingMorning => 'Good morning, Mom';
+
+  @override
+  String get greetingAfternoon => 'Good afternoon, Mom';
+
+  @override
+  String get greetingEvening => 'Good evening, Mom';
+
+  @override
+  String get cookingForWhom => 'Cooking for whom?';
+
+  @override
+  String get allKidsOption => 'All my kids';
+
+  @override
+  String get savedRecipesSectionTitle => 'Saved Recipes';
+
+  @override
+  String get noSavedRecipesTitle => 'No saved recipes yet';
+
+  @override
+  String get noSavedRecipesSubtitle =>
+      'Bookmark your children\'s favorite meals for quick access';
+
+  @override
+  String get suggestSheetTitle => 'Customize Meal';
+
+  @override
+  String get mealTypeSectionTitle => 'Meal Type';
+
+  @override
+  String get mealTypeBreakfast => 'Breakfast';
+
+  @override
+  String get mealTypeLunchbox => 'Lunchbox';
+
+  @override
+  String get mealTypeDinner => 'Dinner';
+
+  @override
+  String get mealTypeSnack => 'Snack';
+
+  @override
+  String get timeSectionTitle => 'Available Prep Time';
+
+  @override
+  String get time10Min => '10 min';
+
+  @override
+  String get time20Min => '20 min';
+
+  @override
+  String get time30PlusMin => '30+ min';
+
+  @override
+  String get moodSectionTitle => 'Today\'s Mood & Preference';
+
+  @override
+  String get moodPicky => 'Picky Eater';
+
+  @override
+  String get moodQuick => 'Quick & Light';
+
+  @override
+  String get moodFun => 'Fun & Creative';
+
+  @override
+  String get moodHiddenVeggies => 'Hidden Veggies';
+
+  @override
+  String get ingredientsOnHandTitle => 'Ingredients in your kitchen';
+
+  @override
+  String get ingredientsOnHandOptional => '(Optional)';
+
+  @override
+  String get searchIngredientsPlaceholder => 'Search ingredients...';
+
+  @override
+  String get notesFieldLabel => 'Notes or special requests';
+
+  @override
+  String get notesFieldPlaceholder =>
+      'e.g., no raw onions, or something crispy...';
+
+  @override
+  String get micVoiceDisabledTooltip => 'Voice input will be available soon!';
+
+  @override
+  String get submitSuggestionButton => 'Suggest Meals Now';
+
+  @override
+  String get resultsScreenTitle => 'Meal Suggestions';
+
+  @override
+  String get resultsScreenSubtitle =>
+      '3 tailored, allergen-safe ideas for your kids';
+
+  @override
+  String get ticketLabel => 'Meal Ticket';
+
+  @override
+  String totalMinutesFormat(int minutes) {
+    return '$minutes mins';
+  }
+
+  @override
+  String get cardActionDetails => 'Recipe Details';
+
+  @override
+  String get saveRecipeTooltip => 'Save to Favorites';
+
+  @override
+  String get unsaveRecipeTooltip => 'Remove from Favorites';
+
+  @override
+  String get emptyResultsTitle => 'No Matching Meals Found';
+
+  @override
+  String get emptyResultsMessage =>
+      'Allergy constraints or tight prep time may have excluded all recipes. Try increasing prep time or adjusting filters.';
+
+  @override
+  String get adjustFiltersButton => 'Adjust Filters';
+
+  @override
+  String get errorResultsTitle => 'An Unexpected Error Occurred';
+
+  @override
+  String get retryButton => 'Retry';
+
+  @override
+  String cardCounter(int current, int total) {
+    return '$current of $total';
+  }
 }

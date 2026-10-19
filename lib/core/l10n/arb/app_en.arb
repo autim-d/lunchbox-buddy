@@ -494,5 +494,190 @@
         "type": "int"
       }
     }
+  },
+  "greetingMorning": "Good morning, Mom",
+  "@greetingMorning": {
+    "description": "Morning greeting on home screen"
+  },
+  "greetingAfternoon": "Good afternoon, Mom",
+  "@greetingAfternoon": {
+    "description": "Afternoon greeting on home screen"
+  },
+  "greetingEvening": "Good evening, Mom",
+  "@greetingEvening": {
+    "description": "Evening greeting on home screen"
+  },
+  "cookingForWhom": "Cooking for whom?",
+  "@cookingForWhom": {
+    "description": "Kid selector title on home screen"
+  },
+  "allKidsOption": "All my kids",
+  "@allKidsOption": {
+    "description": "Option to select all kids"
+  },
+  "savedRecipesSectionTitle": "Saved Recipes",
+  "@savedRecipesSectionTitle": {
+    "description": "Saved recipes title on home screen"
+  },
+  "noSavedRecipesTitle": "No saved recipes yet",
+  "@noSavedRecipesTitle": {
+    "description": "Title when no recipes are saved"
+  },
+  "noSavedRecipesSubtitle": "Bookmark your children's favorite meals for quick access",
+  "@noSavedRecipesSubtitle": {
+    "description": "Subtitle when no recipes are saved"
+  },
+  "suggestSheetTitle": "Customize Meal",
+  "@suggestSheetTitle": {
+    "description": "Title for suggest bottom sheet"
+  },
+  "mealTypeSectionTitle": "Meal Type",
+  "@mealTypeSectionTitle": {
+    "description": "Meal type section title"
+  },
+  "mealTypeBreakfast": "Breakfast",
+  "@mealTypeBreakfast": {
+    "description": "Breakfast meal type"
+  },
+  "mealTypeLunchbox": "Lunchbox",
+  "@mealTypeLunchbox": {
+    "description": "Lunchbox meal type"
+  },
+  "mealTypeDinner": "Dinner",
+  "@mealTypeDinner": {
+    "description": "Dinner meal type"
+  },
+  "mealTypeSnack": "Snack",
+  "@mealTypeSnack": {
+    "description": "Snack meal type"
+  },
+  "timeSectionTitle": "Available Prep Time",
+  "@timeSectionTitle": {
+    "description": "Time section title"
+  },
+  "time10Min": "10 min",
+  "@time10Min": {
+    "description": "10 minutes option"
+  },
+  "time20Min": "20 min",
+  "@time20Min": {
+    "description": "20 minutes option"
+  },
+  "time30PlusMin": "30+ min",
+  "@time30PlusMin": {
+    "description": "30+ minutes option"
+  },
+  "moodSectionTitle": "Today's Mood & Preference",
+  "@moodSectionTitle": {
+    "description": "Mood section title"
+  },
+  "moodPicky": "Picky Eater",
+  "@moodPicky": {
+    "description": "Picky mood option"
+  },
+  "moodQuick": "Quick & Light",
+  "@moodQuick": {
+    "description": "Quick mood option"
+  },
+  "moodFun": "Fun & Creative",
+  "@moodFun": {
+    "description": "Fun mood option"
+  },
+  "moodHiddenVeggies": "Hidden Veggies",
+  "@moodHiddenVeggies": {
+    "description": "Hidden veggies mood option"
+  },
+  "ingredientsOnHandTitle": "Ingredients in your kitchen",
+  "@ingredientsOnHandTitle": {
+    "description": "Ingredients on hand title"
+  },
+  "ingredientsOnHandOptional": "(Optional)",
+  "@ingredientsOnHandOptional": {
+    "description": "Optional label"
+  },
+  "searchIngredientsPlaceholder": "Search ingredients...",
+  "@searchIngredientsPlaceholder": {
+    "description": "Placeholder for ingredients search"
+  },
+  "notesFieldLabel": "Notes or special requests",
+  "@notesFieldLabel": {
+    "description": "Notes field label"
+  },
+  "notesFieldPlaceholder": "e.g., no raw onions, or something crispy...",
+  "@notesFieldPlaceholder": {
+    "description": "Notes field placeholder"
+  },
+  "micVoiceDisabledTooltip": "Voice input will be available soon!",
+  "@micVoiceDisabledTooltip": {
+    "description": "Disabled mic tooltip"
+  },
+  "submitSuggestionButton": "Suggest Meals Now",
+  "@submitSuggestionButton": {
+    "description": "Submit suggestion CTA button"
+  },
+  "resultsScreenTitle": "Meal Suggestions",
+  "@resultsScreenTitle": {
+    "description": "Results screen title"
+  },
+  "resultsScreenSubtitle": "3 tailored, allergen-safe ideas for your kids",
+  "@resultsScreenSubtitle": {
+    "description": "Results screen subtitle"
+  },
+  "ticketLabel": "Meal Ticket",
+  "@ticketLabel": {
+    "description": "Meal ticket label"
+  },
+  "totalMinutesFormat": "{minutes} mins",
+  "@totalMinutesFormat": {
+    "description": "Formatted total minutes",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "cardActionDetails": "Recipe Details",
+  "@cardActionDetails": {
+    "description": "Action on recipe card"
+  },
+  "saveRecipeTooltip": "Save to Favorites",
+  "@saveRecipeTooltip": {
+    "description": "Save recipe tooltip"
+  },
+  "unsaveRecipeTooltip": "Remove from Favorites",
+  "@unsaveRecipeTooltip": {
+    "description": "Unsave recipe tooltip"
+  },
+  "emptyResultsTitle": "No Matching Meals Found",
+  "@emptyResultsTitle": {
+    "description": "Empty results title"
+  },
+  "emptyResultsMessage": "Allergy constraints or tight prep time may have excluded all recipes. Try increasing prep time or adjusting filters.",
+  "@emptyResultsMessage": {
+    "description": "Empty results description"
+  },
+  "adjustFiltersButton": "Adjust Filters",
+  "@adjustFiltersButton": {
+    "description": "Adjust filters button"
+  },
+  "errorResultsTitle": "An Unexpected Error Occurred",
+  "@errorResultsTitle": {
+    "description": "Error results title"
+  },
+  "retryButton": "Retry",
+  "@retryButton": {
+    "description": "Retry button"
+  },
+  "cardCounter": "{current} of {total}",
+  "@cardCounter": {
+    "description": "Card counter in results screen",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
   }
 }

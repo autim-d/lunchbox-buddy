@@ -71,6 +71,7 @@ class AppSpacing {
 class AppRadii {
   const AppRadii();
 
+  final double xs = 4.0;
   final double sm = 8.0;
   final double md = 12.0;
   final double card = 20.0;
@@ -181,6 +182,13 @@ class AppTypography {
 
   TextStyle get labelMedium => GoogleFonts.cairo(
     fontSize: 14.0,
+    fontWeight: FontWeight.w500,
+    color: AppTokens.colors.textSecondary,
+    height: 1.2,
+  );
+
+  TextStyle get labelSmall => GoogleFonts.cairo(
+    fontSize: 12.0,
     fontWeight: FontWeight.w500,
     color: AppTokens.colors.textSecondary,
     height: 1.2,

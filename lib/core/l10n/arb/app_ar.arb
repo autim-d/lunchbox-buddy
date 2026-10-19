@@ -494,5 +494,190 @@
         "type": "int"
       }
     }
+  },
+  "greetingMorning": "صباح الخير يا أمي",
+  "@greetingMorning": {
+    "description": "Morning greeting on home screen"
+  },
+  "greetingAfternoon": "مساء الخير يا أمي",
+  "@greetingAfternoon": {
+    "description": "Afternoon greeting on home screen"
+  },
+  "greetingEvening": "مساء الورد يا أمي",
+  "@greetingEvening": {
+    "description": "Evening greeting on home screen"
+  },
+  "cookingForWhom": "تجهيز وجبة لمن؟",
+  "@cookingForWhom": {
+    "description": "Kid selector title on home screen"
+  },
+  "allKidsOption": "كل أطفالي",
+  "@allKidsOption": {
+    "description": "Option to select all kids"
+  },
+  "savedRecipesSectionTitle": "الوصفات المحفوظة",
+  "@savedRecipesSectionTitle": {
+    "description": "Saved recipes title on home screen"
+  },
+  "noSavedRecipesTitle": "لا توجد وصفات محفوظة بعد",
+  "@noSavedRecipesTitle": {
+    "description": "Title when no recipes are saved"
+  },
+  "noSavedRecipesSubtitle": "احفظي وجبات أطفالكِ المفضلة للرجوع إليها سريعاً",
+  "@noSavedRecipesSubtitle": {
+    "description": "Subtitle when no recipes are saved"
+  },
+  "suggestSheetTitle": "تخصيص الوجبة",
+  "@suggestSheetTitle": {
+    "description": "Title for suggest bottom sheet"
+  },
+  "mealTypeSectionTitle": "نوع الوجبة",
+  "@mealTypeSectionTitle": {
+    "description": "Meal type section title"
+  },
+  "mealTypeBreakfast": "فطور",
+  "@mealTypeBreakfast": {
+    "description": "Breakfast meal type"
+  },
+  "mealTypeLunchbox": "لانش بوكس",
+  "@mealTypeLunchbox": {
+    "description": "Lunchbox meal type"
+  },
+  "mealTypeDinner": "عشاء",
+  "@mealTypeDinner": {
+    "description": "Dinner meal type"
+  },
+  "mealTypeSnack": "سناك",
+  "@mealTypeSnack": {
+    "description": "Snack meal type"
+  },
+  "timeSectionTitle": "الوقت المتاح للتحضير",
+  "@timeSectionTitle": {
+    "description": "Time section title"
+  },
+  "time10Min": "١٠ دقائق",
+  "@time10Min": {
+    "description": "10 minutes option"
+  },
+  "time20Min": "٢٠ دقيقة",
+  "@time20Min": {
+    "description": "20 minutes option"
+  },
+  "time30PlusMin": "٣٠+ دقيقة",
+  "@time30PlusMin": {
+    "description": "30+ minutes option"
+  },
+  "moodSectionTitle": "مزاج اليوم والوجبة",
+  "@moodSectionTitle": {
+    "description": "Mood section title"
+  },
+  "moodPicky": "للطفل الانتقائي",
+  "@moodPicky": {
+    "description": "Picky mood option"
+  },
+  "moodQuick": "سريع وخفيف",
+  "@moodQuick": {
+    "description": "Quick mood option"
+  },
+  "moodFun": "ممتع ومرح",
+  "@moodFun": {
+    "description": "Fun mood option"
+  },
+  "moodHiddenVeggies": "خضار مخفية",
+  "@moodHiddenVeggies": {
+    "description": "Hidden veggies mood option"
+  },
+  "ingredientsOnHandTitle": "مكونات متوفرة في مطبخكِ",
+  "@ingredientsOnHandTitle": {
+    "description": "Ingredients on hand title"
+  },
+  "ingredientsOnHandOptional": "(اختياري)",
+  "@ingredientsOnHandOptional": {
+    "description": "Optional label"
+  },
+  "searchIngredientsPlaceholder": "ابحثي عن مكون...",
+  "@searchIngredientsPlaceholder": {
+    "description": "Placeholder for ingredients search"
+  },
+  "notesFieldLabel": "ملاحظة أو تفضيل خاص",
+  "@notesFieldLabel": {
+    "description": "Notes field label"
+  },
+  "notesFieldPlaceholder": "مثال: بدون بصل، أو شيء مقرمش...",
+  "@notesFieldPlaceholder": {
+    "description": "Notes field placeholder"
+  },
+  "micVoiceDisabledTooltip": "التسجيل الصوتي سيكون متاحاً قريباً!",
+  "@micVoiceDisabledTooltip": {
+    "description": "Disabled mic tooltip"
+  },
+  "submitSuggestionButton": "اقترحي الوجبات الآن",
+  "@submitSuggestionButton": {
+    "description": "Submit suggestion CTA button"
+  },
+  "resultsScreenTitle": "اقتراحات الوجبات",
+  "@resultsScreenTitle": {
+    "description": "Results screen title"
+  },
+  "resultsScreenSubtitle": "٣ أفكار مدروسة وآمنة لأطفالكِ",
+  "@resultsScreenSubtitle": {
+    "description": "Results screen subtitle"
+  },
+  "ticketLabel": "تذكرة وجبة",
+  "@ticketLabel": {
+    "description": "Meal ticket label"
+  },
+  "totalMinutesFormat": "{minutes} دقيقة",
+  "@totalMinutesFormat": {
+    "description": "Formatted total minutes",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "cardActionDetails": "طريقة التحضير",
+  "@cardActionDetails": {
+    "description": "Action on recipe card"
+  },
+  "saveRecipeTooltip": "حفظ في المفضلة",
+  "@saveRecipeTooltip": {
+    "description": "Save recipe tooltip"
+  },
+  "unsaveRecipeTooltip": "إزالة من المفضلة",
+  "@unsaveRecipeTooltip": {
+    "description": "Unsave recipe tooltip"
+  },
+  "emptyResultsTitle": "لم نعثر على وجبة مطابقة تماماً",
+  "@emptyResultsTitle": {
+    "description": "Empty results title"
+  },
+  "emptyResultsMessage": "حساسيات الأطفال أو ضيق الوقت استبعدت بعض الوصفات. جربي زيادة الوقت أو اختيار فلاتر أخرى.",
+  "@emptyResultsMessage": {
+    "description": "Empty results description"
+  },
+  "adjustFiltersButton": "تعديل الفلاتر",
+  "@adjustFiltersButton": {
+    "description": "Adjust filters button"
+  },
+  "errorResultsTitle": "حدث خطأ غير متوقع",
+  "@errorResultsTitle": {
+    "description": "Error results title"
+  },
+  "retryButton": "إعادة المحاولة",
+  "@retryButton": {
+    "description": "Retry button"
+  },
+  "cardCounter": "{current} من {total}",
+  "@cardCounter": {
+    "description": "Card counter in results screen",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
   }
 }

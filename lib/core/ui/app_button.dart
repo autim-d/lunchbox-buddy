@@ -139,11 +139,15 @@ class _AppButtonState extends State<AppButton> {
                           Icon(widget.icon, color: textColor, size: 22.0),
                           SizedBox(width: spacing.sm),
                         ],
-                        Text(
-                          widget.label,
-                          style: typography.labelLarge.copyWith(
-                            color: textColor,
-                            fontWeight: FontWeight.bold,
+                        Flexible(
+                          child: Text(
+                            widget.label,
+                            style: typography.labelLarge.copyWith(
+                              color: textColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
                           ),
                         ),
                       ],

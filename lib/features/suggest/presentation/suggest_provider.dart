@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lunchbox_buddy/core/data/providers.dart';
 import 'package:lunchbox_buddy/core/safety/safety_filter.dart';
+import 'package:lunchbox_buddy/features/kids/presentation/kids_notifier.dart';
 import 'package:lunchbox_buddy/features/suggest/domain/meal_recommendation.dart';
 import 'package:lunchbox_buddy/features/suggest/domain/meal_suggestion_request.dart';
 import 'package:lunchbox_buddy/features/suggest/domain/recommendation_service.dart';
@@ -40,3 +41,54 @@ final mealSuggestionsProvider =
       final service = ref.watch(recommendationServiceProvider);
       return service.getRecommendations(request);
     });
+
+/// Provider managing multi-selected kid IDs for suggestions
+class SelectedKidIdsNotifier extends Notifier<Set<String>> {
+  @override
+  Set<String> build() {
+    final kids = ref.watch(kidsListNotifierProvider).asData?.value ?? const [];
+    // Default to selecting all children
+    return kids.map((k) => k.id).toSet();
+  }
+
+  void toggleKid(String id) {
+    final next = Set<String>.from(state);
+    if (next.contains(id)) {
+      if (next.length > 1) {
+        next.remove(id);
+      }
+    } else {
+      next.add(id);
+    }
+    state = next;
+  }
+
+  void selectAll(Iterable<String> allIds) {
+    state = allIds.toSet();
+  }
+
+  void selectSingle(String id) {
+    state = {id};
+  }
+}
+
+final selectedKidIdsProvider =
+    NotifierProvider<SelectedKidIdsNotifier, Set<String>>(
+      SelectedKidIdsNotifier.new,
+    );
+
+/// State holding the currently active suggestion request for results screen
+class CurrentSuggestionRequestNotifier
+    extends Notifier<MealSuggestionRequest?> {
+  @override
+  MealSuggestionRequest? build() => null;
+
+  void setRequest(MealSuggestionRequest request) {
+    state = request;
+  }
+}
+
+final currentSuggestionRequestProvider =
+    NotifierProvider<CurrentSuggestionRequestNotifier, MealSuggestionRequest?>(
+      CurrentSuggestionRequestNotifier.new,
+    );
