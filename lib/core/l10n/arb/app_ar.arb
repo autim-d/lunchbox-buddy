@@ -420,5 +420,79 @@
   "noDislikesSelected": "لا توجد أكلات مستبعدة",
   "@noDislikesSelected": {
     "description": "Empty dislikes label"
+  },
+  "reasonIngredientsOnHand": "متوفر لديكِ أغلب المكونات",
+  "@reasonIngredientsOnHand": {
+    "description": "Suggestion reason: ingredients on hand"
+  },
+  "reasonKidFavorite": "مفضلة ومحبوبة لأطفالكِ",
+  "@reasonKidFavorite": {
+    "description": "Suggestion reason: kid favorite"
+  },
+  "reasonHiddenVeggies": "خضار مخفية تناسب الانتقائيين",
+  "@reasonHiddenVeggies": {
+    "description": "Suggestion reason: hidden veggies"
+  },
+  "reasonLunchboxFriendly": "مثالية للانش بوكس المدرسي",
+  "@reasonLunchboxFriendly": {
+    "description": "Suggestion reason: lunchbox friendly"
+  },
+  "reasonQuickPrep": "سريعة التحضير في وقت قياسي",
+  "@reasonQuickPrep": {
+    "description": "Suggestion reason: quick prep"
+  },
+  "reasonBalancedMeal": "وجبة متوازنة ومغذية",
+  "@reasonBalancedMeal": {
+    "description": "Suggestion reason: balanced meal"
+  },
+  "testSuggestionsTitle": "تجربة محرك الاقتراحات (بدون إنترنت)",
+  "@testSuggestionsTitle": {
+    "description": "Title for test suggestions tab"
+  },
+  "testSuggestionsDescription": "اختبار الفلترة الحتمية للحساسيات وترتيب الوجبات",
+  "@testSuggestionsDescription": {
+    "description": "Subtitle for test suggestions tab"
+  },
+  "filterNutAllergy": "حساسية المكسرات والفول السوداني",
+  "@filterNutAllergy": {
+    "description": "Test nut allergy chip"
+  },
+  "filterMilkAllergy": "حساسية الحليب ومشتقاته",
+  "@filterMilkAllergy": {
+    "description": "Test milk allergy chip"
+  },
+  "filterGlutenAllergy": "حساسية القمح والجلوتين",
+  "@filterGlutenAllergy": {
+    "description": "Test gluten allergy chip"
+  },
+  "filterAllergiesNone": "بدون حساسيات",
+  "@filterAllergiesNone": {
+    "description": "No allergies chip"
+  },
+  "quickLunchboxTag": "لانش بوكس مدرسي سريع",
+  "@quickLunchboxTag": {
+    "description": "Quick lunchbox test preset"
+  },
+  "scoreLabel": "التقييم: {score}",
+  "@scoreLabel": {
+    "description": "Score label for recommendation card",
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "topRecommendationsTitle": "أفضل 3 اقتراحات",
+  "@topRecommendationsTitle": {
+    "description": "Top 3 recommendations title"
+  },
+  "safeRecipesCount": "{count} وصفة آمنة تماماً",
+  "@safeRecipesCount": {
+    "description": "Count of safe recipes after filter",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   }
 }

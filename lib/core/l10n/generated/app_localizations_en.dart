@@ -317,4 +317,57 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noDislikesSelected => 'No disliked foods selected';
+
+  @override
+  String get reasonIngredientsOnHand => 'You have most ingredients on hand';
+
+  @override
+  String get reasonKidFavorite => 'A favorite with your kids';
+
+  @override
+  String get reasonHiddenVeggies => 'Hidden veggies, great for picky eaters';
+
+  @override
+  String get reasonLunchboxFriendly => 'Perfect for school lunchboxes';
+
+  @override
+  String get reasonQuickPrep => 'Quick and easy prep';
+
+  @override
+  String get reasonBalancedMeal => 'Balanced and nutritious meal';
+
+  @override
+  String get testSuggestionsTitle => 'Test Suggestion Engine (Offline)';
+
+  @override
+  String get testSuggestionsDescription =>
+      'Test deterministic safety filtering and recipe scoring';
+
+  @override
+  String get filterNutAllergy => 'Nut & Peanut Allergy';
+
+  @override
+  String get filterMilkAllergy => 'Dairy & Milk Allergy';
+
+  @override
+  String get filterGlutenAllergy => 'Gluten & Wheat Allergy';
+
+  @override
+  String get filterAllergiesNone => 'No Allergies';
+
+  @override
+  String get quickLunchboxTag => 'Quick School Lunchbox';
+
+  @override
+  String scoreLabel(String score) {
+    return 'Score: $score';
+  }
+
+  @override
+  String get topRecommendationsTitle => 'Top 3 Recommendations';
+
+  @override
+  String safeRecipesCount(int count) {
+    return '$count Strictly Safe Recipes';
+  }
 }

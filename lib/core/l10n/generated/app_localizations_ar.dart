@@ -313,4 +313,57 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get noDislikesSelected => 'لا توجد أكلات مستبعدة';
+
+  @override
+  String get reasonIngredientsOnHand => 'متوفر لديكِ أغلب المكونات';
+
+  @override
+  String get reasonKidFavorite => 'مفضلة ومحبوبة لأطفالكِ';
+
+  @override
+  String get reasonHiddenVeggies => 'خضار مخفية تناسب الانتقائيين';
+
+  @override
+  String get reasonLunchboxFriendly => 'مثالية للانش بوكس المدرسي';
+
+  @override
+  String get reasonQuickPrep => 'سريعة التحضير في وقت قياسي';
+
+  @override
+  String get reasonBalancedMeal => 'وجبة متوازنة ومغذية';
+
+  @override
+  String get testSuggestionsTitle => 'تجربة محرك الاقتراحات (بدون إنترنت)';
+
+  @override
+  String get testSuggestionsDescription =>
+      'اختبار الفلترة الحتمية للحساسيات وترتيب الوجبات';
+
+  @override
+  String get filterNutAllergy => 'حساسية المكسرات والفول السوداني';
+
+  @override
+  String get filterMilkAllergy => 'حساسية الحليب ومشتقاته';
+
+  @override
+  String get filterGlutenAllergy => 'حساسية القمح والجلوتين';
+
+  @override
+  String get filterAllergiesNone => 'بدون حساسيات';
+
+  @override
+  String get quickLunchboxTag => 'لانش بوكس مدرسي سريع';
+
+  @override
+  String scoreLabel(String score) {
+    return 'التقييم: $score';
+  }
+
+  @override
+  String get topRecommendationsTitle => 'أفضل 3 اقتراحات';
+
+  @override
+  String safeRecipesCount(int count) {
+    return '$count وصفة آمنة تماماً';
+  }
 }

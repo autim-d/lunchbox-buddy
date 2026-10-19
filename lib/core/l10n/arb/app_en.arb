@@ -420,5 +420,79 @@
   "noDislikesSelected": "No disliked foods selected",
   "@noDislikesSelected": {
     "description": "Empty dislikes label"
+  },
+  "reasonIngredientsOnHand": "You have most ingredients on hand",
+  "@reasonIngredientsOnHand": {
+    "description": "Suggestion reason: ingredients on hand"
+  },
+  "reasonKidFavorite": "A favorite with your kids",
+  "@reasonKidFavorite": {
+    "description": "Suggestion reason: kid favorite"
+  },
+  "reasonHiddenVeggies": "Hidden veggies, great for picky eaters",
+  "@reasonHiddenVeggies": {
+    "description": "Suggestion reason: hidden veggies"
+  },
+  "reasonLunchboxFriendly": "Perfect for school lunchboxes",
+  "@reasonLunchboxFriendly": {
+    "description": "Suggestion reason: lunchbox friendly"
+  },
+  "reasonQuickPrep": "Quick and easy prep",
+  "@reasonQuickPrep": {
+    "description": "Suggestion reason: quick prep"
+  },
+  "reasonBalancedMeal": "Balanced and nutritious meal",
+  "@reasonBalancedMeal": {
+    "description": "Suggestion reason: balanced meal"
+  },
+  "testSuggestionsTitle": "Test Suggestion Engine (Offline)",
+  "@testSuggestionsTitle": {
+    "description": "Title for test suggestions tab"
+  },
+  "testSuggestionsDescription": "Test deterministic safety filtering and recipe scoring",
+  "@testSuggestionsDescription": {
+    "description": "Subtitle for test suggestions tab"
+  },
+  "filterNutAllergy": "Nut & Peanut Allergy",
+  "@filterNutAllergy": {
+    "description": "Test nut allergy chip"
+  },
+  "filterMilkAllergy": "Dairy & Milk Allergy",
+  "@filterMilkAllergy": {
+    "description": "Test milk allergy chip"
+  },
+  "filterGlutenAllergy": "Gluten & Wheat Allergy",
+  "@filterGlutenAllergy": {
+    "description": "Test gluten allergy chip"
+  },
+  "filterAllergiesNone": "No Allergies",
+  "@filterAllergiesNone": {
+    "description": "No allergies chip"
+  },
+  "quickLunchboxTag": "Quick School Lunchbox",
+  "@quickLunchboxTag": {
+    "description": "Quick lunchbox test preset"
+  },
+  "scoreLabel": "Score: {score}",
+  "@scoreLabel": {
+    "description": "Score label for recommendation card",
+    "placeholders": {
+      "score": {
+        "type": "String"
+      }
+    }
+  },
+  "topRecommendationsTitle": "Top 3 Recommendations",
+  "@topRecommendationsTitle": {
+    "description": "Top 3 recommendations title"
+  },
+  "safeRecipesCount": "{count} Strictly Safe Recipes",
+  "@safeRecipesCount": {
+    "description": "Count of safe recipes after filter",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   }
 }

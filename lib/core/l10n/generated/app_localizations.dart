@@ -661,6 +661,102 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'لا توجد أكلات مستبعدة'**
   String get noDislikesSelected;
+
+  /// Suggestion reason: ingredients on hand
+  ///
+  /// In ar, this message translates to:
+  /// **'متوفر لديكِ أغلب المكونات'**
+  String get reasonIngredientsOnHand;
+
+  /// Suggestion reason: kid favorite
+  ///
+  /// In ar, this message translates to:
+  /// **'مفضلة ومحبوبة لأطفالكِ'**
+  String get reasonKidFavorite;
+
+  /// Suggestion reason: hidden veggies
+  ///
+  /// In ar, this message translates to:
+  /// **'خضار مخفية تناسب الانتقائيين'**
+  String get reasonHiddenVeggies;
+
+  /// Suggestion reason: lunchbox friendly
+  ///
+  /// In ar, this message translates to:
+  /// **'مثالية للانش بوكس المدرسي'**
+  String get reasonLunchboxFriendly;
+
+  /// Suggestion reason: quick prep
+  ///
+  /// In ar, this message translates to:
+  /// **'سريعة التحضير في وقت قياسي'**
+  String get reasonQuickPrep;
+
+  /// Suggestion reason: balanced meal
+  ///
+  /// In ar, this message translates to:
+  /// **'وجبة متوازنة ومغذية'**
+  String get reasonBalancedMeal;
+
+  /// Title for test suggestions tab
+  ///
+  /// In ar, this message translates to:
+  /// **'تجربة محرك الاقتراحات (بدون إنترنت)'**
+  String get testSuggestionsTitle;
+
+  /// Subtitle for test suggestions tab
+  ///
+  /// In ar, this message translates to:
+  /// **'اختبار الفلترة الحتمية للحساسيات وترتيب الوجبات'**
+  String get testSuggestionsDescription;
+
+  /// Test nut allergy chip
+  ///
+  /// In ar, this message translates to:
+  /// **'حساسية المكسرات والفول السوداني'**
+  String get filterNutAllergy;
+
+  /// Test milk allergy chip
+  ///
+  /// In ar, this message translates to:
+  /// **'حساسية الحليب ومشتقاته'**
+  String get filterMilkAllergy;
+
+  /// Test gluten allergy chip
+  ///
+  /// In ar, this message translates to:
+  /// **'حساسية القمح والجلوتين'**
+  String get filterGlutenAllergy;
+
+  /// No allergies chip
+  ///
+  /// In ar, this message translates to:
+  /// **'بدون حساسيات'**
+  String get filterAllergiesNone;
+
+  /// Quick lunchbox test preset
+  ///
+  /// In ar, this message translates to:
+  /// **'لانش بوكس مدرسي سريع'**
+  String get quickLunchboxTag;
+
+  /// Score label for recommendation card
+  ///
+  /// In ar, this message translates to:
+  /// **'التقييم: {score}'**
+  String scoreLabel(String score);
+
+  /// Top 3 recommendations title
+  ///
+  /// In ar, this message translates to:
+  /// **'أفضل 3 اقتراحات'**
+  String get topRecommendationsTitle;
+
+  /// Count of safe recipes after filter
+  ///
+  /// In ar, this message translates to:
+  /// **'{count} وصفة آمنة تماماً'**
+  String safeRecipesCount(int count);
 }
 
 class _AppLocalizationsDelegate
